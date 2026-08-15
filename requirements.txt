@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+streamlit
+langchain
+langchain-community
+psycopg2-binary
+pgvector
+boto3
+docling
+python-dotenv
+pydantic
+sqlalchemy

@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Project
+evaluation/results/*
+!evaluation/results/.gitkeep
+
 # C extensions
 *.so
 
