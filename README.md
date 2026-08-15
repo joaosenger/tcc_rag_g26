@@ -1,6 +1,6 @@
 # tcc_rag_g26
 
-**⚠️ Nota de Licenciamento:** O código-fonte original deste projeto está sob a licença MIT (arquivo `LICENSE`). No entanto, todos os textos, anotações, apostilas e materiais didáticos baseados no curso de Eduardo Mendes (@dunossauro) contidos na pasta `content/` seguem estritamente a licença Creative Commons BY-NC-SA 4.0 (ver `content/README.md` e `content/LICENSE-CONTENT`).
+**⚠️ Nota de Licenciamento:** O código-fonte original deste projeto está sob a licença GPLv3 (arquivo `LICENSE`). No entanto, todos os textos, anotações, apostilas e materiais didáticos baseados no curso de Eduardo Mendes (@dunossauro) contidos na pasta `content/` seguem estritamente a licença Creative Commons BY-NC-SA 4.0 (ver `content/README.md` e `content/LICENSE-CONTENT`).
 
 # arquitetura-rag.md
 
