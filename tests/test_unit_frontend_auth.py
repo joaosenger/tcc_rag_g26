@@ -2,10 +2,37 @@
 
 from __future__ import annotations
 
-from frontend.auth import check_credentials
+from frontend.auth import check_credentials, extract_credentials
 
 LOGIN = "G26"
 PASSWORD = "G26Tcc2026@UFG"
+
+
+class FakeAttrDict(dict):
+    """Simula o AttrDict retornado pelo st.secrets do Streamlit."""
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError as exc:
+            raise AttributeError(key) from exc
+
+
+def test_extract_credentials_secao_login():
+    section = FakeAttrDict({"login": LOGIN, "password": PASSWORD})
+    assert extract_credentials(section) == (LOGIN, PASSWORD)
+
+
+def test_extract_credentials_none():
+    assert extract_credentials(None) == ("", "")
+
+
+def test_extract_credentials_string_simples():
+    assert extract_credentials(LOGIN) == (LOGIN, "")
+
+
+def test_extract_credentials_secao_sem_chaves():
+    assert extract_credentials({}) == ("", "")
 
 
 def test_credentials_corretas():

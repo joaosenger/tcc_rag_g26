@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from frontend.utils import build_pdf_url, list_corpus_pdfs
+from frontend.utils import build_pdf_url, list_corpus_pdfs, resolve_pdf_url
 
 
 def test_list_corpus_pdfs_returns_only_pdfs(tmp_path):
@@ -52,3 +52,18 @@ def test_build_pdf_url_uses_pathlib(tmp_path):
     assert isinstance(list_corpus_pdfs(tmp_path), list)
     assert all(isinstance(p, str) for p in list_corpus_pdfs(tmp_path))
     assert isinstance(Path("content/documents"), Path)
+
+
+def test_resolve_pdf_url_externa_introducao():
+    url = resolve_pdf_url("http://localhost:8000", "Introdução ao Python.pdf")
+    assert url == "https://files.cercomp.ufg.br/weby/up/688/o/M2_IP_24-09-24.pdf"
+
+
+def test_resolve_pdf_url_externa_processamento():
+    url = resolve_pdf_url("http://localhost:8000", "Python para Processamento de Dados.pdf")
+    assert url == "https://portaldelivros.ufg.br/index.php/cegrafufg/catalog/view/642/614/2539"
+
+
+def test_resolve_pdf_url_fallback_local():
+    url = resolve_pdf_url("http://localhost:8000", "outro.pdf")
+    assert url == "http://localhost:8000/api/documents/pdf/outro.pdf"
