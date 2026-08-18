@@ -1,0 +1,5 @@
+Playlist: https://www.youtube.com/playlist?list=PLOQgLBuj2-3KT9ZWvPmaGFQ0KjIez0403
+
+Curso: Curso de FastAPI 2025
+Autor: Eduardo Mendes https://www.youtube.com/@Dunossauro
+Licença: CC BY-NC-SA 4.0

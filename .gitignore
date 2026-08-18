@@ -6,6 +6,7 @@ __pycache__/
 # Project
 evaluation/results/*
 !evaluation/results/.gitkeep
+content/audio/*.mp3
 
 # C extensions
 *.so
@@ -220,3 +221,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Documentos internos (não versionados)
+PRD.md
+PROMPT.md

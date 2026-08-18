@@ -1,1 +1,0 @@
-Links da documentos PDF abertor sobre Python e FastAPI, ainda a serem escolhidos e definidos. Também instruções de como os PDFs foram extraídos e processados para serem utilizados no projeto.

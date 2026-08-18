@@ -1,2 +1,0 @@
-Links da documentação do curso onde o professor Eduardo Mendes (@dunossauro) explica o conteúdo do curso em formato de documentação (MkDocs).
-Também instruções de como o Markdown foi extraído e processado para ser utilizado no projeto.

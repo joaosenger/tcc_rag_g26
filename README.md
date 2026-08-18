@@ -2,6 +2,178 @@
 
 **⚠️ Nota de Licenciamento:** O código-fonte original deste projeto está sob a licença GPLv3 (arquivo `LICENSE`). No entanto, todos os textos, anotações, apostilas e materiais didáticos baseados no curso de Eduardo Mendes (@dunossauro) contidos na pasta `content/` seguem estritamente a licença Creative Commons BY-NC-SA 4.0 (ver `content/README.md` e `content/LICENSE-CONTENT`).
 
+---
+
+## Início rápido
+
+### Pré-requisitos
+
+- Python 3.12+
+- Docker e Docker Compose
+- FFmpeg (para transcrição de áudio com Whisper)
+- Credenciais AWS com acesso ao Bedrock (Titan Embeddings + DeepSeek)
+
+### 1. Configurar variáveis de ambiente
+
+```bash
+cp .example.env .env
+# Edite .env e preencha com suas credenciais AWS
+```
+
+Variáveis necessárias (ver `.example.env`):
+
+| Variável | Descrição |
+| --- | --- |
+| `AWS_ACCESS_KEY_ID` | Chave de acesso AWS (IAM) |
+| `AWS_SECRET_ACCESS_KEY` | Chave secreta AWS |
+| `AWS_REGION` | Região AWS (ex.: `us-east-1`) |
+| `BEDROCK_EMBEDDING_MODEL` | Modelo de embedding (`amazon.titan-embed-text-v2:0`) |
+| `BEDROCK_LLM_MODEL` | Modelo LLM (`us.deepseek.r1-v1:0`) |
+| `POSTGRES_USER` | Usuário do banco (padrão: `rag`) |
+| `POSTGRES_PASSWORD` | Senha do banco (padrão: `rag`) |
+| `POSTGRES_DB` | Nome do banco (padrão: `rag`) |
+| `POSTGRES_HOST` | Host do banco (`localhost` local, `postgres` no compose) |
+| `POSTGRES_PORT` | Porta do banco (padrão: `5432`) |
+| `API_URL` | URL da API para o frontend (`http://localhost:8000`) |
+
+> As credenciais AWS podem ficar vazias no `.env` se você usar o perfil default em `~/.aws/credentials` — o boto3 assume automaticamente.
+
+### 2. Configurar credenciais do frontend (login)
+
+```bash
+cp .streamlit/secrets.example.toml .streamlit/secrets.toml
+# Edite .streamlit/secrets.toml e defina usuário e senha do acesso
+```
+
+O frontend Streamlit exige login antes de mostrar o chat.
+
+### 3. Instalar dependências
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+```
+
+### 4. Subir o banco de dados
+
+```bash
+docker compose up -d postgres
+```
+
+### 5. Criar as tabelas
+
+```bash
+python -m app.database.init_db
+```
+
+### 6. Obter os materiais do curso
+
+> Os PDFs e Markdowns das aulas **estão versionados no repositório** (licença CC BY-NC-SA, ver `content/documents/LICENSE-CONTENT`). Os **MP3s das videoaulas não estão** (por tamanho, licença CC BY-NC-SA) — obtenha-os das videoaulas do curso e coloque-os em `content/audio/`:
+>
+> - **PDFs** → `content/documents/` (apostilas, slides, exercícios)
+> - **Markdown** → `content/markdown/aulas/` (já versionado no repo)
+> - **Áudios MP3** → `content/audio/` (obter das videoaulas do curso)
+
+### 7. Transcrever áudios (uma vez só)
+
+Requer GPU (recomendado) ou CPU com pelo menos 4 GB RAM.
+
+```bash
+# Transcrever todas as aulas de uma vez
+python content/audio/transcribe_all.py --batch-size 32
+
+# Ou transcrever uma aula específica
+python content/audio/audio_transcript.py content/audio/aula-00.mp3
+```
+
+As transcrições são salvas em `content/audio/transcriptions/` (`.md` + `.json`).
+
+### 8. Subir a API (ela ingere o corpus automaticamente)
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Na primeira inicialização, se o banco estiver vazio, a API **ingere automaticamente** todos os materiais de `content/` (markdowns, PDFs e transcrições de áudio). Isso acontece só uma vez — nas próximas inicializações o banco já está populado.
+
+A API fica disponível em `http://localhost:8000` (documentação em `/docs`).
+
+### 9. Subir o frontend (Streamlit)
+
+Em outro terminal:
+
+```bash
+streamlit run frontend/app.py
+```
+
+Abra `http://localhost:8501` no navegador e faça login (credenciais definidas no passo 2).
+
+### 10. Fazer perguntas
+
+1. Digite sua pergunta no campo de chat e pressione **Enter**
+2. A resposta aparece com:
+   - **Texto da resposta** (gerada pelo DeepSeek com base no contexto recuperado)
+   - **Fontes** (clique em "Fontes" para expandir — mostra arquivo, página/seção/tempo, score e trecho)
+   - **Aviso amarelo** se a evidência for insuficiente
+
+Exemplos de perguntas:
+- "Qual o editor que o professor usa durante o curso?"
+- "O que significa LAN?"
+- "Quais os tipos de dados em Python?"
+- "O que é o pipx e para que serve?"
+
+### Tudo via Docker Compose
+
+```bash
+docker compose up
+```
+
+Isso sobe FastAPI (porta 8000), Streamlit (porta 8501) e PostgreSQL (porta 5432). A auto-ingestão roda na primeira inicialização do FastAPI.
+
+> ⚠️ **Nota:** a imagem Docker **não inclui os MP3s** do corpus (excluídos no `.dockerignore` por tamanho). Dentro do container são ingeridos os PDFs, Markdowns e as transcrições. **Para a apresentação, recomendamos o fluxo local** (passos 8 e 9), que usa o corpus completo já presente em `content/`.
+
+### Rodar os testes
+
+```bash
+pytest
+```
+
+### Estrutura do projeto
+
+```text
+tcc_rag_g26/
+├── app/
+│   ├── api/routes/          # endpoints FastAPI (documents, chat, health)
+│   ├── config/              # configurações centralizadas (chunking, settings)
+│   ├── database/            # modelos, conexão, CRUD, init_db
+│   ├── embeddings/          # Amazon Titan (Bedrock)
+│   ├── ingestion/           # PDF, Markdown, chunking, pipeline, auto_ingest
+│   ├── llm/                 # DeepSeek (Bedrock), prompt
+│   └── retrieval/           # busca vetorial Top-K
+├── content/
+│   ├── audio/               # MP3s + transcrições
+│   │   ├── transcriptions/  # .md + .json gerados pelo Whisper
+│   │   ├── audio_transcript.py
+│   │   └── transcribe_all.py
+│   ├── documents/           # PDFs do curso (CC BY-NC-SA)
+│   └── markdown/aulas/      # Markdown das aulas
+├── frontend/
+│   ├── app.py               # Streamlit (login + chat)
+│   ├── auth.py              # validação de credenciais (login)
+│   └── utils.py             # funções puras
+├── scripts/
+│   └── ingest_corpus.py     # ingestão manual via API (opcional)
+├── tests/                   # pytest (unitários)
+├── docker/
+│   ├── entrypoint.sh        # init_db + uvicorn
+│   └── postgres/init/       # CREATE EXTENSION vector
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── requirements-dev.txt
+```
+
 # arquitetura-rag.md
 
 # Arquitetura da RAG Multimodal
@@ -30,7 +202,7 @@ Quando a evidência recuperada for insuficiente para responder à pergunta, o si
                     ┌──────────────────────────────┐
                     │          Streamlit           │
                     │           Frontend           │
-                    │       Upload + Chat          │
+                    │       Chat (perguntas)      │
                     └──────────────┬───────────────┘
                                    │
                                    ▼
@@ -52,20 +224,20 @@ Quando a evidência recuperada for insuficiente para responder à pergunta, o si
      └──────────┬───────────┘                          ▼
                 │                             Titan Embeddings
                 ▼                              (AWS Bedrock)
-        ┌───────────────┐                               │
-        │   Amazon S3   │                               ▼
-        │               │                        PostgreSQL
-        │ Arquivos      │                        + pgvector
-        │ originais     │                               │
-        └───────┬───────┘                               ▼
-                │                                 Top-K Chunks
+         ┌───────────────┐                               │
+         │   content/    │                               ▼
+         │   (local)     │                        PostgreSQL
+         │               │                        + pgvector
+         │ Arquivos      │                               │
+         │ originais     │                               ▼
+         └───────┬───────┘                         Top-K Chunks
        ┌────────┼─────────┐                           │
        ▼        ▼         ▼                           ▼
-    Docling  Python    FFmpeg                 Contexto + Pergunta
+    Docling  Python   Áudio mp3              Contexto + Pergunta
        │        │         │                           │
        │        │         ▼                           ▼
-       │        │  Amazon                            DeepSeek
-       │        │  Transcribe                       (AWS Bedrock)
+       │        │  Whisper                           DeepSeek
+       │        │  (local)                           (AWS Bedrock)
        │        │         │                           │
        └────────┴─────────┘                           ▼
                 │                                  Resposta
@@ -86,20 +258,19 @@ Quando a evidência recuperada for insuficiente para responder à pergunta, o si
 
 | Componente | Tecnologia | Responsabilidade |
 | --- | --- | --- |
-| Frontend | Streamlit | Interface de upload e chatbot |
+| Frontend | Streamlit | Interface de chat (perguntas) |
 | Backend | FastAPI | API e lógica da aplicação |
-| Armazenamento | Amazon S3 | Armazenamento dos arquivos originais |
+| Armazenamento | Local (`content/`) | Arquivos originais mantidos localmente |
 | Banco de dados | PostgreSQL | Dados estruturados e metadados |
 | Vector Store | pgvector | Armazenamento e busca dos embeddings |
 | PDF | Docling | Extração e estruturação de documentos PDF |
 | Markdown | Python | Leitura e processamento de arquivos Markdown |
-| Vídeo | FFmpeg | Extração do áudio dos vídeos |
-| Transcrição | Amazon Transcribe | Conversão de áudio em texto |
-| Chunking | LangChain | Fragmentação dos documentos |
+| Áudio | Whisper / FFmpeg | Transcrição local dos áudios das aulas |
+| Transcrição | Whisper (local) | Conversão de áudio em texto |
+| Chunking | LangChain (text splitters) | Fragmentação dos documentos |
 | Embeddings | Amazon Titan Text Embeddings V2 / AWS Bedrock | Conversão do conteúdo em vetores |
 | Retrieval | pgvector | Busca dos chunks semanticamente semelhantes |
-| LLM | DeepSeek / AWS Bedrock | Geração das respostas |
-| Orquestração | LangChain | Integração das etapas da RAG |
+| LLM | DeepSeek-R1 / AWS Bedrock | Geração das respostas |
 | Containerização | Docker | Padronização do ambiente |
 
 ## 4. Fluxo de ingestão
@@ -112,9 +283,6 @@ Arquivo
    ▼
 FastAPI
    │
-   ├──────────────────────► Amazon S3
-   │                         Arquivo original
-   │
    ▼
 Processamento
    │
@@ -125,8 +293,8 @@ Processamento
    │    └── Python
    │
    └── Vídeo
-        └── FFmpeg
-             └── Amazon Transcribe
+        └── Áudio (.mp3)
+             └── Whisper (local)
    │
    ▼
 Conteúdo textual estruturado
@@ -145,16 +313,14 @@ PostgreSQL + pgvector
 
 ## 5. Armazenamento dos arquivos
 
-Os arquivos originais enviados pelos usuários serão armazenados no Amazon S3.
-
-O S3 terá a responsabilidade de preservar os arquivos originais independentemente do processamento realizado pela RAG.
+Os arquivos originais enviados pelos usuários são mantidos localmente na pasta `content/`.
 
 Adicionalmente, os materiais do curso serão versionados no repositório, na pasta `content/`, sob a licença CC BY-NC-SA (ver `content/README.md` e `content/LICENSE-CONTENT`).
 
 Exemplo:
 
 ```text
-s3://rag-tcc/
+content/
 │
 ├── documents/
 │   ├── apostila-machine-learning.pdf
@@ -224,24 +390,18 @@ Conteúdo...
 
 O contexto hierárquico será preservado durante a criação dos chunks.
 
-## 8. Processamento de vídeo
+## 8. Processamento de áudio
 
-Os vídeos serão processados em duas etapas: extração do áudio e transcrição.
+Os áudios das aulas (`.mp3` em `content/audio/`, obtidos manualmente) são transcritos localmente com o Whisper (`faster-whisper` sobre `openai-whisper`, modelo `small`, pt-BR, com aceleração por GPU quando disponível).
 
 ```text
-Vídeo
+Áudio (.mp3)
   │
   ▼
-FFmpeg
+Whisper (local, modelo small)
   │
   ▼
-Áudio
-  │
-  ▼
-Amazon Transcribe
-  │
-  ▼
-Transcrição
+Transcrição (.md + .json) em content/audio/transcriptions/
   │
   ▼
 Chunking
@@ -253,7 +413,7 @@ Os metadados do vídeo (arquivo de origem e marcações temporais da transcriç�
 
 ## 9. Chunking
 
-O conteúdo processado será dividido em unidades menores denominadas chunks.
+O conteúdo processado é dividido em unidades menores denominadas chunks.
 
 O objetivo é evitar que documentos inteiros sejam transformados em um único embedding.
 
@@ -269,21 +429,26 @@ Chunk 4
 Chunk N
 ```
 
-A estratégia de chunking adotada será fixa em todas as execuções do projeto, priorizando a preservação do contexto semântico por meio de chunking semântico/hierárquico.
+A estratégia de chunking é fixa e centralizada em `app/config/chunking.py`:
 
-Para documentos estruturados, serão utilizadas informações como:
+```python
+CHUNK_SIZE = 1024          # caracteres
+CHUNK_OVERLAP = 128        # caracteres (~12,5%)
+TOP_K = 5                  # chunks recuperados por pergunta
+SEPARATORS = ["\n\n", "\n", ". ", " ", ""]
+```
 
-- títulos;
-- subtítulos;
-- seções;
-- parágrafos;
-- blocos de código.
+Para cada tipo de conteúdo:
 
-Cada chunk carregará os metadados de origem (arquivo e página/seção/tempo).
+- **PDF**: `RecursiveCharacterTextSplitter` sobre os blocos extraídos pelo Docling, mantendo `page` e `heading`.
+- **Markdown**: `RecursiveCharacterTextSplitter` sobre os blocos extraídos pelo parser interno, mantendo `section` e `title`.
+- **Áudio**: agrupamento de segmentos Whisper consecutivos até atingir `CHUNK_SIZE`, mantendo `start` e `end` no formato `HH:MM:SS`.
 
-O LangChain será utilizado para auxiliar nessa etapa.
+Cada chunk carrega os metadados de origem (arquivo e página/seção/tempo).
 
-Como a estratégia de chunking não é objeto de comparação experimental, ela será definida uma única vez e mantida constante em todos os experimentos.
+O LangChain (`langchain-text-splitters`) é utilizado para auxiliar nessa etapa.
+
+Como a estratégia de chunking não é objeto de comparação experimental, ela foi definida uma única vez e mantida constante em todos os experimentos.
 
 ## 10. Geração dos embeddings
 
@@ -321,7 +486,6 @@ documents
     ├── id
     ├── filename
     ├── type
-    ├── s3_key
     └── metadata
          │
          ▼
@@ -362,13 +526,13 @@ Top-K Chunks
 
 O parâmetro K determina quantos chunks serão recuperados.
 
-Exemplo:
+O valor de K é fixo e definido em `app/config/chunking.py`:
 
 ```text
-K = 3
+K = 5
 ```
 
-Nesse caso, os 3 chunks mais semelhantes serão recuperados.
+Nesse caso, os 5 chunks mais semelhantes serão recuperados.
 
 O valor de K será definido uma única vez e mantido fixo em todas as execuções do projeto, garantindo que a única variável experimental seja a presença ou ausência da RAG.
 
@@ -383,7 +547,7 @@ Top-K Chunks
     │
     ▼
 Contexto + Pergunta
-   (LangChain)
+   (app/llm/prompt.py)
 ```
 
 O contexto será utilizado para instruir o LLM a responder utilizando somente as informações recuperadas.
@@ -430,73 +594,98 @@ Top-K
    │
    ▼
 Contexto + Pergunta
-(LangChain)
-   │
-   ▼
+    │
+    ▼
 DeepSeek
 (AWS Bedrock)
-   │
-   ▼
+    │
+    ▼
 Resposta + Fontes
-   │
-   ▼
+    │
+    ▼
 Streamlit
 ```
 
-## 16. Estrutura sugerida do projeto
+## 16. API (endpoints)
+
+| Método | Rota | Função |
+| --- | --- | --- |
+| POST | `/api/documents` | Ingestão de um arquivo do corpus (multipart) |
+| GET | `/api/documents` | Lista documentos ingeridos |
+| POST | `/api/chat` | Recebe pergunta, retorna resposta + fontes |
+| GET | `/health` | Healthcheck |
+
+## 17. Estrutura do projeto
 
 ```text
-rag-tcc/
+tcc_rag_g26/
 │
 ├── app/
 │   ├── api/
 │   │   ├── routes/
-│   │   └── main.py
+│   │   │   ├── chat.py             # POST /api/chat (RAG)
+│   │   │   └── documents.py        # POST/GET /api/documents
+│   │   └── main.py                 # App FastAPI + healthcheck
 │   │
-│   ├── ingestion/
-│   │   ├── pdf.py
-│   │   ├── markdown.py
-│   │   ├── video.py
-│   │   └── chunking.py
-│   │
-│   ├── embeddings/
-│   │   └── bedrock.py
-│   │
-│   ├── retrieval/
-│   │   └── vector_search.py
-│   │
-│   ├── llm/
-│   │   └── bedrock.py
-│   │
-│   ├── storage/
-│   │   └── s3.py
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── settings.py             # configurações gerais (AWS, Bedrock)
+│   │   └── chunking.py             # constantes de chunking (congeladas)
 │   │
 │   ├── database/
-│   │   ├── models.py
-│   │   └── connection.py
+│   │   ├── connection.py           # engine SQLAlchemy + SessionLocal
+│   │   ├── crud.py                 # CRUD + similarity_search
+│   │   ├── init_db.py              # cria tabelas + extensão vector
+│   │   └── models.py               # modelos Document e Chunk
 │   │
-│   └── main.py
+│   ├── embeddings/
+│   │   └── bedrock.py              # Amazon Titan V2 (1024 dims)
+│   │
+│   ├── ingestion/
+│   │   ├── chunking.py             # splitters (PDF, Markdown, áudio)
+│   │   ├── markdown.py             # extração com hierarquia de seções
+│   │   ├── pdf.py                  # extração com Docling (fast mode)
+│   │   ├── pipeline.py             # orquestra: extrair → chunkar → embeddar → persistir
+│   │   └── video.py                # transcrição com Whisper (legado)
+│   │
+│   ├── llm/
+│   │   ├── bedrock.py              # DeepSeek-R1 via Converse API + retry
+│   │   └── prompt.py               # build_prompt + format_sources
+│   │
+│   ├── retrieval/
+│   │   └── vector_search.py        # retrieve_top_k (K fixo da config)
+│   │
+│   └── main.py                     # ponto de entrada (expõe app)
+│
+├── content/
+│   ├── audio/
+│   │   ├── transcriptions/         # .md + .json gerados pelo Whisper
+│   │   ├── audio_transcript.py     # transcrição individual
+│   │   ├── transcribe_all.py       # transcrição em lote
+│   │   └── aula-NN.mp3             # áudios originais (fora do git)
+│   ├── documents/                  # PDFs do curso (CC BY-NC-SA)
+│   └── markdown/aulas/             # Markdown das aulas
 │
 ├── frontend/
-│   └── app.py
+│   ├── __init__.py
+│   ├── app.py                      # Streamlit (login + chat + sidebar)
+│   ├── auth.py                     # validação de credenciais
+│   └── utils.py                    # funções puras (format_source, PDFs, is_insufficient)
 │
-├── evaluation/
-│   ├── datasets/
-│   │   └── questions.json
-│   ├── results/
-│   ├── run_eval.py
-│   ├── metrics.py
-│   └── README.md
+├── tests/                          # pytest (testes unitários)
+│   └── test_unit_*.py              # testes unitários (sem AWS/banco)
 │
 ├── docker/
+│   └── postgres/init/              # CREATE EXTENSION vector
 │
 ├── Dockerfile
-├── docker-compose.yml
+├── docker-compose.yml              # FastAPI + Streamlit + PostgreSQL
 ├── requirements.txt
+├── requirements-dev.txt
 └── README.md
 ```
 
-## 17. Containerização
+## 18. Containerização
 
 O Docker será utilizado para garantir um ambiente reprodutível.
 
@@ -520,20 +709,18 @@ Docker Compose
 
 Os serviços externos serão acessados por API:
 
-- AWS Bedrock
-- Amazon S3
-- Amazon Transcribe
+- AWS Bedrock (embeddings + LLM)
 
-## 18. Escopo
+## 19. Escopo
 
 O sistema terá como funcionalidades principais:
 
-- upload de PDF;
-- upload de Markdown;
-- upload de vídeo;
-- armazenamento dos arquivos no S3;
+- ingestão de PDF;
+- ingestão de Markdown;
+- ingestão de áudio (videoaulas);
+- processamento e armazenamento local dos arquivos (corpus em `content/`);
 - processamento dos documentos;
-- transcrição de vídeos;
+- transcrição de áudios;
 - chunking;
 - geração de embeddings;
 - armazenamento vetorial;
@@ -541,11 +728,11 @@ O sistema terá como funcionalidades principais:
 - geração de respostas utilizando LLM;
 - indicação dos documentos e trechos que fundamentam cada resposta;
 - sinalização quando a evidência recuperada for insuficiente;
-- apresentação das respostas no Streamlit;
-- avaliação comparando LLM puro e LLM+RAG com métricas quantitativas e análise manual dos integrantes.
+- apresentação das respostas no Streamlit.
 
 Não fazem parte do escopo inicial:
 
+- upload de arquivos pelo usuário (corpus gerenciado localmente);
 - reranking;
 - RAGAS;
 - Kubernetes;
@@ -557,9 +744,10 @@ Não fazem parte do escopo inicial:
 - fine-tuning de LLM;
 - treinamento de modelos próprios;
 - memória conversacional avançada;
+- avaliação automática das respostas (análise manual pelos autores);
 - medição de aprendizagem ou desempenho acadêmico dos estudantes.
 
-## 19. Stack final
+## 20. Stack final
 
 ```text
 Frontend
@@ -571,7 +759,7 @@ Backend
 
 
 Storage
-└── Amazon S3
+└── Local (content/)
 
 
 Database
@@ -580,12 +768,11 @@ Database
 
 Document Processing
 ├── Docling
-├── Python
-└── FFmpeg
+└── Python
 
 
-Video Transcription
-└── Amazon Transcribe
+Audio Transcription
+└── Whisper (local, GPU)
 
 
 Embeddings
@@ -593,7 +780,7 @@ Embeddings
 
 
 RAG
-└── LangChain
+└── LangChain (text splitters)
 
 
 Retrieval
@@ -607,246 +794,3 @@ LLM
 Infrastructure
 └── Docker
 ```
-
----
-
-# avaliacao-rag.md
-
-# Avaliação da RAG
-
-## 1. Objetivo
-
-O objetivo desta etapa é avaliar o desempenho do sistema de Retrieval-Augmented Generation (RAG) em comparação com o LLM puro, verificando a hipótese do trabalho:
-
-> A incorporação de uma etapa de recuperação de informações de materiais educacionais ao fluxo de um modelo de linguagem produzirá, para um mesmo conjunto de perguntas, respostas mais factuais, relevantes e contextualizadas, além de reduzir a ocorrência de informações não sustentadas pelos documentos, quando comparada ao uso do modelo de linguagem sem recuperação externa.
-
-**A avaliação será realizada pelos três integrantes do grupo**, por meio da classificação manual das respostas (correta, parcialmente correta ou incorreta), complementada por métricas quantitativas automáticas da recuperação.
-
-A avaliação será executada exclusivamente durante a etapa experimental do projeto, separada do fluxo normal de atendimento das perguntas dos usuários.
-
-## 2. Separação entre aplicação e avaliação
-
-### Aplicação
-
-```text
-Pergunta
-   │
-   ▼
-Embedding
-   │
-   ▼
-pgvector
-   │
-   ▼
-Top-K
-   │
-   ▼
-Contexto
-   │
-   ▼
-DeepSeek
-   │
-   ▼
-Resposta + Fontes
-```
-
-### Avaliação
-
-```text
-Dataset de perguntas
-        │
-        ▼
-  LLM puro ──┐
-             ├──► Respostas
-  LLM+RAG ───┘
-             │
-             ▼
-  Métricas automáticas da recuperação (LLM+RAG)
-  Classificação manual pelos 3 integrantes
-             │
-             ▼
-         Resultados
-```
-
-## 3. Dataset de avaliação
-
-Será criado um conjunto de perguntas representativas dos documentos utilizados na base de conhecimento, elaborado pelos integrantes do grupo.
-
-Importante: os materiais do curso (PDFs, transcrições das aulas, documentações em Markdown) são previamente ingeridos e indexados no pgvector. O dataset de avaliação é um artefato interno do experimento — o usuário da aplicação apenas faz perguntas e nunca fornece arquivos ou referências.
-
-Para cada pergunta do dataset, os integrantes anotarão onde a resposta se encontra no corpus já indexado. Essa anotação funciona como gabarito, permitindo verificar automaticamente se o sistema recuperou os trechos corretos.
-
-Cada pergunta deverá possuir:
-
-- pergunta;
-- resposta de referência (`ground_truth`);
-- trechos relevantes previamente identificados (chunks do corpus já indexado, com página/seção/tempo para localização humana).
-
-Exemplo:
-
-```json
-{
-  "id": 1,
-  "question": "O que é overfitting?",
-  "ground_truth": "Overfitting ocorre quando um modelo aprende excessivamente os padrões dos dados de treinamento.",
-  "relevant_chunks": ["apostila-machine-learning.pdf:pagina 42"],
-  "relevant_pages": [42]
-}
-```
-
-O dataset deverá conter perguntas relacionadas aos diferentes tipos de conteúdo utilizados na aplicação (PDF, Markdown e vídeo).
-
-O dataset será congelado antes do início dos experimentos e versionado no repositório, garantindo que as duas condições experimentais sejam avaliadas com exatamente o mesmo conjunto de perguntas.
-
-## 4. Experimentos
-
-### Experimento 1 — LLM puro
-
-```text
-Pergunta
-    ↓
-DeepSeek
-    ↓
-Resposta
-```
-
-Objetivo:
-
-Estabelecer o desempenho do LLM sem acesso ao contexto recuperado, respondendo apenas com seu conhecimento paramétrico.
-
-### Experimento 2 — LLM+RAG
-
-```text
-Pergunta
-    ↓
-Titan Embeddings
-    ↓
-pgvector
-    ↓
-Top-K
-    ↓
-DeepSeek
-    ↓
-Resposta + Fontes
-```
-
-Objetivo:
-
-Avaliar se o acesso ao contexto recuperado dos documentos melhora a correção e a relevância das respostas em comparação ao LLM puro.
-
-As duas condições utilizam exatamente o mesmo dataset de perguntas e o mesmo modelo generativo (DeepSeek), isolando a RAG como única variável experimental.
-
-## 5. Avaliação pelos três integrantes
-
-**Esta é a etapa central da avaliação.**
-
-Cada um dos três integrantes do grupo classificará, de forma independente, todas as respostas produzidas nas duas condições (LLM puro e LLM+RAG), com base na pergunta, na resposta de referência e no conteúdo dos documentos.
-
-Cada resposta será classificada como:
-
-- correta;
-- parcialmente correta;
-- incorreta.
-
-Critérios:
-
-- a resposta está correta em relação à resposta de referência e ao conteúdo dos documentos?
-- a resposta é pertinente à pergunta realizada?
-- a resposta é sustentada pelo corpus (no caso do LLM+RAG, pelos trechos recuperados)?
-
-Cada avaliador registrará sua classificação em uma planilha compartilhada. Divergências entre avaliadores serão discutidas e resolvidas em consenso, com registro da decisão.
-
-Como referência preliminar, será considerado satisfatório obter pelo menos 70% de respostas classificadas como corretas ou parcialmente corretas. Esse valor é apenas um parâmetro de acompanhamento e deverá ser interpretado em função do tamanho, da dificuldade e da composição do corpus.
-
-## 6. Métricas automáticas da recuperação
-
-Aplicáveis apenas à condição com RAG. Calculadas automaticamente por script, comparando os chunks recuperados com os trechos relevantes anotados no dataset.
-
-- **Precision@K**: proporção dos chunks recuperados que são relevantes;
-- **Recall@K**: proporção das informações relevantes existentes que foram recuperadas.
-
-## 7. Comparação dos resultados
-
-Os resultados serão apresentados em tabelas e gráficos.
-
-### Classificação manual das respostas (3 avaliadores)
-
-| Classificação | LLM puro | LLM+RAG |
-| ------------- | -------- | ------- |
-| Correta | XX% | XX% |
-| Parcialmente correta | XX% | XX% |
-| Incorreta | XX% | XX% |
-| Correta + Parcial | XX% | XX% |
-
-### Métricas automáticas da recuperação (apenas LLM+RAG)
-
-| Métrica | Valor |
-| ------- | ----- |
-| Precision@K | 0.XX |
-| Recall@K | 0.XX |
-
-Os principais erros encontrados (falhas na extração, transcrição, recuperação de trechos irrelevantes, geração de informações não presentes no corpus) serão documentados, orientando ajustes e recomendações para outros acervos educacionais.
-
-## 8. Estrutura do código de avaliação
-
-```text
-evaluation/
-│
-├── datasets/
-│   └── questions.json
-│
-├── results/
-│   ├── llm_pure.json
-│   ├── llm_rag.json
-│   └── retrieval_metrics.json
-│
-├── run_eval.py
-├── metrics.py
-└── README.md
-```
-
-- `run_eval.py`: executa o dataset de perguntas nas duas condições e salva as respostas (e os contextos recuperados) em `results/`;
-- `metrics.py`: calcula Precision@K e Recall@K a partir dos contextos recuperados e dos trechos relevantes anotados;
-- a planilha de classificação manual é preenchida pelos três avaliadores a partir das respostas salvas em `results/`.
-
-## 9. Execução
-
-A avaliação poderá ser executada separadamente da aplicação:
-
-```bash
-python evaluation/run_eval.py
-python evaluation/metrics.py
-```
-
-Fluxo:
-
-```text
-questions.json
-      │
-      ▼
-LLM puro ──┐
-           ├──► Respostas (results/)
-LLM+RAG ───┘
-           │
-           ▼
-Contextos recuperados (LLM+RAG)
-           │
-           ▼
-metrics.py ──► retrieval_metrics.json
-           │
-           ▼
-Planilha de classificação manual (3 avaliadores)
-           │
-           ▼
-Comparação dos resultados
-```
-
-## 10. Princípios metodológicos
-
-- o dataset de perguntas será congelado antes do início dos experimentos;
-- o modelo generativo será o mesmo nas duas condições (DeepSeek);
-- o valor de K do Top-K será o mesmo em todas as execuções;
-- a estratégia de chunking será mantida constante;
-- os três avaliadores classificarão as respostas de forma independente antes da reunião de consenso.
-
-Isso permite uma comparação controlada, isolando a presença da RAG como única variável experimental.
