@@ -13,4 +13,3 @@ docling
 openai-whisper
 faster-whisper
 ctranslate2
-nvidia-cublas-cu12
