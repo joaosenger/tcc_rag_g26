@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from frontend.auth import check_credentials, extract_credentials
 
-LOGIN = "G26"
-PASSWORD = "G26Tcc2026@UFG"
+LOGIN = "usuario-teste"
+PASSWORD = "senha-teste-123"
 
 
 class FakeAttrDict(dict):
