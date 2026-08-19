@@ -360,8 +360,8 @@ Total de perguntas: **60**
 ### G05-Q01 (pt)
 
 **Pergunta:** oq é rag e como ele funciona?
-**Categorias:** erro_ortografia_pt | sem_pontuacao | curta | contexto
-**Expectativa:** `context`
+**Categorias:** erro_ortografia_pt | sem_pontuacao | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -416,8 +416,8 @@ Total de perguntas: **60**
 ### G05-Q05 (en)
 
 **Pergunta:** what is rag and how dos it work?
-**Categorias:** erro_ortografia_en | ingles | curta | contexto
-**Expectativa:** `context`
+**Categorias:** erro_ortografia_en | ingles | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -446,8 +446,8 @@ Total de perguntas: **60**
 ### G06-Q01 (pt)
 
 **Pergunta:** O que é RAG,,, como funciona???
-**Categorias:** sem_pontuacao | curta | contexto
-**Expectativa:** `context`
+**Categorias:** sem_pontuacao | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -532,8 +532,8 @@ Total de perguntas: **60**
 ### G07-Q01 (pt)
 
 **Pergunta:** O que é RAG? 🤖📚
-**Categorias:** emoji | curta | contexto
-**Expectativa:** `context`
+**Categorias:** emoji | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -574,8 +574,8 @@ Total de perguntas: **60**
 ### G07-Q04 (pt)
 
 **Pergunta:** Como funciona a ingestão do corpus no projeto? 🚀
-**Categorias:** emoji | curta | contexto
-**Expectativa:** `context`
+**Categorias:** emoji | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -618,8 +618,8 @@ Total de perguntas: **60**
 ### G08-Q01 (pt)
 
 **Pergunta:** RAG utiliza apenas informações armazenadas no modelo.
-**Categorias:** afirmacao | curta | contexto
-**Expectativa:** `context`
+**Categorias:** afirmacao | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -704,8 +704,8 @@ Total de perguntas: **60**
 ### G09-Q01 (pt)
 
 **Pergunta:** Me explica aí, de boa, como esse RAG funciona?
-**Categorias:** giria | curta | contexto
-**Expectativa:** `context`
+**Categorias:** giria | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -790,8 +790,8 @@ Total de perguntas: **60**
 ### G10-Q01 (pt)
 
 **Pergunta:** Então quer dizer que RAG magicamente sabe tudo, né? 🙄
-**Categorias:** sarcasmo | emoji | curta | contexto
-**Expectativa:** `context`
+**Categorias:** sarcasmo | emoji | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**
@@ -860,8 +860,8 @@ Total de perguntas: **60**
 ### G10-Q06 (en)
 
 **Pergunta:** Oh sure, RAG knows absolutely everything, right? 🙄
-**Categorias:** sarcasmo | emoji | ingles | curta | contexto
-**Expectativa:** `context`
+**Categorias:** sarcasmo | emoji | ingles | curta | fora_de_contexto
+**Expectativa:** `out_of_context`
 
 - **Resposta obtida:**
 - **Fontes obtidas:**

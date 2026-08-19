@@ -58,19 +58,19 @@ Uma pergunta pode estar em mais de uma categoria:
 | `ingles` | Pergunta em inglês | 8 |
 | `erro_ortografia_pt` | Erros de ortografia em português | 4 |
 | `erro_ortografia_en` | Erros de ortografia em inglês | 2 |
-| `fora_de_contexto` | Tema ausente do corpus | 13 |
+| `fora_de_contexto` | Tema ausente do corpus | 22 |
 | `emoji` | Contém emojis | 8 |
 | `giria` | Linguagem informal/gírias | 6 |
 | `sem_pontuacao` | Pontuação ausente ou excessiva | 12 |
 | `afirmacao` | Enunciada como afirmação | 6 |
 | `sarcasmo` | Ironia/sarcasmo | 6 |
 | `correta` | Ortografia e pontuação corretas | 12 |
-| `contexto` | Conteúdo presente no corpus | 47 |
+| `contexto` | Conteúdo presente no corpus | 38 |
 
 ## Distribuição de expectativa
 
-- `expected: "context"` — **47 perguntas** (deve responder com base no corpus)
-- `expected: "out_of_context"` — **13 perguntas** (deve sinalizar evidência insuficiente em vez de inventar)
+- `expected: "context"` — **38 perguntas** (deve responder com base no corpus)
+- `expected: "out_of_context"` — **22 perguntas** (deve sinalizar evidência insuficiente em vez de inventar)
 
 ## Como usar
 
@@ -112,7 +112,7 @@ python dataset/gerar_resultados_base.py
 | `Fontes obtidas` | Fontes recuperadas (arquivo + página/seção/tempo) |
 | `Fonte correta recuperada` | `sim` / `nao` / `parcial` — a fonte certa apareceu? |
 | `Resposta adequada` | `sim` / `nao` / `parcial` — a resposta responde a pergunta? |
-| `Sinalizou insuficiência` | `sim` / `nao` / `n/a` — sinalizou evidência insuficiente (esperado nas 13 fora de contexto) |
+| `Sinalizou insuficiência` | `sim` / `nao` / `n/a` — sinalizou evidência insuficiente (esperado nas 22 fora de contexto) |
 | `Qualidade geral (1–5)` | Nota 1–5 (relevância, fidelidade ao material, clareza) |
 | `Observações` | Notas livres (ex.: ruído que atrapalhou, fonte errada recuperada) |
 
@@ -120,7 +120,7 @@ python dataset/gerar_resultados_base.py
 
 - **Fidelidade**: `resposta_adequada = sim` + `fonte_correta_recuperada = sim`
   indicam resposta sustentada pelo material (princípio do RAG).
-- **Controle de alucinação**: nas 13 perguntas `out_of_context`,
+- **Controle de alucinação**: nas 22 perguntas `out_of_context`,
   `sinalizou_insuficiencia = sim` é o comportamento correto — qualquer resposta
   inventada deve ser marcada como `nao` e discutida no trabalho.
 - **Robustez linguística**: compare `fonte_correta_recuperada` entre as
