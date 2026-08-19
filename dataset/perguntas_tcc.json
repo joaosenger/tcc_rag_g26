@@ -261,9 +261,9 @@
       "group_name": "Erros de ortografia (português)",
       "question": "oq é rag e como ele funciona?",
       "language": "pt",
-      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Ruído ortográfico em pergunta sobre o próprio sistema."
+      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Ruído ortográfico em pergunta sobre tema ausente do corpus (RAG não é conteúdo do curso)."
     },
     {
       "id": "G05-Q02",
@@ -301,9 +301,9 @@
       "group_name": "Erros de ortografia (português)",
       "question": "what is rag and how dos it work?",
       "language": "en",
-      "categories": ["erro_ortografia_en", "ingles", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Erros de ortografia em inglês (dos instead of does)."
+      "categories": ["erro_ortografia_en", "ingles", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Erros de ortografia em inglês (dos instead of does); tema ausente do corpus (RAG)."
     },
     {
       "id": "G05-Q06",
@@ -321,9 +321,9 @@
       "group_name": "Erros de pontuação",
       "question": "O que é RAG,,, como funciona???",
       "language": "pt",
-      "categories": ["sem_pontuacao", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Pontuação excessiva e aleatória."
+      "categories": ["sem_pontuacao", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Pontuação excessiva e aleatória; tema ausente do corpus (RAG)."
     },
     {
       "id": "G06-Q02",
@@ -381,9 +381,9 @@
       "group_name": "Emojis",
       "question": "O que é RAG? 🤖📚",
       "language": "pt",
-      "categories": ["emoji", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Emojis como ruído não semântico."
+      "categories": ["emoji", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Emojis como ruído não semântico; tema ausente do corpus (RAG)."
     },
     {
       "id": "G07-Q02",
@@ -411,9 +411,9 @@
       "group_name": "Emojis",
       "question": "Como funciona a ingestão do corpus no projeto? 🚀",
       "language": "pt",
-      "categories": ["emoji", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Emoji de foguete como ruído."
+      "categories": ["emoji", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Emoji de foguete como ruído; 'ingestão' só existe como Dependency Injection (aula 06) — risco de recuperar chunk errado."
     },
     {
       "id": "G07-Q05",
@@ -441,9 +441,9 @@
       "group_name": "Afirmações",
       "question": "RAG utiliza apenas informações armazenadas no modelo.",
       "language": "pt",
-      "categories": ["afirmacao", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Afirmação incorreta; espera-se que o sistema corrija com base no corpus."
+      "categories": ["afirmacao", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Afirmação sobre tema ausente do corpus; espera-se sinalização de insuficiência."
     },
     {
       "id": "G08-Q02",
@@ -501,9 +501,9 @@
       "group_name": "Gírias",
       "question": "Me explica aí, de boa, como esse RAG funciona?",
       "language": "pt",
-      "categories": ["giria", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Linguagem informal."
+      "categories": ["giria", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Linguagem informal; tema ausente do corpus (RAG)."
     },
     {
       "id": "G09-Q02",
@@ -561,9 +561,9 @@
       "group_name": "Sarcasmo/ironia",
       "question": "Então quer dizer que RAG magicamente sabe tudo, né? 🙄",
       "language": "pt",
-      "categories": ["sarcasmo", "emoji", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Ironia sobre as limitações do RAG; espera-se resposta com evidência."
+      "categories": ["sarcasmo", "emoji", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Ironia sobre tema ausente do corpus; espera-se sinalização de insuficiência."
     },
     {
       "id": "G10-Q02",
@@ -611,9 +611,9 @@
       "group_name": "Sarcasmo/ironia",
       "question": "Oh sure, RAG knows absolutely everything, right? 🙄",
       "language": "en",
-      "categories": ["sarcasmo", "emoji", "ingles", "curta", "contexto"],
-      "expected": "context",
-      "notes": "Ironia em inglês."
+      "categories": ["sarcasmo", "emoji", "ingles", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Ironia em inglês; tema ausente do corpus (RAG)."
     }
   ]
 }
