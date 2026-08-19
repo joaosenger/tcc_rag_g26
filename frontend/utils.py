@@ -36,6 +36,27 @@ def list_corpus_pdfs(base_dir: Path) -> list[str]:
     return sorted(p.name for p in base_dir.glob("*.pdf") if p.is_file())
 
 
+PDF_EXTERNAL_URLS = {
+    "Introdução ao Python.pdf": "https://files.cercomp.ufg.br/weby/up/688/o/M2_IP_24-09-24.pdf",
+    "Python para Processamento de Dados.pdf": (
+        "https://portaldelivros.ufg.br/index.php/cegrafufg/catalog/view/642/614/2539"
+    ),
+}
+
+
+def resolve_pdf_url(api_url: str, filename: str) -> str:
+    """Retorna a URL de um PDF: externa (UFG) se mapeada, senão o endpoint local da API.
+
+    Args:
+        api_url: URL base da API (ex.: `http://localhost:8000`).
+        filename: nome do arquivo PDF.
+
+    Returns:
+        URL externa oficial ou a URL do endpoint local que serve o PDF.
+    """
+    return PDF_EXTERNAL_URLS.get(filename, build_pdf_url(api_url, filename))
+
+
 def build_pdf_url(api_url: str, filename: str) -> str:
     """Monta a URL do endpoint que serve um PDF do corpus.
 

@@ -6,6 +6,27 @@ Funções puras e testáveis, sem dependência do Streamlit.
 from __future__ import annotations
 
 import hmac
+from typing import Any
+
+
+def extract_credentials(section: Any) -> tuple[str, str]:
+    """Extrai (usuário, senha) de uma seção de credenciais.
+
+    O `st.secrets` do Streamlit retorna um AttrDict para a seção
+    `[login]` do secrets.toml — esta função normaliza qualquer formato:
+    dict/AttrDict com chaves `login`/`password`, string simples ou None.
+
+    Args:
+        section: valor retornado por `st.secrets.get("login")`.
+
+    Returns:
+        Tupla (usuário, senha).
+    """
+    if section is None:
+        return "", ""
+    if hasattr(section, "get"):
+        return section.get("login", ""), section.get("password", "")
+    return str(section), ""
 
 
 def check_credentials(

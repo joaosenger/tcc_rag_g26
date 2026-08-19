@@ -15,12 +15,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 import requests
 import streamlit as st
 
-from frontend.auth import check_credentials
+from frontend.auth import check_credentials, extract_credentials
 from frontend.utils import (
-    build_pdf_url,
     format_sources_display,
     is_insufficient_evidence,
     list_corpus_pdfs,
+    resolve_pdf_url,
 )
 
 API_URL = os.getenv("API_URL", "http://localhost:8000")
@@ -61,8 +61,9 @@ def render_login() -> None:
             submitted = st.form_submit_button("Entrar", use_container_width=True)
 
     if submitted:
-        expected_username = st.secrets.get("login", "")
-        expected_password = st.secrets.get("password", "")
+        expected_username, expected_password = extract_credentials(
+            st.secrets.get("login")
+        )
         if check_credentials(username, password, expected_username, expected_password):
             st.session_state.authenticated = True
             st.rerun()
@@ -87,7 +88,7 @@ def render_logout() -> None:
             st.markdown("**Documentos PDF**")
             for pdf in pdfs:
                 st.markdown(
-                    f'<a href="{build_pdf_url(API_URL, pdf)}" target="_blank">📄 {pdf}</a>',
+                    f'<a href="{resolve_pdf_url(API_URL, pdf)}" target="_blank">📄 {pdf}</a>',
                     unsafe_allow_html=True,
                 )
 
