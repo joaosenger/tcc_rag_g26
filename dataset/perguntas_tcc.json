@@ -1,0 +1,619 @@
+{
+  "meta": {
+    "titulo": "Dataset de avaliação da RAG — TCC G26",
+    "descricao": "60 perguntas para avaliar recuperação, robustez a ruído linguístico e controle de alucinação do assistente RAG sobre o material do curso (FastAPI do zero, Introdução ao Python e Python para Processamento de Dados).",
+    "grupos": 10,
+    "total_perguntas": 60,
+    "categorias": [
+      "direta", "curta", "longa", "ingles", "erro_ortografia_pt",
+      "erro_ortografia_en", "fora_de_contexto", "emoji", "giria",
+      "sem_pontuacao", "afirmacao", "sarcasmo", "correta", "contexto"
+    ],
+    "expectativa": {
+      "context": "A pergunta deve ser respondida com base no corpus (recuperação correta esperada).",
+      "out_of_context": "O sistema deve sinalizar evidência insuficiente em vez de inventar a resposta."
+    }
+  },
+  "questions": [
+    {
+      "id": "G01-Q01",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "O que é o pipx e para que serve?",
+      "language": "pt",
+      "categories": ["direta", "curta", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Conteúdo da aula 01 (ambiente de desenvolvimento)."
+    },
+    {
+      "id": "G01-Q02",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "Qual editor de texto o professor usa durante o curso?",
+      "language": "pt",
+      "categories": ["direta", "curta", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 01: GNU/Emacs."
+    },
+    {
+      "id": "G01-Q03",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "O que significa LAN?",
+      "language": "pt",
+      "categories": ["direta", "curta", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 02: Local Area Network (rede local)."
+    },
+    {
+      "id": "G01-Q04",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "What is FastAPI?",
+      "language": "en",
+      "categories": ["direta", "curta", "ingles", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Pergunta em inglês, conteúdo presente no corpus."
+    },
+    {
+      "id": "G01-Q05",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "Quais os tipos de dados em Python?",
+      "language": "pt",
+      "categories": ["direta", "curta", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Conteúdo do PDF Introdução ao Python."
+    },
+    {
+      "id": "G01-Q06",
+      "group": 1,
+      "group_name": "Perguntas diretas",
+      "question": "O que é um endpoint?",
+      "language": "pt",
+      "categories": ["direta", "curta", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 02 (APIs e endpoints)."
+    },
+    {
+      "id": "G02-Q01",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "Considerando a aula de introdução ao desenvolvimento web, explique como funciona o modelo cliente-servidor e qual o papel do FastAPI nesse modelo.",
+      "language": "pt",
+      "categories": ["longa", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 02: modelo cliente-servidor e web."
+    },
+    {
+      "id": "G02-Q02",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "Na aula sobre autenticação, o professor explica o funcionamento do JWT. Considerando isso, descreva o que são as claims e qual o papel delas na geração de tokens.",
+      "language": "pt",
+      "categories": ["longa", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 06: JWT e claims."
+    },
+    {
+      "id": "G02-Q03",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "Levando em conta o material sobre o ambiente de desenvolvimento, por que o professor recomenda o uso do pipx em vez do pip para instalar ferramentas globais como o Poetry e o Ruff?",
+      "language": "pt",
+      "categories": ["longa", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 01: isolamento em ambiente virtual."
+    },
+    {
+      "id": "G02-Q04",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "Considering the course material, explain how the HTTP request model works, including the role of verbs and response codes in a REST API.",
+      "language": "en",
+      "categories": ["longa", "ingles", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 02: HTTP, verbos e códigos de resposta."
+    },
+    {
+      "id": "G02-Q05",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "No contexto da aula sobre containerização, qual o objetivo de colocar a aplicação em um container Docker e qual banco de dados é introduzido nessa etapa do curso?",
+      "language": "pt",
+      "categories": ["longa", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 11: containers e PostgreSQL."
+    },
+    {
+      "id": "G02-Q06",
+      "group": 2,
+      "group_name": "Longas e contextualizadas",
+      "question": "Considerando o que foi visto sobre testes no curso, explique as três fases de um teste segundo o TDD — arrange, act e assert — e qual a importância de cada uma delas.",
+      "language": "pt",
+      "categories": ["longa", "correta", "contexto"],
+      "expected": "context",
+      "notes": "Aula 01: fases do teste no TDD."
+    },
+    {
+      "id": "G03-Q01",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "Considerando a evolução dos processadores e a Lei de Moore, como a densidade de transistores impacta o design de novos chips?",
+      "language": "pt",
+      "categories": ["longa", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus; espera-se sinalização de insuficiência."
+    },
+    {
+      "id": "G03-Q02",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "Levando em conta o cenário econômico brasileiro recente, quais fatores influenciam a inflação de alimentos?",
+      "language": "pt",
+      "categories": ["longa", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus."
+    },
+    {
+      "id": "G03-Q03",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "Considerando os estudos sobre a Guerra Fria, qual foi o papel do muro de Berlim na geopolítica europeia?",
+      "language": "pt",
+      "categories": ["longa", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus."
+    },
+    {
+      "id": "G03-Q04",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "Taking into account the history of space exploration, what was the main contribution of the Apollo missions to scientific knowledge?",
+      "language": "en",
+      "categories": ["longa", "ingles", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus; em inglês."
+    },
+    {
+      "id": "G03-Q05",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "No contexto da agricultura orgânica, quais são os principais desafios para a certificação de pequenos produtores no Brasil?",
+      "language": "pt",
+      "categories": ["longa", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus."
+    },
+    {
+      "id": "G03-Q06",
+      "group": 3,
+      "group_name": "Longas sem relação com o material",
+      "question": "Considerando as teorias de aprendizagem de Piaget e Vygotsky, como elas diferem na abordagem da construção do conhecimento?",
+      "language": "pt",
+      "categories": ["longa", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Tema ausente do corpus."
+    },
+    {
+      "id": "G04-Q01",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "Quem descobriu o Brasil?",
+      "language": "pt",
+      "categories": ["direta", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação: não está no corpus."
+    },
+    {
+      "id": "G04-Q02",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "Qual a capital da Austrália?",
+      "language": "pt",
+      "categories": ["direta", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação."
+    },
+    {
+      "id": "G04-Q03",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "O que é a teoria da relatividade?",
+      "language": "pt",
+      "categories": ["direta", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação."
+    },
+    {
+      "id": "G04-Q04",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "Who invented the telephone?",
+      "language": "en",
+      "categories": ["direta", "curta", "ingles", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação; em inglês."
+    },
+    {
+      "id": "G04-Q05",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "Quantos planetas existem no sistema solar?",
+      "language": "pt",
+      "categories": ["direta", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação."
+    },
+    {
+      "id": "G04-Q06",
+      "group": 4,
+      "group_name": "Diretas sem relação com o material",
+      "question": "Qual o maior oceano do planeta?",
+      "language": "pt",
+      "categories": ["direta", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Controle de alucinação."
+    },
+    {
+      "id": "G05-Q01",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "oq é rag e como ele funciona?",
+      "language": "pt",
+      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ruído ortográfico em pergunta sobre o próprio sistema."
+    },
+    {
+      "id": "G05-Q02",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "qual editar o profeçor usa no curço?",
+      "language": "pt",
+      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Erros em palavras-chave (editor/professor/curso)."
+    },
+    {
+      "id": "G05-Q03",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "o que é pipx e pra que serve, é melhor que o pip?",
+      "language": "pt",
+      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Comparação pip vs pipx, conteúdo da aula 01."
+    },
+    {
+      "id": "G05-Q04",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "como eu instalo o fastapi no meu computado?",
+      "language": "pt",
+      "categories": ["erro_ortografia_pt", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Erro no final da palavra (computador)."
+    },
+    {
+      "id": "G05-Q05",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "what is rag and how dos it work?",
+      "language": "en",
+      "categories": ["erro_ortografia_en", "ingles", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Erros de ortografia em inglês (dos instead of does)."
+    },
+    {
+      "id": "G05-Q06",
+      "group": 5,
+      "group_name": "Erros de ortografia (português)",
+      "question": "wich editor does the proffesor use?",
+      "language": "en",
+      "categories": ["erro_ortografia_en", "ingles", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Erros de ortografia em inglês (wich/proffesor)."
+    },
+    {
+      "id": "G06-Q01",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "O que é RAG,,, como funciona???",
+      "language": "pt",
+      "categories": ["sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Pontuação excessiva e aleatória."
+    },
+    {
+      "id": "G06-Q02",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "qual o editor que o professor usa... ou melhor, qual terminal ele usa???",
+      "language": "pt",
+      "categories": ["sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Correção no meio da frase e reticências."
+    },
+    {
+      "id": "G06-Q03",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "O que é um endpoint, e o que é uma API, será que são a mesma coisa??",
+      "language": "pt",
+      "categories": ["sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Pergunta composta sem pontuação correta."
+    },
+    {
+      "id": "G06-Q04",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "me fala o que é LAN!!!",
+      "language": "pt",
+      "categories": ["sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Exclamações excessivas."
+    },
+    {
+      "id": "G06-Q05",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "o que é JWT, como funciona, e onde é usado????",
+      "language": "pt",
+      "categories": ["sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Interrogações excessivas."
+    },
+    {
+      "id": "G06-Q06",
+      "group": 6,
+      "group_name": "Erros de pontuação",
+      "question": "what is lan how does it work",
+      "language": "en",
+      "categories": ["sem_pontuacao", "ingles", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Sem pontuação, em inglês."
+    },
+    {
+      "id": "G07-Q01",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "O que é RAG? 🤖📚",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emojis como ruído não semântico."
+    },
+    {
+      "id": "G07-Q02",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "Qual editor o professor usa? 🖥️",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emoji no final da pergunta."
+    },
+    {
+      "id": "G07-Q03",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "O que é um JWT? 🔐",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emoji temático (cadeado)."
+    },
+    {
+      "id": "G07-Q04",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "Como funciona a ingestão do corpus no projeto? 🚀",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emoji de foguete como ruído."
+    },
+    {
+      "id": "G07-Q05",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "O que significa LAN? 🌐",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emoji de globo."
+    },
+    {
+      "id": "G07-Q06",
+      "group": 7,
+      "group_name": "Emojis",
+      "question": "O que é o FastAPI? ⚡",
+      "language": "pt",
+      "categories": ["emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Emoji de raio (relâmpago)."
+    },
+    {
+      "id": "G08-Q01",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "RAG utiliza apenas informações armazenadas no modelo.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação incorreta; espera-se que o sistema corrija com base no corpus."
+    },
+    {
+      "id": "G08-Q02",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "O pipx instala pacotes sem criar um ambiente virtual.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação falsa (o pipx isola em ambiente virtual)."
+    },
+    {
+      "id": "G08-Q03",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "O GNU Emacs é o editor de texto usado pelo professor no curso.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação verdadeira, presente no corpus."
+    },
+    {
+      "id": "G08-Q04",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "JWT é um formato de token usado para autenticação.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação verdadeira sobre o JWT."
+    },
+    {
+      "id": "G08-Q05",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "O FastAPI gera documentação automática com o Swagger UI.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação verdadeira (OpenAPI/Swagger)."
+    },
+    {
+      "id": "G08-Q06",
+      "group": 8,
+      "group_name": "Afirmações",
+      "question": "O PostgreSQL é o banco de dados introduzido na aula de containerização.",
+      "language": "pt",
+      "categories": ["afirmacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Afirmação verdadeira (aula 11)."
+    },
+    {
+      "id": "G09-Q01",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "Me explica aí, de boa, como esse RAG funciona?",
+      "language": "pt",
+      "categories": ["giria", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Linguagem informal."
+    },
+    {
+      "id": "G09-Q02",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "Qual editor o prof usa, manda a braba?",
+      "language": "pt",
+      "categories": ["giria", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Gíria 'manda a braba' (diz logo)."
+    },
+    {
+      "id": "G09-Q03",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "O que é LAN, tô boiando nesse assunto",
+      "language": "pt",
+      "categories": ["giria", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Gíria 'tô boiando' (sem entender)."
+    },
+    {
+      "id": "G09-Q04",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "Me fala a real: o pipx é melhor que o pip?",
+      "language": "pt",
+      "categories": ["giria", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Gíria 'me fala a real'."
+    },
+    {
+      "id": "G09-Q05",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "Como que eu rodo esse trem de FastAPI aí?",
+      "language": "pt",
+      "categories": ["giria", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Gíria regional 'trem' (coisa)."
+    },
+    {
+      "id": "G09-Q06",
+      "group": 9,
+      "group_name": "Gírias",
+      "question": "O que é esse tal de endpoint, tô perdido",
+      "language": "pt",
+      "categories": ["giria", "sem_pontuacao", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Gíria 'tal de' + informalidade."
+    },
+    {
+      "id": "G10-Q01",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Então quer dizer que RAG magicamente sabe tudo, né? 🙄",
+      "language": "pt",
+      "categories": ["sarcasmo", "emoji", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ironia sobre as limitações do RAG; espera-se resposta com evidência."
+    },
+    {
+      "id": "G10-Q02",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Ah claro, o computador só funciona se eu rezar pro terminal, né?",
+      "language": "pt",
+      "categories": ["sarcasmo", "curta", "fora_de_contexto"],
+      "expected": "out_of_context",
+      "notes": "Ironia genérica sem relação direta com o material."
+    },
+    {
+      "id": "G10-Q03",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Claro, JWT é só colocar a senha no código e pronto, não é mesmo?",
+      "language": "pt",
+      "categories": ["sarcasmo", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ironia sobre má prática; espera-se correção com base no material."
+    },
+    {
+      "id": "G10-Q04",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Deve ser por isso que todo mundo usa pip, quem precisa de ambiente virtual, né?",
+      "language": "pt",
+      "categories": ["sarcasmo", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ironia sobre pip vs pipx/ambientes virtuais."
+    },
+    {
+      "id": "G10-Q05",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Óbvio que o professor usa o bloco de notas, todo mundo sabe disso, né?",
+      "language": "pt",
+      "categories": ["sarcasmo", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ironia; a resposta correta é GNU/Emacs."
+    },
+    {
+      "id": "G10-Q06",
+      "group": 10,
+      "group_name": "Sarcasmo/ironia",
+      "question": "Oh sure, RAG knows absolutely everything, right? 🙄",
+      "language": "en",
+      "categories": ["sarcasmo", "emoji", "ingles", "curta", "contexto"],
+      "expected": "context",
+      "notes": "Ironia em inglês."
+    }
+  ]
+}
