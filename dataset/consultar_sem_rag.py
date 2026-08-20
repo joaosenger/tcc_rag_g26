@@ -6,16 +6,14 @@ modelo generativo, sem o contexto do corpus. Usa o MESMO modelo do pipeline
 com RAG (app.llm.bedrock.generate) para manter os parâmetros constantes.
 
 Uso:
-    python dataset/consultar_sem_rag.py run     # executa as consultas (15 s entre requisições)
-    python dataset/consultar_sem_rag.py fill    # popula 'answer' em perguntas_sem_rag.json
+    python dataset/consultar_sem_rag.py run   # executa as consultas (3 s entre requisições)
 
 Requisitos:
     Credenciais AWS com acesso ao Bedrock no ambiente (env, ~/.aws ou IAM role).
     O modelo (us.deepseek.r1-v1:0) e a região devem estar habilitados na conta.
 
 Saídas:
-    dataset/resultados_sem_rag.json   - respostas do modelo sem RAG (incremental/retomável)
-    dataset/perguntas_sem_rag.json    - arquivo de base com os campos 'answer' preenchidos
+    dataset/respostas_sem_rag.json   - respostas do modelo sem RAG (incremental/retomável)
 """
 from __future__ import annotations
 
@@ -31,8 +29,8 @@ sys.path.insert(0, str(PROJETO_ROOT))
 from app.config import settings  # noqa: E402
 from app.llm.bedrock import generate  # noqa: E402
 
-PERGUNTAS_PATH = PROJETO_ROOT / "dataset" / "perguntas_sem_rag.json"
-RESULTADOS_PATH = PROJETO_ROOT / "dataset" / "resultados_sem_rag.json"
+PERGUNTAS_PATH = PROJETO_ROOT / "dataset" / "perguntas.json"
+RESULTADOS_PATH = PROJETO_ROOT / "dataset" / "respostas_sem_rag.json"
 
 INTERVALO_SEGUNDOS = 3
 
@@ -95,30 +93,11 @@ def run() -> None:
     print(f"Concluído: {ok} ok, {erro} erro, {len(dados['responses'])} total.")
 
 
-def fill() -> None:
-    dados = json.loads(RESULTADOS_PATH.read_text(encoding="utf-8"))
-    responses = dados["responses"]
-    base = json.loads(PERGUNTAS_PATH.read_text(encoding="utf-8"))
-    preenchidos = 0
-    for q in base["questions"]:
-        resp = responses.get(q["id"])
-        if resp and resp.get("status") == "ok":
-            q["answer"] = resp["answer"]
-            preenchidos += 1
-    PERGUNTAS_PATH.write_text(
-        json.dumps(base, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"respostas preenchidas em {PERGUNTAS_PATH.name}: {preenchidos}/{len(base['questions'])}")
-
-
 def main() -> None:
-    if len(sys.argv) != 2 or sys.argv[1] not in {"run", "fill"}:
+    if len(sys.argv) != 2 or sys.argv[1] != "run":
         print(__doc__)
         sys.exit(1)
-    if sys.argv[1] == "run":
-        run()
-    else:
-        fill()
+    run()
 
 
 if __name__ == "__main__":

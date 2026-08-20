@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Gera dataset/resultados_avaliacao.md a partir de dataset/perguntas_avaliacao.json."""
+"""Gera dataset/resultados_avaliacao.md a partir de dataset/perguntas.json."""
 from __future__ import annotations
 
 import json
@@ -11,7 +11,7 @@ CAMPO_EXPECTATIVA = "expected"
 
 
 def main() -> None:
-    dataset = json.loads((BASE_DIR / "perguntas_avaliacao.json").read_text(encoding="utf-8"))
+    dataset = json.loads((BASE_DIR / "perguntas.json").read_text(encoding="utf-8"))
     perguntas = dataset["questions"]
 
     linhas = [
