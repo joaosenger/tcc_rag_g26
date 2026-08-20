@@ -190,20 +190,16 @@ def _fonte_correta(q: dict, resp: dict) -> str:
     return "nao"
 
 
-def _formata_campo(campo: str, valor: str) -> list[str]:
-    """Formata um campo do markdown preservando a estrutura do texto.
+def _bloco_resposta(campo: str, valor: str) -> list[str]:
+    """Formata uma resposta em bloco de texto, fiel ao conteúdo original.
 
-    A primeira linha vai inline após o rótulo; as demais são recuadas em 2
-    espaços para manter o item de lista válido e renderizar o markdown interno
-    (títulos, listas, tabelas, blocos de código) corretamente.
+    Usa fence de 4 backticks para que a resposta possa conter cadeias internas
+    de 3 backticks (```bash, ```python etc.) sem fechar o bloco antes do fim.
     """
-    if not valor:
+    texto = valor.strip().rstrip()
+    if not texto:
         return [f"- **{campo}:**"]
-    linhas = valor.rstrip().splitlines()
-    out = [f"- **{campo}:** {linhas[0]}"]
-    for linha in linhas[1:]:
-        out.append(f"  {linha}" if linha.strip() else "")
-    return out
+    return [f"- **{campo}:**", "", "````text", texto, "````"]
 
 
 def fill() -> None:
@@ -251,47 +247,49 @@ def fill() -> None:
             linhas.append(f"**Expectativa:** `{q['expected']}`")
             linhas.append("")
 
-            campos: dict[str, str] = {
-                "Resposta obtida (RAG)": "",
-                "Análises": "",
-                "Resposta sem RAG": "",
-                "Fontes obtidas": "",
-                "Fonte correta recuperada": "",
-                "Resposta adequada": "",
-                "Sinalizou insuficiência": "",
-                "Qualidade geral (1–5)": "",
-                "Observações": "",
-            }
+            if _respondida(qid):
+                resp = responses[qid]
+                linhas.extend(_bloco_resposta("Resposta obtida (RAG)", (resp["answer"] or "")))
+                sem_rag_resp = sem_rag.get(qid)
+                if sem_rag_resp and sem_rag_resp.get("status") == "ok":
+                    linhas.extend(
+                        _bloco_resposta(
+                            "Resposta sem RAG", (sem_rag_resp.get("answer") or "")
+                        )
+                    )
+                else:
+                    linhas.append("- **Resposta sem RAG:** —")
+            else:
+                resp = responses.get(qid, {})
+                linhas.append(
+                    f"- **Resposta obtida (RAG):** "
+                    f"FALHA NA CONSULTA: {resp.get('error', 'não consultada')}"
+                )
+                linhas.append("- **Resposta sem RAG:** —")
+
+            linhas.append(f"### Análises {qid}")
 
             if _respondida(qid):
                 resp = responses[qid]
-                campos["Resposta obtida (RAG)"] = (resp["answer"] or "").strip()
-                sem_rag_resp = sem_rag.get(qid)
-                if sem_rag_resp and sem_rag_resp.get("status") == "ok":
-                    campos["Resposta sem RAG"] = (
-                        (sem_rag_resp.get("answer") or "").strip()
-                    )
-                else:
-                    campos["Resposta sem RAG"] = "—"
                 sources = resp.get("sources") or []
                 if sources:
-                    campos["Fontes obtidas"] = "\n".join(
-                        f"- {_formata_fonte(s)}" for s in sources
-                    )
+                    linhas.append("- **Fontes obtidas:**")
+                    for s in sources:
+                        linhas.append(f"  - {_formata_fonte(s)}")
                 else:
-                    campos["Fontes obtidas"] = "nenhuma"
-                campos["Fonte correta recuperada"] = _fonte_correta(q, resp)
+                    linhas.append("- **Fontes obtidas:** nenhuma")
+                linhas.append(f"- **Fonte correta recuperada:** {_fonte_correta(q, resp)}")
             else:
-                resp = responses.get(qid, {})
-                campos["Resposta obtida (RAG)"] = (
-                    f"FALHA NA CONSULTA: {resp.get('error', 'não consultada')}"
-                )
-                campos["Resposta sem RAG"] = "—"
-                campos["Fontes obtidas"] = "—"
-                campos["Fonte correta recuperada"] = "—"
+                linhas.append("- **Fontes obtidas:** —")
+                linhas.append("- **Fonte correta recuperada:** —")
 
-            for campo, valor in campos.items():
-                linhas.extend(_formata_campo(campo, valor))
+            for campo in (
+                "Resposta adequada",
+                "Sinalizou insuficiência",
+                "Qualidade geral (1–5)",
+                "Observações",
+            ):
+                linhas.append(f"- **{campo}:**")
             linhas.append("")
 
     SAIDA_PATH.write_text("\n".join(linhas), encoding="utf-8")
