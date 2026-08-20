@@ -28,6 +28,7 @@ Total de perguntas: **60**
   Após a instalação, o comando `pipx ensurepath` é necessário para adicionar os caminhos das ferramentas instaladas ao `PATH` do sistema, garantindo seu funcionamento adequado.  
 
   Fontes: [1] 01.md | seção: Configurando o ambiente de desenvolvimento > pipx; [3] aula-01.mp3 | tempo: 00:09:49 - 00:10:55; [4] aula-01.mp3 | tempo: 00:13:28 - 00:14:27.
+- **Análises:**
 - **Resposta sem RAG:** O **pipx** é uma ferramenta de gerenciamento de pacotes Python projetada para instalar e executar aplicativos de linha de comando (CLIs) em ambientes isolados. Sua principal finalidade é garantir que cada aplicativo Python instalado tenha suas próprias dependências, evitando conflitos entre pacotes e mantendo o ambiente global do sistema limpo.
 
   ---
@@ -117,6 +118,7 @@ Total de perguntas: **60**
   **Fontes:**  
   - [1] aula-01.mp3 | tempo: 00:04:35 - 00:05:34  
   - [2] README.md | seção: O que é FastAPI? > 🧰 Ferramentas necessárias para acompanhar o curso
+- **Análises:**
 - **Resposta sem RAG:** Infelizmente, não tenho acesso a informações específicas sobre qual editor de texto um professor ou curso específico utiliza. No entanto, posso listar alguns editores comumente usados em ambientes acadêmicos ou de programação:
 
   - **Visual Studio Code (VS Code)**: Popular por sua versatilidade, extensões e suporte a diversas linguagens.
@@ -149,6 +151,7 @@ Total de perguntas: **60**
 
   **Fontes:**  
   [1] aula-02.mp3 | tempo: 00:04:17 - 00:05:30
+- **Análises:**
 - **Resposta sem RAG:** LAN significa **Local Area Network** (Rede de Área Local, em português). É uma rede de computadores que conecta dispositivos em uma área geográfica limitada, como uma residência, escritório, escola ou prédio. A LAN permite que dispositivos como computadores, impressoras, servidores e outros compartilhem recursos (arquivos, internet, periféricos) e se comuniquem entre si de forma rápida e eficiente.
 
   ### Características principais:
@@ -195,6 +198,7 @@ Total de perguntas: **60**
   [1] README.md | seção: O que é FastAPI?  
   [2] aula-02.mp3 | tempo: 01:08:26 - 01:09:23 (explicação sobre APIs)  
   [3] 01.md | seção: Configurando o ambiente... > Primeira Execução (exemplo prático)
+- **Análises:**
 - **Resposta sem RAG:** FastAPI is a modern, high-performance web framework for building APIs with Python 3.6 and above. Here's a structured overview of its key features and characteristics:
 
   ### **Core Features**:
@@ -275,6 +279,7 @@ Total de perguntas: **60**
   Fontes:  
   [1] Introdução ao Python.pdf (p. 26) | seção: Tipagem de dados e casting  
   [4] Introdução ao Python.pdf (p. 47) | seção: 3.2.2 Estruturas básicas de dados
+- **Análises:**
 - **Resposta sem RAG:** Em Python, os tipos de dados são categorizados em **tipos embutidos (built-in)**. Os principais são:
 
   ### **1. Numéricos**  
@@ -355,6 +360,7 @@ Total de perguntas: **60**
   [1] 02.md | seção: Introdução ao desenvolvimento WEB > APIs > Endpoint  
   [3] 03.md | seção: Estruturando o projeto e criando rotas CRUD > Implementando endpoints  
   [4] aula-03.mp3 | tempo: 00:03:27 - 00:04:21
+- **Análises:**
 - **Resposta sem RAG:** Um **endpoint** é um ponto de acesso específico em uma API (Interface de Programação de Aplicações) ou serviço web que permite a comunicação entre sistemas. Ele funciona como um "endereço" único (geralmente uma URL) que recebe solicitações (como GET, POST, PUT, DELETE) e retorna respostas, possibilitando a interação com recursos ou funcionalidades de um servidor.
 
   ### Características principais:
@@ -408,6 +414,7 @@ Total de perguntas: **60**
   O FastAPI atua como o **servidor** nesse modelo. Ele é um framework para desenvolvimento de APIs web, responsável por receber requisições HTTP, processá-las (como operações CRUD ou autenticação) e enviar respostas estruturadas (geralmente em JSON). Quando a aplicação FastAPI é executada, ela sobe um servidor de aplicação (como o Uvicorn) que fica disponível para receber conexões de clientes, conforme demonstrado durante a configuração do ambiente e execução do código ([1] 02.md | seção: Introdução ao desenvolvimento WEB; [5] aula-02.mp3 | tempo: 00:13:57 - 00:14:59). 
 
   Essa dinâmica permite a criação de APIs eficientes e confiáveis, alinhada com práticas modernas de desenvolvimento web ([2] README.md | seção: O que é FastAPI? > Conclusão).
+- **Análises:**
 - **Resposta sem RAG:** O **modelo cliente-servidor** é uma arquitetura fundamental no desenvolvimento web, onde dois agentes interagem:  
   - **Cliente**: Dispositivo ou aplicação (como um navegador ou app móvel) que **solicita recursos** (páginas web, dados, imagens, etc.).  
   - **Servidor**: Sistema remoto (como um computador ou serviço em nuvem) que **processa solicitações**, executa lógica de negócio, acessa bancos de dados e **envia respostas** ao cliente.  
@@ -492,6 +499,7 @@ Total de perguntas: **60**
   Outras claims podem ser adicionadas conforme necessidades específicas, seguindo padrões definidos (como a lista oficial da IANA mencionada em [1]).  
 
   Fontes: [1] 06.md | seção: Autenticação e Autorização com JWT > O que é um JWT > Claims; [5] aula-06.mp3 | tempo: 00:38:43 - 00:39:29.
+- **Análises:**
 - **Resposta sem RAG:** As **claims** em um **JWT (JSON Web Token)** são declarações ou afirmações sobre uma entidade (geralmente o usuário) e metadados adicionais que definem as regras de funcionamento do token. Elas são representadas como pares de **chave-valor** no payload (carga útil) do token e desempenham um papel central na autenticação e autorização. Vamos detalhar seu conceito e função:
 
   ---
@@ -577,6 +585,7 @@ Total de perguntas: **60**
   - [2] 01.md | seção: Configurando o ambiente de desenvolvimento > pipx  
   - [1] aula-01.mp3 | tempo: 00:20:38 - 00:21:32  
   - [5] aula-01.mp3 | tempo: 00:10:56 - 00:11:43
+- **Análises:**
 - **Resposta sem RAG:** O professor recomenda o uso do **pipx** em vez do **pip** para instalar ferramentas globais como o Poetry e o Ruff pelos seguintes motivos:
 
   ### 1. **Isolamento de Dependências**  
@@ -657,6 +666,7 @@ Total de perguntas: **60**
   - Exemplo prático: A rota `@app.get('/')` no FastAPI retorna `{'message': 'Olá Mundo!'}` com status **200 OK** implícito ([1], [2]).
 
   Fontes: [1] (verbos), [2] (códigos), [3] (mensagens), [5] (CRUD/HTTP).
+- **Análises:**
 - **Resposta sem RAG:** The HTTP request model in REST APIs operates through a client-server interaction where clients use specific HTTP methods (verbs) to perform operations on resources identified by URIs. Here's a structured explanation:
 
   ### **HTTP Request Model in REST APIs**
@@ -737,6 +747,7 @@ Total de perguntas: **60**
   [1] 11.md | seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL  
   [4] 11.md | seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL > Containers e nossa aplicação  
   [5] aula-11.mp3 | tempo: 00:00:59 - 00:01:55
+- **Análises:**
 - **Resposta sem RAG:** No contexto da aulas sobre containerização, o objetivo de colocar uma aplicação em um **container Docker** é:  
   1. **Isolar o ambiente** da aplicação, garantindo que ela execute de forma consistente em qualquer sistema (desenvolvimento, testes, produção).  
   2. **Simplificar a implantação**, evitando conflitos de dependências e configurações entre diferentes ambientes.  
@@ -782,6 +793,7 @@ Total de perguntas: **60**
   [1] 01.md | seção: parte da mensagem foi omitida > Estrutura de um teste  
   [2] aula-01.mp3 | tempo: 01:55:36 - 01:56:57  
   [5] aula-01.mp3 | tempo: 01:52:22 - 01:53:25
+- **Análises:**
 - **Resposta sem RAG:** As três fases de um teste no **TDD (Test-Driven Development)** — **Arrange**, **Act** e **Assert** — são fundamentais para garantir que os testes sejam claros, estruturados e eficazes. Cada uma desempenha um papel específico no processo de validação do código, contribuindo para a qualidade e a confiabilidade do software. Abaixo está a explicação detalhada de cada fase e sua importância:
 
   ---
@@ -874,6 +886,7 @@ Total de perguntas: **60**
   Fontes citadas no contexto:  
   [1] Introdução ao Python.pdf (p. 47) | seção: Desvantagens  
   [4] aula-08.mp3 | tempo: 00:44:00 - 00:45:09
+- **Análises:**
 - **Resposta sem RAG:** A evolução da densidade de transistores, impulsionada pela Lei de Moore, impacta profundamente o design de novos chips, introduzindo desafios e oportunidades em múltiplas dimensões:
 
   1. **Desafios Térmicos e de Energia**:
@@ -931,6 +944,7 @@ Total de perguntas: **60**
   [1], [3], [5] Introdução ao Python.pdf (p. 78, 80) | seção: 4.2.5 Estrutura try-except  
   [2] Introdução ao Python.pdf (p. 59) | seção: Adicionando novos pares chave-valor  
   [4] Introdução ao Python.pdf (p. 68) | seção: 4.1.3 Aplicações das Estruturas de Controle de Fluxo
+- **Análises:**
 - **Resposta sem RAG:** A inflação de alimentos no Brasil é influenciada por uma combinação de fatores estruturais, conjunturais e externos. No cenário recente, destacam-se os seguintes elementos:
 
   ### 1. **Custos de Produção e Insumos Agrícolas**  
@@ -990,6 +1004,7 @@ Total de perguntas: **60**
 **Expectativa:** `out_of_context`
 
 - **Resposta obtida (RAG):** A evidência disponível nos documentos fornecidos é insuficiente para responder à pergunta sobre o papel do Muro de Berlim na geopolítica europeia durante a Guerra Fria. Os contextos recuperados referem-se exclusivamente a materiais didáticos de Python, abordando tópicos técnicos e encerramentos de unidades (fontes [1], [2], [3], [4], [5]). Nenhum dos documentos menciona eventos históricos, geopolítica ou a Guerra Fria.
+- **Análises:**
 - **Resposta sem RAG:** O Muro de Berlim, construído em 1961 pela Alemanha Oriental com apoio soviético, desempenhou um papel central na geopolítica europeia durante a Guerra Fria, com os seguintes aspectos-chave:
 
   1. **Barreira Física e Ideológica**: 
@@ -1034,6 +1049,7 @@ Total de perguntas: **60**
   [1] Introdução ao Python.pdf (p. 14)  
   [3] 04.md  
   [5] 11.md
+- **Análises:**
 - **Resposta sem RAG:** The Apollo missions, conducted by NASA between 1961 and 1972, made profound contributions to scientific knowledge, fundamentally transforming our understanding of the Moon, Earth, and the solar system. Their primary scientific contributions include:
 
   1. **Lunar Sample Analysis**: 
@@ -1079,6 +1095,7 @@ Total de perguntas: **60**
   [3] aula-14.mp3 | tempo: 00:18:27 - 00:19:17  
   [4] aula-13.mp3 | tempo: 00:10:53 - 00:11:39  
   [5] Introdução ao Python.pdf (p. 16) | seção: 1.3 Ferramentas e Ambientes de Desenvolvimento com Python
+- **Análises:**
 - **Resposta sem RAG:** Os principais desafios para a certificação de pequenos produtores orgânicos no Brasil são multifacetados, refletindo questões econômicas, técnicas, sociais e estruturais. Abaixo, destaco os pontos mais relevantes:
 
   1. **Custos Financeiros Elevados**:  
@@ -1143,6 +1160,7 @@ Total de perguntas: **60**
   [3] Introdução ao Python.pdf (p. 8) | seção: Sumário  
   [4] README.md | seção: O que é FastAPI? > Pré-requisitos  
   [5] aula-14.mp3 | tempo: 00:56:18 - 00:57:45
+- **Análises:**
 - **Resposta sem RAG:** As teorias de aprendizagem de Jean Piaget e Lev Vygotsky oferecem perspectivas distintas sobre a construção do conhecimento, destacando-se principalmente nas seguintes diferenças:
 
   ### 1. **Foco na Construção do Conhecimento:**
@@ -1222,6 +1240,7 @@ Total de perguntas: **60**
   Fontes:  
   [1] Python para Processamento de Dados.pdf (p. 78) | seção: Operações Avançadas e Análise Exploratória de Dados  
   [3] Python para Processamento de Dados.pdf (p. 120) | seção: Dicionário de Dados do Dataset Titanic
+- **Análises:**
 - **Resposta sem RAG:** O Brasil foi oficialmente descoberto pelos europeus em 22 de abril de 1500, quando a frota comandada pelo navegador português **Pedro Álvares Cabral** chegou ao litoral da Bahia, no local hoje conhecido como Porto Seguro. Esse evento marca o reconhecimento europeu do território, que foi inicialmente chamado de "Ilha de Vera Cruz" e depois "Terra de Santa Cruz".
 
   ### Contexto e nuances históricas:
@@ -1259,6 +1278,7 @@ Total de perguntas: **60**
   Fontes:  
   [1] Python para Processamento de Dados.pdf (p. 80) | seção: Tabelas dinâmicas ou pivô  
   [5] Introdução ao Python.pdf (p. 59) | seção: Adicionando novos pares chave-valor
+- **Análises:**
 - **Resposta sem RAG:** A capital da Austrália é **Canberra**. 
 
   Embora Sydney e Melbourne sejam cidades mais conhecidas internacionalmente, Canberra foi escolhida como capital em 1908 para resolver a rivalidade entre as duas. É uma cidade planejada, localizada no Território da Capital Australiana (ACT), e abriga instituições governamentais importantes, como o Parlamento e a Suprema Corte. 🦘🇦🇺
@@ -1280,6 +1300,7 @@ Total de perguntas: **60**
 **Expectativa:** `out_of_context`
 
 - **Resposta obtida (RAG):** A evidência disponível nos documentos fornecidos é insuficiente para responder à pergunta sobre a teoria da relatividade. O contexto recuperado aborda apenas operadores relacionais em Python (*==, !=, >, <, >=, <=*), lógica booleana e técnicas de processamento de dados, como cálculos de correlação (documentos [1], [2], [3], [4], [5]). Não há menção a conceitos de física ou teoria da relatividade nas fontes citadas.
+- **Análises:**
 - **Resposta sem RAG:** A **Teoria da Relatividade** é um conjunto de ideias desenvolvidas por Albert Einstein que revolucionou nossa compreensão do espaço, tempo, gravidade e universo. Ela se divide em duas partes principais:
 
   ---
@@ -1340,6 +1361,7 @@ Total de perguntas: **60**
   - [3] Introdução ao Python.pdf (p. 58) | seção: Criar um dicionário com chaves e valores do tipo string  
   - [4] aula-02.mp3 | tempo: 00:31:18 - 00:32:20  
   - [5] Introdução ao Python.pdf (p. 58) | seção: Criar um dicionário vazio
+- **Análises:**
 - **Resposta sem RAG:** The invention of the telephone is primarily credited to **Alexander Graham Bell**, who received the first U.S. patent for the device on **March 7, 1876**. His famous first successful transmission of intelligible speech occurred on **March 10, 1876**, when he summoned his assistant, Thomas Watson, with the words, "Mr. Watson, come here, I want to see you."
 
   However, the history involves notable controversies and contributions from others:  
@@ -1373,6 +1395,7 @@ Total de perguntas: **60**
   [3] Python para Processamento de Dados.pdf (p. 11) | seção: Lista de Códigos  
   [4] Python para Processamento de Dados.pdf (p. 108) | seção: # Cri ando um gráfi co de pi zza com a Di st ri bui ção das Espéci es de Í ri s  
   [5] Introdução ao Python.pdf (p. 23) | seção: Indentação
+- **Análises:**
 - **Resposta sem RAG:** No sistema solar, existem **8 planetas** oficialmente reconhecidos pela União Astronômica Internacional (IAU). São eles, em ordem de proximidade ao Sol:
 
   1. **Mercúrio**  
@@ -1414,6 +1437,7 @@ Total de perguntas: **60**
   [3] Introdução ao Python.pdf (p. 98) | seção: Escrever em um arquivo  
   [4] Python para Processamento de Dados.pdf (p. 37) | seção: Arrays e Matrizes  
   [5] Introdução ao Python.pdf (p. 57) | seção: 3.2.2.3 Dicionários
+- **Análises:**
 - **Resposta sem RAG:** O maior oceano do planeta é o **Oceano Pacífico**. Ele cobre aproximadamente **165,25 milhões de quilômetros quadrados**, representando cerca de **46% da superfície aquática da Terra** e mais de **30% da superfície total do planeta**. Além de ser o maior, também é o mais profundo, abrigando a **Fossa das Marianas**, o ponto mais profundo conhecido no mundo (cerca de 11.034 metros de profundidade). O Pacífico se estende desde o Oceano Ártico, ao norte, até o Oceano Antártico, ao sul, e está delimitado pela Ásia, Austrália e Américas. 🌊
 - **Fontes obtidas:** - `Introdução ao Python.pdf` (pdf) — p. 91 — seção: Escopo global — score: 0.1836
   - `Introdução ao Python.pdf` (pdf) — p. 91 — seção: 5.1.4 Escopo de Variáveis — score: 0.1744
@@ -1438,6 +1462,7 @@ Total de perguntas: **60**
 
   Fontes consultadas:  
   [1] Python para Processamento de Dados.pdf (p. 10), [2] Introdução ao Python.pdf (p. 30), [3] aula-01.mp3, [4] aula-14.mp3, [5] Python para Processamento de Dados.pdf (p. 76).
+- **Análises:**
 - **Resposta sem RAG:** **RAG (Retrieval-Augmented Generation)** é uma técnica de inteligência artificial que combina **recuperação de informações** e **geração de texto** para melhorar a qualidade e precisão de respostas em sistemas de processamento de linguagem natural (NLP). Foi desenvolvida para superar limitações de modelos de linguagem tradicionais, como falta de conhecimento atualizado ou específico. Vamos entender como funciona:
 
   ---
@@ -1506,6 +1531,7 @@ Total de perguntas: **60**
   Fontes:  
   - [1] aula-01.mp3 | tempo: 00:04:35 - 00:05:34 (menção ao GNU Emacs como editor pessoal)  
   - [1] aula-01.mp3 | tempo: 00:04:35 - 00:05:34 (recomendação do Kate para os alunos)
+- **Análises:**
 - **Resposta sem RAG:** Para saber qual editor o professor utiliza no curso, a melhor forma é:
 
   1. **Verificar o material do curso**: Muitas vezes, o editor/IDE recomendado está no plano de ensino, no primeiro módulo ou em tutoriais de configuração.  
@@ -1548,6 +1574,7 @@ Total de perguntas: **60**
   Não é uma questão de ser melhor, mas de propósito diferente. O pip é essencial para instalar bibliotecas, enquanto o pipx é ideal para ferramentas executáveis globais. Ambos são complementares e mantidos pelo PyPA (Python Packaging Authority) (documento [3], tempo 00:09:49 - 00:10:55).  
 
   Fontes: [1], [3], [4].
+- **Análises:**
 - **Resposta sem RAG:** **Pipx** é uma ferramenta para instalar e executar aplicações Python **isoladas em ambientes virtuais**, focada especificamente em **CLI tools** (ferramentas de linha de comando). Ele resolve problemas comuns ao usar o `pip` tradicional para instalar programas que você executa diretamente no terminal. 
 
   ### **Para que serve o Pipx?**
@@ -1647,6 +1674,7 @@ Total de perguntas: **60**
   *Observação*: Em alguns sistemas (como Windows), as aspas podem não ser necessárias.  
   *Fonte*: [3] 01.md | seção: Configurando o ambiente de desenvolvimento > Criando um projeto > Instalando o FastAPI.  
   Detalhes adicionais sobre versões e configurações estão documentados nas transcrições das aulas ([4] e [5]).
+- **Análises:**
 - **Resposta sem RAG:** Para instalar o **FastAPI** no seu computador, siga os passos abaixo:
 
   ---
@@ -1744,6 +1772,7 @@ Total de perguntas: **60**
 
   Fontes:  
   *Contexto analisado sem referências ao tema*
+- **Análises:**
 - **Resposta sem RAG:** **Retrieval-Augmented Generation (RAG)** is a hybrid AI framework that enhances language models by integrating real-time information retrieval with text generation. Here's a structured breakdown:
 
   ### **What is RAG?**
@@ -1838,6 +1867,7 @@ Total de perguntas: **60**
 
   Fontes:  
   [2] aula-01.mp3 | tempo: 00:04:35 - 00:05:34
+- **Análises:**
 - **Resposta sem RAG:** The professor uses **Vim** as their primary text editor for coding and writing. For typesetting academic papers and documentation, they use **LaTeX**, which is often edited in Vim with plugins or alongside dedicated LaTeX editors depending on workflow preferences. 
 
   If you need specifics about their LaTeX setup (e.g., editors like TeXworks, Overleaf, or Vim configurations), feel free to ask!
@@ -1864,6 +1894,7 @@ Total de perguntas: **60**
 
   Fontes consultadas:  
   [1], [2], [3], [4], [5] (nenhuma referência encontrada).
+- **Análises:**
 - **Resposta sem RAG:** **RAG (Retrieval-Augmented Generation)** é uma técnica de inteligência artificial que combina **recuperação de informações** com **geração de texto** para produzir respostas mais precisas e contextualizadas. É amplamente usado em modelos de linguagem (como GPT) para superar limitações como desatualização de conhecimento ou "alucinações" (respostas incorretas ou inventadas).
 
   ---
@@ -1928,6 +1959,7 @@ Total de perguntas: **60**
   - Na seção de perguntas frequentes ([4]), consta a resposta direta: *"Qual terminal está usando? O Terminator"* com link para sua página oficial.  
 
   Fontes: [1], [4].
+- **Análises:**
 - **Resposta sem RAG:** Infelizmente, não tenho como saber qual editor de texto ou terminal específico o seu professor utiliza, pois isso depende do contexto do curso, do sistema operacional e das preferências pessoais dele. No entanto, posso listar algumas ferramentas populares que são comumente usadas em ambientes acadêmicos ou de programação:
 
   ### **Editores de Código/IDEs populares:**
@@ -1988,6 +2020,7 @@ Total de perguntas: **60**
   Em resumo: a API é o conjunto completo de funcionalidades, enquanto os endpoints são os "pontos de acesso" individuais dentro dessa interface.  
 
   Fontes: [1] (Endpoint), [2] (APIs), [3] (Implementando endpoints), [5] (Documentação).
+- **Análises:**
 - **Resposta sem RAG:** **API** e **endpoint** são conceitos relacionados, mas **não são a mesma coisa**. Vamos esclarecer cada um:
 
   ---
@@ -2051,6 +2084,7 @@ Total de perguntas: **60**
 - **Resposta obtida (RAG):** LAN (Local Area Network) é uma rede de comunicação que abrange um espaço local, como uma residência ou escritório, conectando dispositivos como computadores, celulares, tablets e outros equipamentos por meio de um roteador. Ela permite a troca de dados entre dispositivos próximos fisicamente, geralmente usando cabos ou conexões sem fio (Wi-Fi). O termo "LAN" destaca a limitação geográfica da rede, diferenciando-a de redes de longa distância, como a WAN (Wide Area Network).  
 
   **Fonte:** [1] aula-02.mp3 | tempo: 00:04:17 - 00:05:30.
+- **Análises:**
 - **Resposta sem RAG:** **LAN** significa **Local Area Network** (Rede de Área Local, em português). É uma rede de computadores que conecta dispositivos em uma área geográfica limitada, como uma casa, escritório, prédio ou campus. 
 
   ### Principais características da LAN:
@@ -2115,6 +2149,7 @@ Total de perguntas: **60**
   [3] 06.md | seção: Autenticação e Autorização com JWT  
   [4] aula-13.mp3 | tempo: 00:29:34 - 00:30:21  
   [5] aula-06.mp3 | tempo: 00:51:49 - 00:52:51
+- **Análises:**
 - **Resposta sem RAG:** ### **O que é JWT?**  
   JWT (**JSON Web Token**) é um padrão aberto (RFC 7519) que define uma forma compacta e autônoma de transmitir informações entre partes de forma segura, usando objetos JSON. Ele é frequentemente usado para **autenticação** e **troca de dados confiáveis**, pois é assinado digitalmente, garantindo integridade e autenticidade.
 
@@ -2210,6 +2245,7 @@ Total de perguntas: **60**
   **Fontes:**  
   - [1] aula-02.mp3 | tempo: 00:04:17 - 00:05:30 (definição de LAN e exemplos de dispositivos)  
   - [3] aula-02.mp3 | tempo: 00:05:30 - 00:06:28 (tipos de conexão e funcionamento básico)
+- **Análises:**
 - **Resposta sem RAG:** A **Local Area Network (LAN)** is a network that connects devices within a limited geographic area, such as a home, office, school, or building. It enables resource sharing (files, printers, internet) and communication between devices. Here's a structured explanation of how it works:
 
   ---
@@ -2292,6 +2328,7 @@ Total de perguntas: **60**
 
   Fontes consultadas (sem menção a RAG):  
   [1] Python para Processamento de Dados.pdf (p. 76) | [2] Python para Processamento de Dados.pdf (p. 10) | [3] Python para Processamento de Dados.pdf (p. 8) | [4] Introdução ao Python.pdf (p. 9) | [5] Introdução ao Python.pdf (p. 7).
+- **Análises:**
 - **Resposta sem RAG:** **RAG (Retrieval-Augmented Generation)** é uma técnica de inteligência artificial que combina dois componentes principais para melhorar a geração de respostas:  
   1. **Recuperação (Retrieval)**: Busca informações relevantes em uma base de dados ou corpus de documentos (ex: artigos, livros, páginas web).  
   2. **Geração (Generation)**: Usa um modelo de linguagem (como GPT) para produzir uma resposta contextualizada, baseada nos dados recuperados.  
@@ -2337,6 +2374,7 @@ Total de perguntas: **60**
 
   Fonte:  
   [1] aula-01.mp3 | tempo: 00:04:35 - 00:05:34.
+- **Análises:**
 - **Resposta sem RAG:** Ah, boa pergunta! 🤓 No entanto, não tenho informações específicas sobre qual editor de código ou ferramenta o seu professor utiliza. Isso varia muito dependendo da disciplina, do contexto (programação, texto, dados etc.) e das preferências pessoais dele. 
 
   ### Algumas dicas para descobrir:
@@ -2383,6 +2421,7 @@ Total de perguntas: **60**
   - [2] aula-06.mp3 | tempo: 00:37:43 - 00:38:43  
   - [4] aula-06.mp3 | tempo: 00:38:43 - 00:39:29  
   - [5] aula-06.mp3 | tempo: 00:43:18 - 00:44:16
+- **Análises:**
 - **Resposta sem RAG:** Um **JWT (JSON Web Token)** é um padrão aberto (**RFC 7519**) usado para transmitir informações de forma segura e compacta entre partes, geralmente em sistemas de autenticação e autorização. Ele é representado como uma string codificada em **Base64**, composta por três partes separadas por pontos: **header**, **payload** e **signature**.
 
   ---
@@ -2483,6 +2522,7 @@ Total de perguntas: **60**
   [1] aula-12.mp3 | tempo: 00:02:02 - 00:03:03  
   [3] aula-12.mp3 | tempo: 00:04:07 - 00:05:07  
   [5] aula-12.mp3 | tempo: 00:05:07 - 00:05:59
+- **Análises:**
 - **Resposta sem RAG:** A **ingestão de _corpus_** em um projeto (especialmente em Processamento de Linguagem Natural - PLN ou NLP) refere-se ao processo de **coleta, preparação e integração de dados textuais** para análise ou treinamento de modelos. Vamos descrever como isso funciona em um projeto típico, usando uma abordagem estruturada 🚀:
 
   ---
@@ -2590,6 +2630,7 @@ Total de perguntas: **60**
 
   **Fontes:**  
   [1] aula-02.mp3 | tempo: 00:04:17 - 00:05:30
+- **Análises:**
 - **Resposta sem RAG:** LAN significa **Local Area Network** (em português, **Rede de Área Local**). É uma rede de computadores que conecta dispositivos em uma área geográfica limitada, como uma casa, escritório, prédio ou campus. Sua principal função é permitir a comunicação e o compartilhamento de recursos entre dispositivos próximos, como:  
   - Computadores,  
   - Impressoras,  
@@ -2639,6 +2680,7 @@ Total de perguntas: **60**
   [2] aula-02.mp3 | tempo: 01:08:26 - 01:09:23  
   [3] 01.md | seção: Configurando o ambiente de desenvolvimento > Criando um projeto > Primeira Execução de um "Hello, World!"  
   [4] README.md | seção: O que é FastAPI? > Conclusão
+- **Análises:**
 - **Resposta sem RAG:** **FastAPI** é um **framework web moderno, rápido (de alto desempenho)** e **fácil de usar** para construção de **APIs** em Python. Ele foi criado por **Sebastián Ramírez** e combina características avançadas do Python, como **type hints** (anotações de tipo), com uma arquitetura assíncrona para oferecer alta eficiência. É ideal para desenvolver APIs RESTful de forma rápida e robusta. ⚡
 
   ---
@@ -2726,6 +2768,7 @@ Total de perguntas: **60**
   [3] aula-10.mp3 | tempo: 00:12:02 - 00:12:53  
   [4] aula-04.mp3 | tempo: 00:30:16 - 00:31:15  
   [5] aula-05.mp3 | tempo: 01:20:14 - 01:21:13
+- **Análises:**
 - **Resposta sem RAG:** Na verdade, o **RAG (Retrieval-Augmented Generation)** **não se limita apenas às informações armazenadas no modelo**. Ele combina dois componentes principais:
 
   1. **Retrieval (Busca):**  
@@ -2771,6 +2814,7 @@ Total de perguntas: **60**
 
   **Fontes:**  
   [2] 01.md | seção: Configurando o ambiente de desenvolvimento > pipx; [3] aula-01.mp3 | tempo: 00:20:38 - 00:21:32.
+- **Análises:**
 - **Resposta sem RAG:** Na verdade, **o pipx sempre cria um ambiente virtual isolado** para cada pacote que você instala. Esse é um dos principais objetivos do pipx: garantir que cada aplicação Python seja instalada em seu próprio ambiente virtual, evitando conflitos de dependências entre pacotes. 
 
   ### Como o pipx funciona:
@@ -2830,6 +2874,7 @@ Total de perguntas: **60**
   **Fontes:**  
   [3] README.md | seção: O que é FastAPI? > ❓ F.A.Q.  
   [5] README.md | seção: O que é FastAPI? > 🧰 Ferramentas necessárias para acompanhar o curso
+- **Análises:**
 - **Resposta sem RAG:** O GNU Emacs é um editor de texto altamente personalizável e extensível, muito apreciado em ambientes acadêmicos e de programação devido à sua flexibilidade e poder. Se o professor está usando-o no curso, provavelmente ele valoriza ferramentas que permitam aos alunos explorar conceitos avançados de edição, automação e até mesmo desenvolvimento de software. Aqui estão alguns pontos-chave sobre o Emacs:
 
   ### **Por que o Emacs?**
@@ -2888,6 +2933,7 @@ Total de perguntas: **60**
   **Fontes:**  
   [3] 06.md | seção: Autenticação e Autorização com JWT  
   [5] 06.md | seção: Autenticação e Autorização com JWT > O que é um JWT
+- **Análises:**
 - **Resposta sem RAG:** **JSON Web Token (JWT)** é um padrão aberto ([RFC 7519](https://tools.ietf.org/html/rfc7519)) usado para transmitir informações de forma segura e compacta entre partes, geralmente para **autenticação** e **autorização** em sistemas web. Ele é amplamente utilizado em APIs RESTful e aplicações modernas por ser **stateless** (não requer armazenamento de sessão no servidor).
 
   ---
@@ -3012,6 +3058,7 @@ Total de perguntas: **60**
   - [1] 02.md | seção: Introdução ao desenvolvimento WEB > APIs > Documentação > OpenAPI e documentação automática  
   - [3] 02.md | seção: Introdução ao desenvolvimento WEB > APIs > Documentação > Qual escolher?  
   - [4] 02.md | seção: Introdução ao desenvolvimento WEB > APIs > Documentação > Qual escolher?
+- **Análises:**
 - **Resposta sem RAG:** Sim, o FastAPI gera automaticamente documentação interativa usando o Swagger UI (e também uma alternativa com ReDoc). Essa documentação é criada com base no esquema OpenAPI (antigo Swagger) que o FastAPI gera automaticamente a partir do seu código. Aqui está como funciona:
 
   ### 1. **Acesso à Documentação**
@@ -3107,6 +3154,7 @@ Total de perguntas: **60**
 
   **Fontes:**  
   - [1], [2], [4], [5] conforme citado no contexto.
+- **Análises:**
 - **Resposta sem RAG:** Sim, o **PostgreSQL** é um banco de dados relacional de código aberto amplamente utilizado, e sua utilização em ambientes containerizados (como o Docker) é uma prática comum, especialmente em desenvolvimento e implantação de aplicações modernas. Abaixo está uma explicação resumida de como ele pode ser utilizado em containers, seguindo o contexto de containerização:
 
   ---
@@ -3211,6 +3259,7 @@ Total de perguntas: **60**
 - **Resposta obtida (RAG):** A evidência disponível nos contextos fornecidos é insuficiente para explicar como o RAG (Retrieval-Augmented Generation) funciona. Nenhum dos trechos das aulas menciona ou descreve mecanismos, configurações ou aplicações relacionadas a esse conceito. Para esclarecimentos sobre RAG, seria necessário consultar materiais específicos que abordem o tema. 
 
   Fontes: Nenhuma referência encontrada nos contextos fornecidos.
+- **Análises:**
 - **Resposta sem RAG:** Claro, vou explicar de um jeito tranquilo! 🤙
 
   Imagine que você tá montando um trabalho da escola/faculdade e, em vez de confiar só na sua memória, você dá um Google, pega uns livros da biblioteca e aí escreve sua resposta com base nisso. **RAG** (*Retrieval-Augmented Generation*) funciona mais ou menos assim, mas no mundo da IA. 
@@ -3266,6 +3315,7 @@ Total de perguntas: **60**
 
   Fontes:  
   [2] aula-01.mp3 | tempo: 00:04:35 - 00:05:34.
+- **Análises:**
 - **Resposta sem RAG:** Se eu fosse adivinhar qual editor o professor usa, apostaria nas opções clássicas ou nas mais populares do momento! 🧙‍♂️💻 Aqui vai uma lista *braba* dos suspeitos usuais:
 
   1. **VS Code** (Visual Studio Code):  
@@ -3313,6 +3363,7 @@ Total de perguntas: **60**
 - **Resposta obtida (RAG):** LAN (Local Area Network) é uma Rede de Área Local, ou seja, uma rede que abrange um espaço físico limitado, como uma residência, escritório ou prédio. Ela conecta dispositivos próximos entre si, como roteadores, computadores, celulares, tablets e até eletrodomésticos inteligentes (exemplo: máquina de lavar com conexão à internet). Essa rede permite que os dispositivos compartilhem dados e recursos sem depender de infraestrutura externa.  
 
   Por exemplo: em uma casa, o roteador distribui internet para todos os dispositivos via Wi-Fi ou cabos, formando uma LAN. Já redes de longa distância (como a internet) são chamadas de WAN (Wide Area Network), interligando múltiplas LANs através de roteadores e servidores remotos (documento [1], aula-02.mp3 | tempo: 00:04:17 - 00:05:30).
+- **Análises:**
 - **Resposta sem RAG:** Tranquilo! Vou explicar de um jeito bem simples. 😊
 
   **LAN** significa **Local Area Network** (em português, **Rede de Área Local**). É uma rede que conecta dispositivos em uma área **pequena e limitada**, como:
@@ -3374,6 +3425,7 @@ Total de perguntas: **60**
   Conclusão: pipx é mais adequado para ferramentas globais, enquanto pip deve ser usado para dependências de projetos em ambientes controlados. 
 
   Fontes: [1] 01.md (pipx), [2] aula-01.mp3 (00:20:38), [3] aula-01.mp3 (00:09:49).
+- **Análises:**
 - **Resposta sem RAG:** **A verdade sobre pipx vs. pip:**  
   Nenhum é "melhor" que o outro — eles têm propósitos diferentes! A escolha depende do que você quer fazer. Vou explicar de forma direta:
 
@@ -3440,6 +3492,7 @@ Total de perguntas: **60**
 - **Resposta obtida (RAG):** Para executar um projeto FastAPI, utilize o comando `fastapi run` no terminal. Por padrão, o servidor será iniciado em `http://127.0.0.1:8000` (porta 8000). Esse comando é um atalho para o servidor ASGI **Uvicorn**, conforme mencionado na aula sobre a inicialização do framework ([5] aula-02.mp3 | tempo: 00:21:19 - 00:22:14). 
 
   Certifique-se de que o FastAPI esteja instalado no ambiente (evitando erros como os discutidos na aula inicial, [2] aula-01.mp3 | tempo: 00:59:50 - 01:01:10).
+- **Análises:**
 - **Resposta sem RAG:** Para rodar uma aplicação FastAPI, siga os passos abaixo:
 
   ---
@@ -3546,6 +3599,7 @@ Total de perguntas: **60**
   - Exclusão de registros (DELETE) ([4]).  
 
   Fontes: [1] 02.md | seção: APIs > Endpoint; [3] 03.md | seção: Implementando endpoints; [4] aula-03.mp3 (00:03:27-00:04:21).
+- **Análises:**
 - **Resposta sem RAG:** Fica tranquilo, vou explicar de um jeito simples! 😄
 
   **Endpoint** é como um "ponto de contato" na internet onde sistemas se comunicam. É basicamente um endereço digital (URL) que você acessa para:
@@ -3602,6 +3656,7 @@ Total de perguntas: **60**
   Fontes consultadas:  
   [1] aula-04.mp3 | tempo: 01:16:05 - 01:17:01  
   [3] aula-04.mp3 | tempo: 00:18:58 - 00:19:34
+- **Análises:**
 - **Resposta sem RAG:** Ah, você está brincando, mas vou explicar direitinho! 😉 Na verdade, o **RAG (Retrieval-Augmented Generation)** não "sabe tudo magicamente" — ele é uma combinação de duas coisas:
 
   1. **Recuperação (Retrieval)**: Busca informações em **fontes externas** (como documentos, artigos, bancos de dados) para encontrar dados relevantes.  
@@ -3639,6 +3694,7 @@ Total de perguntas: **60**
   - A importância de adicionar o Python ao PATH durante a instalação ([5], 00:11:43)  
 
   O instrutor inclusive simula erros propositalmente para demonstrar soluções práticas, como mencionado em [1] (00:52:12) e [2] (00:48:30). Portanto, a "oração" mencionada na pergunta equivale, na prática, à aplicação de comandos técnicos adequados para cada situação 😉.
+- **Análises:**
 - **Resposta sem RAG:** Haha, entendo a frustração! Às vezes parece que o terminal tem vontade própria mesmo... 😅 Se quiser ajuda com algum comando específico ou erro que está aparecendo, compartilha aí que tento ajudar a "rezar" de forma mais prática! (Ou só desabafar também vale, o computador merece um puxão de orelha às vezes.)
 - **Fontes obtidas:** - `aula-01.mp3` (audio) — tempo 00:52:12-00:53:13s — score: 0.3120
   - `aula-01.mp3` (audio) — tempo 00:48:30-00:49:36s — score: 0.2989
@@ -3667,6 +3723,7 @@ Total de perguntas: **60**
      - **Boas práticas de codificação**: como o uso de bibliotecas específicas (ex: `pwdlib` para senhas) e validação adequada dos tokens ([2], [5]).
 
   A abordagem simplista de "colocar a senha no código" ignora riscos como vazamento de credenciais e comprometimento da assinatura dos tokens. A implementação segura exige atenção à geração, armazenamento e uso das chaves, conforme detalhado nas fontes.
+- **Análises:**
 - **Resposta sem RAG:** A ideia de simplesmente colocar a senha diretamente no código para trabalhar com JWT (JSON Web Tokens) é **extremamente perigosa** e **não recomendada**. Vamos esclarecer alguns pontos importantes para evitar más práticas de segurança:
 
   ---
@@ -3754,6 +3811,7 @@ Total de perguntas: **60**
   O instrutor reforça que o **Poetry** é a ferramenta central para criar pacotes, ambientes virtuais e gerenciar dependências, substituindo o uso direto do `venv` (que não permite alterar versões do Python, por exemplo) ([3], [5]). 
 
   Fontes: [1] (00:20:38-00:21:32), [2] (00:30:50-00:31:41), [3] (00:08:53-00:09:49), [5] (01:02:32-01:03:30).
+- **Análises:**
 - **Resposta sem RAG:** Hmm, não exatamente! 😅 Vamos desenrolar isso:
 
   **Pip** é ótimo para instalar pacotes, mas **ambientes virtuais** são como "salas isoladas" para seus projetos. Por quê?  
@@ -3797,6 +3855,7 @@ Total de perguntas: **60**
 
   **Fontes:**  
   [1] Introdução ao Python.pdf (p. 45) | [4] Introdução ao Python.pdf (p. 69) | [2] aula-06.mp3 (tempo 00:00:50-00:01:35).
+- **Análises:**
 - **Resposta sem RAG:** Ah, entendi o que você está dizendo! Quando se trata de professores usando o "Bloco de Notas" (o editor de texto simples do Windows), pode ser uma referência a situações como:
 
   1. **Aulas de programação básica**: Alguns professores preferem que os alunos comecem escrevendo código em um editor simples (como o Bloco de Notas) para evitar distrações de IDEs complexas e entender melhor a sintaxe.
@@ -3834,6 +3893,7 @@ Total de perguntas: **60**
   [3] aula-04.mp3 | tempo: 01:16:05 - 01:17:01  
   [4] aula-00.mp3 | tempo: 00:49:28 - 00:50:27  
   [5] aula-03.mp3 | tempo: 00:49:25 - 00:50:29
+- **Análises:**
 - **Resposta sem RAG:** Haha, I wish! 😅 While RAG (Retrieval-Augmented Generation) is powerful, it’s definitely not omniscient. It relies on the data it’s been trained on and the documents it can access in the moment. If the information isn’t in its training data or retrievable sources, it’ll either make an educated guess (which might be wrong) or admit it doesn’t know. Plus, biases, outdated info, or context gaps can trip it up. Think of me as a very enthusiastic librarian with a sometimes-overconfident AI sidekick. Need help with something specific? I’ll do my best! 🔍✨
 - **Fontes obtidas:** - `aula-06.mp3` (audio) — tempo 01:53:46-01:54:18s — score: 0.1962
   - `aula-01.mp3` (audio) — tempo 02:03:37-02:04:39s — score: 0.1907

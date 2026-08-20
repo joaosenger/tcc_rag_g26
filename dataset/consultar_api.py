@@ -253,6 +253,7 @@ def fill() -> None:
 
             campos: dict[str, str] = {
                 "Resposta obtida (RAG)": "",
+                "Análises": "",
                 "Resposta sem RAG": "",
                 "Fontes obtidas": "",
                 "Fonte correta recuperada": "",
