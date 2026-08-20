@@ -190,6 +190,22 @@ def _fonte_correta(q: dict, resp: dict) -> str:
     return "nao"
 
 
+def _formata_campo(campo: str, valor: str) -> list[str]:
+    """Formata um campo do markdown preservando a estrutura do texto.
+
+    A primeira linha vai inline após o rótulo; as demais são recuadas em 2
+    espaços para manter o item de lista válido e renderizar o markdown interno
+    (títulos, listas, tabelas, blocos de código) corretamente.
+    """
+    if not valor:
+        return [f"- **{campo}:**"]
+    linhas = valor.rstrip().splitlines()
+    out = [f"- **{campo}:** {linhas[0]}"]
+    for linha in linhas[1:]:
+        out.append(f"  {linha}" if linha.strip() else "")
+    return out
+
+
 def fill() -> None:
     perguntas = carregar_perguntas()
     dados = carregar_respostas()
@@ -248,18 +264,17 @@ def fill() -> None:
 
             if _respondida(qid):
                 resp = responses[qid]
-                answer = (resp["answer"] or "").strip()
-                campos["Resposta obtida (RAG)"] = " ".join(answer.split())
+                campos["Resposta obtida (RAG)"] = (resp["answer"] or "").strip()
                 sem_rag_resp = sem_rag.get(qid)
                 if sem_rag_resp and sem_rag_resp.get("status") == "ok":
-                    campos["Resposta sem RAG"] = " ".join(
-                        (sem_rag_resp.get("answer") or "").strip().split()
+                    campos["Resposta sem RAG"] = (
+                        (sem_rag_resp.get("answer") or "").strip()
                     )
                 else:
                     campos["Resposta sem RAG"] = "—"
                 sources = resp.get("sources") or []
                 if sources:
-                    campos["Fontes obtidas"] = "\n  " + "\n  ".join(
+                    campos["Fontes obtidas"] = "\n".join(
                         f"- {_formata_fonte(s)}" for s in sources
                     )
                 else:
@@ -275,10 +290,7 @@ def fill() -> None:
                 campos["Fonte correta recuperada"] = "—"
 
             for campo, valor in campos.items():
-                if valor:
-                    linhas.append(f"- **{campo}:** {valor}")
-                else:
-                    linhas.append(f"- **{campo}:**")
+                linhas.extend(_formata_campo(campo, valor))
             linhas.append("")
 
     SAIDA_PATH.write_text("\n".join(linhas), encoding="utf-8")
