@@ -1,6 +1,6 @@
 # Resultados da Avaliação da RAG — TCC G26
 
-Campos preenchidos automaticamente via API (dataset/resultados_rag.json).
+Campos preenchidos automaticamente via API (dataset/respostas_com_rag.json).
 Legenda das respostas:
 
 - **fonte_correta_recuperada**: `sim` | `nao` | `parcial`

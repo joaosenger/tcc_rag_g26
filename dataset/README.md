@@ -1,21 +1,42 @@
-# Dataset de Avaliação da RAG — TCC G26
+# Avaliação da RAG — TCC G26
 
-Dataset com **60 perguntas** para avaliar o assistente RAG sobre o material do curso
-(FastAPI do zero, Introdução ao Python e Python para Processamento de Dados).
+Conjunto de **60 perguntas** para avaliar o assistente RAG sobre o material do
+curso (FastAPI do zero, Introdução ao Python e Python para Processamento de
+Dados). A avaliação compara duas condições experimentais: resposta **com RAG**
+(contexto recuperado do corpus) e resposta **sem RAG** (pergunta enviada
+diretamente ao modelo).
 
-Arquivos:
+## Arquivos
 
-- [`perguntas_avaliacao.json`](perguntas_avaliacao.json) — as 60 perguntas (10 grupos × 6)
-- [`resultados_avaliacao.md`](resultados_avaliacao.md) — roteiro de resultados
-- [`gerar_resultados_base.py`](gerar_resultados_base.py) — regenera o roteiro a partir do JSON
+| Arquivo | Papel |
+| --- | --- |
+| [`perguntas.json`](perguntas.json) | As 60 perguntas do dataset (10 grupos × 6), com categorias, idioma e expectativa de resposta |
+| [`respostas_com_rag.json`](respostas_com_rag.json) | Respostas da condição **com RAG** (via API), incluindo as fontes recuperadas |
+| [`respostas_sem_rag.json`](respostas_sem_rag.json) | Respostas da condição **sem RAG** (via Bedrock, sem contexto) |
+| [`resultados_avaliacao.md`](resultados_avaliacao.md) | Roteiro de análise consolidado para preencher/avaliar |
+| [`consultar_api.py`](consultar_api.py) | Consulta a API RAG e regenera `resultados_avaliacao.md` |
+| [`consultar_sem_rag.py`](consultar_sem_rag.py) | Consulta o modelo sem RAG (Bedrock) |
+| [`gerar_resultados_base.py`](gerar_resultados_base.py) | Regenera o roteiro com os campos vazios a partir de `perguntas.json` |
 
 ## Objetivo
 
 Verificar se o sistema consegue recuperar o conteúdo correto mesmo quando a
 pergunta apresenta diferentes níveis de clareza, ruído linguístico e relação
-com o material — cobrindo recuperação, robustez e controle de alucinação.
+com o material — cobrindo recuperação, robustez e controle de alucinação, e
+comparando o resultado com o comportamento do modelo sem RAG.
 
-## Estrutura
+## Fluxo de trabalho
+
+1. As **respostas com RAG** são obtidas da API do sistema (`consultar_api.py run`,
+   com 15 s de intervalo entre requisições) e salvas em `respostas_com_rag.json`.
+2. As **respostas sem RAG** são obtidas diretamente do modelo. O script
+   `consultar_sem_rag.py run` usa a mesma implementação Bedrock do pipeline
+   (mesmos parâmetros) e salva em `respostas_sem_rag.json`.
+3. `python dataset/consultar_api.py fill` junta as duas condições em
+   `resultados_avaliacao.md`, com a resposta RAG, a resposta sem RAG e as
+   fontes recuperadas — ficando os campos de avaliação para preencher.
+
+## Estrutura de `perguntas.json`
 
 O dataset é organizado em **10 grupos** de **6 perguntas cada** (60 no total).
 Cada pergunta pode pertencer a **várias categorias** simultaneamente.
@@ -77,7 +98,7 @@ Uma pergunta pode estar em mais de uma categoria:
 ```python
 import json
 
-with open("dataset/perguntas_avaliacao.json", encoding="utf-8") as f:
+with open("dataset/perguntas.json", encoding="utf-8") as f:
     dataset = json.load(f)
 
 for q in dataset["questions"]:
@@ -94,11 +115,18 @@ fontes recuperadas, e confira se:
 
 ## Roteiro de resultados
 
-O arquivo `resultados_avaliacao.md` é o **roteiro de avaliação** do TCC: uma seção
-por pergunta (mesmo id e ordem do JSON), agrupada por grupo, com os campos de
-análise vazios para preencher ao testar o sistema.
+O arquivo `resultados_avaliacao.md` é o **roteiro de análise** do TCC: uma
+seção por pergunta (mesmo id e ordem do JSON), agrupada por grupo, com as
+respostas com/sem RAG e as fontes recuperadas já preenchidas automaticamente,
+e os campos de avaliação abertos para análise.
 
-Para regenerá-lo após alterar o JSON:
+Para (re)gerar o roteiro a partir das respostas já coletadas:
+
+```bash
+python dataset/consultar_api.py fill
+```
+
+Para gerar o roteiro com os campos vazios (sem respostas):
 
 ```bash
 python dataset/gerar_resultados_base.py
@@ -108,7 +136,9 @@ python dataset/gerar_resultados_base.py
 
 | Campo | O que preencher |
 | --- | --- |
-| `Resposta obtida` | Texto da resposta dada pelo assistente |
+| `Análises` | Análise qualitativa da resposta (aderência, raciocínio, erro observado) |
+| `Resposta obtida (RAG)` | Texto da resposta com RAG (preenchido automaticamente) |
+| `Resposta sem RAG` | Texto da resposta sem RAG (preenchido automaticamente) |
 | `Fontes obtidas` | Fontes recuperadas (arquivo + página/seção/tempo) |
 | `Fonte correta recuperada` | `sim` / `nao` / `parcial` — a fonte certa apareceu? |
 | `Resposta adequada` | `sim` / `nao` / `parcial` — a resposta responde a pergunta? |
@@ -126,5 +156,8 @@ python dataset/gerar_resultados_base.py
 - **Robustez linguística**: compare `fonte_correta_recuperada` entre as
   perguntas limpas e as com ruído (erros, emojis, gírias) para medir a queda
   de qualidade da recuperação.
+- **Comparação com/sem RAG**: contraste a `resposta adequada` entre
+  `respostas_com_rag.json` e `respostas_sem_rag.json` para evidenciar o ganho
+  da recuperação e o comportamento de alucinação sem contexto.
 - **Relatório**: a distribuição das notas `qualidade_geral` por grupo alimenta
   a análise de cada cenário no capítulo de avaliação.

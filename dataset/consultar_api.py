@@ -3,9 +3,9 @@
 
 Uso:
     python consultar_api.py run     # executa as consultas (15 s entre requisições)
-    python consultar_api.py fill    # preenche resultados_avaliacao.md a partir de resultados_rag.json
+    python consultar_api.py fill    # preenche resultados_avaliacao.md a partir de respostas_com_rag.json
 
-As respostas são salvas incrementalmente em dataset/resultados_rag.json e a execução
+As respostas são salvas incrementalmente em dataset/respostas_com_rag.json e a execução
 é retomável: perguntas já respondidas são puladas ao reexecutar `run`.
 """
 from __future__ import annotations
@@ -18,10 +18,10 @@ from pathlib import Path
 import requests
 
 BASE_DIR = Path(__file__).resolve().parent
-PERGUNTAS_PATH = BASE_DIR / "perguntas_avaliacao.json"
-RESULTADOS_PATH = BASE_DIR / "resultados_rag.json"
+PERGUNTAS_PATH = BASE_DIR / "perguntas.json"
+RESULTADOS_PATH = BASE_DIR / "respostas_com_rag.json"
 SAIDA_PATH = BASE_DIR / "resultados_avaliacao.md"
-RESPOSTAS_SEM_RAG_PATH = BASE_DIR / "resultados_sem_rag.json"
+RESPOSTAS_SEM_RAG_PATH = BASE_DIR / "respostas_sem_rag.json"
 
 API_URL = "http://98.86.159.78:8000/api/chat"
 INTERVALO_SEGUNDOS = 15
@@ -216,7 +216,7 @@ def fill() -> None:
     linhas = [
         "# Resultados da Avaliação da RAG — TCC G26",
         "",
-        "Campos preenchidos automaticamente via API (dataset/resultados_rag.json).",
+        "Campos preenchidos automaticamente via API (dataset/respostas_com_rag.json).",
         "Legenda das respostas:",
         "",
         "- **fonte_correta_recuperada**: `sim` | `nao` | `parcial`",
