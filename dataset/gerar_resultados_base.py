@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Gera dataset/resultados_base.md a partir de dataset/perguntas_tcc.json."""
+"""Gera dataset/resultados_avaliacao.md a partir de dataset/perguntas_avaliacao.json."""
 from __future__ import annotations
 
 import json
@@ -11,7 +11,7 @@ CAMPO_EXPECTATIVA = "expected"
 
 
 def main() -> None:
-    dataset = json.loads((BASE_DIR / "perguntas_tcc.json").read_text(encoding="utf-8"))
+    dataset = json.loads((BASE_DIR / "perguntas_avaliacao.json").read_text(encoding="utf-8"))
     perguntas = dataset["questions"]
 
     linhas = [
@@ -52,8 +52,8 @@ def main() -> None:
                 linhas.append(f"- **{campo}:**")
             linhas.append("")
 
-    (BASE_DIR / "resultados_base.md").write_text("\n".join(linhas), encoding="utf-8")
-    print(f"Gerado: {BASE_DIR / 'resultados_base.md'}")
+    (BASE_DIR / "resultados_avaliacao.md").write_text("\n".join(linhas), encoding="utf-8")
+    print(f"Gerado: {BASE_DIR / 'resultados_avaliacao.md'}")
 
 
 def _grupos_ordenados(perguntas: list[dict]) -> list[tuple[int, str]]:

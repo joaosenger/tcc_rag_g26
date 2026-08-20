@@ -5,8 +5,8 @@ Dataset com **60 perguntas** para avaliar o assistente RAG sobre o material do c
 
 Arquivos:
 
-- [`perguntas_tcc.json`](perguntas_tcc.json) — as 60 perguntas (10 grupos × 6)
-- [`resultados_base.md`](resultados_base.md) — roteiro de resultados (preencher manualmente)
+- [`perguntas_avaliacao.json`](perguntas_avaliacao.json) — as 60 perguntas (10 grupos × 6)
+- [`resultados_avaliacao.md`](resultados_avaliacao.md) — roteiro de resultados
 - [`gerar_resultados_base.py`](gerar_resultados_base.py) — regenera o roteiro a partir do JSON
 
 ## Objetivo
@@ -77,7 +77,7 @@ Uma pergunta pode estar em mais de uma categoria:
 ```python
 import json
 
-with open("dataset/perguntas_tcc.json", encoding="utf-8") as f:
+with open("dataset/perguntas_avaliacao.json", encoding="utf-8") as f:
     dataset = json.load(f)
 
 for q in dataset["questions"]:
@@ -94,7 +94,7 @@ fontes recuperadas, e confira se:
 
 ## Roteiro de resultados
 
-O arquivo `resultados_base.md` é o **roteiro de avaliação** do TCC: uma seção
+O arquivo `resultados_avaliacao.md` é o **roteiro de avaliação** do TCC: uma seção
 por pergunta (mesmo id e ordem do JSON), agrupada por grupo, com os campos de
 análise vazios para preencher ao testar o sistema.
 

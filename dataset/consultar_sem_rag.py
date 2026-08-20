@@ -7,7 +7,7 @@ com RAG (app.llm.bedrock.generate) para manter os parâmetros constantes.
 
 Uso:
     python dataset/consultar_sem_rag.py run     # executa as consultas (15 s entre requisições)
-    python dataset/consultar_sem_rag.py fill    # popula 'answer' em perguntas_tcc_sem_rag.json
+    python dataset/consultar_sem_rag.py fill    # popula 'answer' em perguntas_sem_rag.json
 
 Requisitos:
     Credenciais AWS com acesso ao Bedrock no ambiente (env, ~/.aws ou IAM role).
@@ -15,7 +15,7 @@ Requisitos:
 
 Saídas:
     dataset/resultados_sem_rag.json   - respostas do modelo sem RAG (incremental/retomável)
-    dataset/perguntas_tcc_sem_rag.json - arquivo de base com os campos 'answer' preenchidos
+    dataset/perguntas_sem_rag.json    - arquivo de base com os campos 'answer' preenchidos
 """
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ sys.path.insert(0, str(PROJETO_ROOT))
 from app.config import settings  # noqa: E402
 from app.llm.bedrock import generate  # noqa: E402
 
-PERGUNTAS_PATH = PROJETO_ROOT / "dataset" / "perguntas_tcc_sem_rag.json"
+PERGUNTAS_PATH = PROJETO_ROOT / "dataset" / "perguntas_sem_rag.json"
 RESULTADOS_PATH = PROJETO_ROOT / "dataset" / "resultados_sem_rag.json"
 
 INTERVALO_SEGUNDOS = 3
