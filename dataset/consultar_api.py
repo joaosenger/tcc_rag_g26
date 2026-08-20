@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-"""Consulta a API RAG com as 60 perguntas do dataset e preenche resultados_base.md.
+"""Consulta a API RAG com as 60 perguntas do dataset e preenche resultados_avaliacao.md.
 
 Uso:
     python consultar_api.py run     # executa as consultas (15 s entre requisições)
-    python consultar_api.py fill    # preenche resultados_base.md a partir de resultados_api.json
+    python consultar_api.py fill    # preenche resultados_avaliacao.md a partir de resultados_rag.json
 
-As respostas são salvas incrementalmente em dataset/resultados_api.json e a execução
+As respostas são salvas incrementalmente em dataset/resultados_rag.json e a execução
 é retomável: perguntas já respondidas são puladas ao reexecutar `run`.
 """
 from __future__ import annotations
@@ -18,9 +18,9 @@ from pathlib import Path
 import requests
 
 BASE_DIR = Path(__file__).resolve().parent
-PERGUNTAS_PATH = BASE_DIR / "perguntas_tcc.json"
-RESULTADOS_PATH = BASE_DIR / "resultados_api.json"
-SAIDA_PATH = BASE_DIR / "resultados_base.md"
+PERGUNTAS_PATH = BASE_DIR / "perguntas_avaliacao.json"
+RESULTADOS_PATH = BASE_DIR / "resultados_rag.json"
+SAIDA_PATH = BASE_DIR / "resultados_avaliacao.md"
 RESPOSTAS_SEM_RAG_PATH = BASE_DIR / "resultados_sem_rag.json"
 
 API_URL = "http://98.86.159.78:8000/api/chat"
@@ -220,7 +220,7 @@ def fill() -> None:
     linhas = [
         "# Resultados da Avaliação da RAG — TCC G26",
         "",
-        "Campos preenchidos automaticamente via API (dataset/resultados_api.json).",
+        "Campos preenchidos automaticamente via API (dataset/resultados_rag.json).",
         "Legenda das respostas:",
         "",
         "- **fonte_correta_recuperada**: `sim` | `nao` | `parcial`",
