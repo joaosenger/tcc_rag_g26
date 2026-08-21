@@ -268,6 +268,8 @@ def fill() -> None:
                 linhas.append("- **Resposta sem RAG:** —")
 
             linhas.append(f"### Análises {qid}")
+            linhas.append(f"- **Nome do grupo:** {q['group_name']}")
+            linhas.append(f"- **Categorias:** {' | '.join(q['categories'])}")
 
             if _respondida(qid):
                 resp = responses[qid]

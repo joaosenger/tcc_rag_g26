@@ -104,6 +104,8 @@ python -m pipx ensurepath
 Em resumo, o `pipx` é a maneira recomendada de gerenciar aplicativos Python de linha de comando, combinando conveniência com isolamento seguro. 🐍🔧
 ````
 ### Análises G01-Q01
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | correta | contexto
 - **Fontes obtidas:**
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.8369
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.5579
@@ -147,6 +149,8 @@ Infelizmente, não tenho acesso a informações específicas sobre qual editor d
 **Dica**: Consulte o programa do curso, materiais de aula ou pergunte diretamente ao professor/professora. A escolha do editor geralmente depende da disciplina (ex.: programação, redação técnica, etc.). 😊
 ````
 ### Análises G01-Q02
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | correta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.5389
   - `README.md` (markdown) — seção: O que é FastAPI? > 🧰 Ferramentas necessárias para acompanhar o curso — score: 0.5024
@@ -196,6 +200,8 @@ LAN significa **Local Area Network** (Rede de Área Local, em português). É um
 A LAN contrasta com redes de maior alcance, como **WAN** (Wide Area Network), que conectam dispositivos em áreas geográficas extensas (ex: entre cidades ou países).
 ````
 ### Análises G01-Q03
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | correta | contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 00:04:17-00:05:30s — score: 0.7474
   - `Introdução ao Python.pdf` (pdf) — p. 24 — seção: Indentação — score: 0.2997
@@ -290,6 +296,8 @@ async def create_item(item: Item):
 FastAPI combines speed, simplicity, and modern Python practices, making it a top choice for API development. 🚀
 ````
 ### Análises G01-Q04
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | ingles | correta | contexto
 - **Fontes obtidas:**
   - `README.md` (markdown) — seção: O que é FastAPI? — score: 0.9136
   - `aula-02.mp3` (audio) — tempo 01:08:26-01:09:23s — score: 0.5891
@@ -379,6 +387,8 @@ Em Python, os tipos de dados são categorizados em **tipos embutidos (built-in)*
 Esses são os tipos básicos, mas Python permite grande flexibilidade com estruturas de dados mais complexas através de classes e bibliotecas. 😊
 ````
 ### Análises G01-Q05
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | correta | contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 26 — seção: Tipagem de dados e casting — score: 0.8734
   - `Introdução ao Python.pdf` (pdf) — p. 45 — seção: 3.2.1 Objetos Mutáveis e Imutáveis — score: 0.6707
@@ -443,6 +453,8 @@ Um **endpoint** é um ponto de acesso específico em uma API (Interface de Progr
 Em resumo, um endpoint é a "porta de entrada" para interagir com um serviço ou recurso online.
 ````
 ### Análises G01-Q06
+- **Nome do grupo:** Perguntas diretas
+- **Categorias:** direta | curta | correta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Endpoint — score: 0.9168
   - `aula-03.mp3` (audio) — tempo 00:16:52-00:17:40s — score: 0.7098
@@ -533,6 +545,8 @@ async def read_user(user_id: int):
 Em resumo, o FastAPI atua como o **cérebro do servidor**, garantindo que as requisições sejam processadas de forma rápida, segura e organizada, enquanto o cliente se concentra na interface e na experiência do usuário.
 ````
 ### Análises G02-Q01
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | correta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB — score: 0.5931
   - `README.md` (markdown) — seção: O que é FastAPI? > Conclusão — score: 0.5819
@@ -631,6 +645,8 @@ Elas são categorizadas em três tipos:
 Em resumo, as claims são a essência do JWT, permitindo que o token transporte informações confiáveis e verificáveis, essenciais para sistemas modernos de autenticação.
 ````
 ### Análises G02-Q02
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | correta | contexto
 - **Fontes obtidas:**
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT > Claims — score: 0.6640
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT — score: 0.6209
@@ -709,6 +725,8 @@ O professor recomenda o uso do **pipx** em vez do **pip** para instalar ferramen
 O **pipx** é a escolha ideal para ferramentas que precisam ser executadas globalmente, enquanto o **pip** deve ser reservado para dependências de projetos locais (gerenciadas em ambientes virtuais). Essa separação mantém seu sistema organizado e seguro! 🐍✨
 ````
 ### Análises G02-Q03
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | correta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:20:38-00:21:32s — score: 0.6231
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.5749
@@ -811,6 +829,8 @@ The HTTP request model in REST APIs operates through a client-server interaction
 REST APIs leverage HTTP verbs to perform CRUD operations on resources, with response codes indicating success/failure. Verbs define actions, URIs target resources, and status codes provide feedback. This model ensures stateless, scalable, and standardized communication between clients and servers.
 ````
 ### Análises G02-Q04
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | ingles | correta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > A web > O modelo padrão da web > HTTP > Verbos — score: 0.4454
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > A web > O modelo padrão da web > HTTP > Códigos de resposta > O lado do servidor — score: 0.4048
@@ -854,6 +874,8 @@ O **banco de dados introduzido** nessa etapa do curso é o **PostgreSQL**, geral
 Isso permite simular um ambiente completo e funcional, próximo ao que seria utilizado em um cenário real de desenvolvimento ou produção.
 ````
 ### Análises G02-Q05
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | correta | contexto
 - **Fontes obtidas:**
   - `11.md` (markdown) — seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL — score: 0.6919
   - `aula-11.mp3` (audio) — tempo 00:02:41-00:03:33s — score: 0.6160
@@ -969,6 +991,8 @@ Neste exemplo, cada fase está bem definida, seguindo o padrão AAA. Isso torna 
 A divisão em **Arrange**, **Act** e **Assert** é essencial para criar testes robustos, confiáveis e de fácil compreensão. Ao seguir essa estrutura, os desenvolvedores adotam uma abordagem sistemática que não apenas valida o código, mas também melhora seu design, promovendo componentes desacoplados e testáveis — princípios centrais do TDD.
 ````
 ### Análises G02-Q06
+- **Nome do grupo:** Longas e contextualizadas
+- **Categorias:** longa | correta | contexto
 - **Fontes obtidas:**
   - `01.md` (markdown) — seção: parte da mensagem foi omitida > Estrutura de um teste — score: 0.6938
   - `aula-01.mp3` (audio) — tempo 01:55:36-01:56:57s — score: 0.5877
@@ -1037,6 +1061,8 @@ A evolução da densidade de transistores, impulsionada pela Lei de Moore, impac
 Em resumo, o aumento da densidade de transistores exige inovação contínua em materiais, técnicas de fabricação, gerenciamento térmico/energético e arquiteturas, enquanto redefine os paradigmas de custo, segurança e sustentabilidade. A evolução futura dependerá da integração de novas tecnologias (ex.: computação quântica) e da adaptação a limites físicos e econômicos.
 ````
 ### Análises G03-Q01
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 47 — seção: Desvantagens : — score: 0.3130
   - `Introdução ao Python.pdf` (pdf) — p. 59 — seção: Adicionando novos pares chave-valor — score: 0.2478
@@ -1111,6 +1137,8 @@ A inflação de alimentos no Brasil é influenciada por uma combinação de fato
 A inflação de alimentos no Brasil é multifatorial, combinando vulnerabilidades estruturais (dependência de insumos importados, logística frágil) com choques externos (clima, câmbio) e políticas domésticas. Para mitigá-la, são necessários investimentos em tecnologia agrícola, estoques reguladores e melhorias na cadeia de distribuição, além de coordenação macroeconômica para estabilizar expectativas.
 ````
 ### Análises G03-Q02
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 78 — seção: 4.2.5 Estrutura try-except — score: 0.1771
   - `Introdução ao Python.pdf` (pdf) — p. 59 — seção: Adicionando novos pares chave-valor — score: 0.1715
@@ -1160,6 +1188,8 @@ O Muro de Berlim, construído em 1961 pela Alemanha Oriental com apoio soviétic
 Em resumo, o Muro de Berlim foi tanto uma solução pragmática para crises imediatas quanto um símbolo duradouro da divisão global, influenciando estratégias políticas, econômicas e militares na Europa durante décadas.
 ````
 ### Análises G03-Q03
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 9 — seção: Sumário — score: 0.2183
   - `Introdução ao Python.pdf` (pdf) — p. 108 — seção: Unidade VII - Encerramento — score: 0.2183
@@ -1213,6 +1243,8 @@ The Apollo missions, conducted by NASA between 1961 and 1972, made profound cont
 **Legacy**: The Apollo missions revolutionized planetary science, offering a template for comparative geology across the solar system. They provided empirical evidence for planetary formation theories, advanced geophysical modeling, and underscored the interconnected history of Earth and the Moon. These achievements remain foundational to lunar and planetary research, influencing ongoing missions to other celestial bodies.
 ````
 ### Análises G03-Q04
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | ingles | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 14 — seção: 1.2 Histórico e Expansão do Python — score: 0.1829
   - `Introdução ao Python.pdf` (pdf) — p. 8 — seção: Sumário — score: 0.1829
@@ -1287,6 +1319,8 @@ Os principais desafios para a certificação de pequenos produtores orgânicos n
 Superar esses desafios requer políticas integradas, como subsídios para certificação, capacitação técnica, fortalecimento de redes de comercialização e simplificação de processos burocráticos. Iniciativas como a Certificação Participativa (OPACs) e o associativismo são alternativas promissoras para reduzir custos e aumentar a inclusão dos pequenos produtores no sistema orgânico.
 ````
 ### Análises G03-Q05
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-00.mp3` (audio) — tempo 00:50:28-00:51:32s — score: 0.2800
   - `aula-00.mp3` (audio) — tempo 00:49:28-00:50:27s — score: 0.2536
@@ -1377,6 +1411,8 @@ As teorias de aprendizagem de Jean Piaget e Lev Vygotsky oferecem perspectivas d
 Enquanto Piaget destaca a **autonomia do sujeito** na descoberta do mundo, Vygotsky ressalta a **mediação social** como alicerce do pensamento. Ambos, porém, concordam que o conhecimento não é meramente transmitido, mas construído ativamente pelo aprendiz.
 ````
 ### Análises G03-Q06
+- **Nome do grupo:** Longas sem relação com o material
+- **Categorias:** longa | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 01:36:51-01:37:52s — score: 0.2521
   - `Introdução ao Python.pdf` (pdf) — p. 12 — seção: 1.1.1 Facilidade de Aprendizado — score: 0.2397
@@ -1426,6 +1462,8 @@ O Brasil foi oficialmente descoberto pelos europeus em 22 de abril de 1500, quan
 Embora Pedro Álvares Cabral seja tradicionalmente reconhecido como o "descobridor" do Brasil no contexto europeu, é essencial lembrar a presença milenar dos povos indígenas e as complexidades geopolíticas da época. A data de 1500 simboliza o início da colonização portuguesa, que teve impactos profundos na história do país.
 ````
 ### Análises G04-Q01
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 78 — seção: Operações Avançadas e Análise Exploratória de Dados — score: 0.1972
   - `Python para Processamento de Dados.pdf` (pdf) — p. 143 — seção: 3. Leitura adicional : — score: 0.1944
@@ -1461,6 +1499,8 @@ A capital da Austrália é **Canberra**.
 Embora Sydney e Melbourne sejam cidades mais conhecidas internacionalmente, Canberra foi escolhida como capital em 1908 para resolver a rivalidade entre as duas. É uma cidade planejada, localizada no Território da Capital Australiana (ACT), e abriga instituições governamentais importantes, como o Parlamento e a Suprema Corte. 🦘🇦🇺
 ````
 ### Análises G04-Q02
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 80 — seção: Tabelas dinâmicas ou pivô: — score: 0.1734
   - `Python para Processamento de Dados.pdf` (pdf) — p. 80 — seção: Tabelas dinâmicas ou pivô: — score: 0.1734
@@ -1524,6 +1564,8 @@ A **Teoria da Relatividade** é um conjunto de ideias desenvolvidas por Albert E
 **Resumo**: A relatividade mostrou que espaço e tempo são interligados, a gravidade é geometria, e nossa percepção de realidade depende do observador. Einstein desafiou conceitos newtonianos, abrindo caminho para a física moderna. 🌌⏳
 ````
 ### Análises G04-Q03
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 30 — seção: Operadores relacionais e lógicos — score: 0.2763
   - `Introdução ao Python.pdf` (pdf) — p. 30 — seção: Operadores relacionais e lógicos — score: 0.2520
@@ -1567,6 +1609,8 @@ However, the history involves notable controversies and contributions from other
 While Bell is traditionally recognized due to his patent and commercialization success, the invention emerged from a competitive landscape of overlapping ideas. Legal disputes and historical debates persist, but Bell’s patent and practical demonstrations solidified his place in mainstream history as the telephone’s inventor.
 ````
 ### Análises G04-Q04
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | ingles | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 78 — seção: Operações Avançadas e Análise Exploratória de Dados — score: 0.2560
   - `aula-02.mp3` (audio) — tempo 01:37:52-01:39:16s — score: 0.1625
@@ -1618,6 +1662,8 @@ Em 2006, a IAU redefiniu os critérios para classificar um corpo celeste como pl
 Há hipóteses sobre a existência de um possível "Planeta Nove" além de Netuno, mas ele ainda não foi observado diretamente e permanece como especulação científica.
 ````
 ### Análises G04-Q05
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 49 — seção: Remover elementos da lista — score: 0.1944
   - `Python para Processamento de Dados.pdf` (pdf) — p. 70 — seção: Versão do Pandas: 2.1.4 — score: 0.1939
@@ -1654,6 +1700,8 @@ Fontes consultadas:
 O maior oceano do planeta é o **Oceano Pacífico**. Ele cobre aproximadamente **165,25 milhões de quilômetros quadrados**, representando cerca de **46% da superfície aquática da Terra** e mais de **30% da superfície total do planeta**. Além de ser o maior, também é o mais profundo, abrigando a **Fossa das Marianas**, o ponto mais profundo conhecido no mundo (cerca de 11.034 metros de profundidade). O Pacífico se estende desde o Oceano Ártico, ao norte, até o Oceano Antártico, ao sul, e está delimitado pela Ásia, Austrália e Américas. 🌊
 ````
 ### Análises G04-Q06
+- **Nome do grupo:** Diretas sem relação com o material
+- **Categorias:** direta | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 91 — seção: Escopo global — score: 0.1836
   - `Introdução ao Python.pdf` (pdf) — p. 91 — seção: 5.1.4 Escopo de Variáveis — score: 0.1744
@@ -1733,6 +1781,8 @@ O RAG opera em duas etapas principais:
 Em resumo, o RAG é uma ponte entre o conhecimento estático de modelos de linguagem e informações externas, tornando respostas mais precisas e contextualizadas.
 ````
 ### Análises G05-Q01
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_pt | sem_pontuacao | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 10 — seção: Lista de Códigos — score: 0.2792
   - `Introdução ao Python.pdf` (pdf) — p. 30 — seção: Operadores relacionais e lógicos — score: 0.2619
@@ -1777,6 +1827,8 @@ Para saber qual editor o professor utiliza no curso, a melhor forma é:
 Se não tiver acesso a essas informações, o **VS Code** é uma opção versátil e amplamente usada em diversos cursos. 😊
 ````
 ### Análises G05-Q02
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_pt | sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.3350
   - `Introdução ao Python.pdf` (pdf) — p. 16 — seção: 1.3 Ferramentas e Ambientes de Desenvolvimento com Python — score: 0.3316
@@ -1884,6 +1936,8 @@ Não é "melhor", é **complementar**!
 O Pipx é recomendado pela [PyPA](https://packaging.python.org/en/latest/guides/tool-recommendations/) para instalação de aplicações CLI, enquanto o `pip` continua sendo essencial para desenvolvimento. 😊
 ````
 ### Análises G05-Q03
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_pt | sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.8097
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.5189
@@ -2002,6 +2056,8 @@ Para instalar o **FastAPI** no seu computador, siga os passos abaixo:
 Se encontrar erros, verifique se o ambiente virtual está ativado e se a versão do Python é compatível. 😊
 ````
 ### Análises G05-Q04
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_pt | sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `README.md` (markdown) — seção: O que é FastAPI? — score: 0.6268
   - `aula-01.mp3` (audio) — tempo 00:59:50-01:01:10s — score: 0.6051
@@ -2106,6 +2162,8 @@ Fontes:
 By bridging retrieval and generation, RAG empowers models to deliver accurate, context-rich responses while maintaining flexibility and transparency.
 ````
 ### Análises G05-Q05
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_en | ingles | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-07.mp3` (audio) — tempo 00:23:52-00:24:55s — score: 0.1769
   - `aula-01.mp3` (audio) — tempo 01:10:37-01:11:39s — score: 0.1700
@@ -2140,6 +2198,8 @@ The professor uses **Vim** as their primary text editor for coding and writing. 
 If you need specifics about their LaTeX setup (e.g., editors like TeXworks, Overleaf, or Vim configurations), feel free to ask!
 ````
 ### Análises G05-Q06
+- **Nome do grupo:** Erros de ortografia (português)
+- **Categorias:** erro_ortografia_en | ingles | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.4223
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.4005
@@ -2215,6 +2275,8 @@ O RAG opera em duas etapas principais:
 Em resumo, o RAG é uma ponte entre a capacidade criativa dos modelos de linguagem e a precisão de fontes externas, tornando sistemas de IA mais confiáveis e adaptáveis. 🚀
 ````
 ### Análises G06-Q01
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 10 — seção: Lista de Códigos — score: 0.2474
   - `Python para Processamento de Dados.pdf` (pdf) — p. 76 — seção: # Mostra as duas primei ras l i nhas — score: 0.2402
@@ -2281,6 +2343,8 @@ Se você quer seguir exatamente o que o professor faz, a melhor opção é:
 Se preferir explorar por conta própria, escolha um editor/terminal que se adapte ao seu sistema operacional e ao conteúdo da disciplina (ex.: VS Code é ótimo para iniciantes). 😊
 ````
 ### Análises G06-Q02
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.6729
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.5186
@@ -2360,6 +2424,8 @@ Imagine uma API de previsão do tempo:
 Portanto, **não são a mesma coisa**, mas trabalham juntos para possibilitar a integração entre sistemas. 😊
 ````
 ### Análises G06-Q03
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Endpoint — score: 0.8286
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs — score: 0.6741
@@ -2413,6 +2479,8 @@ LAN (Local Area Network) é uma rede de comunicação que abrange um espaço loc
 Resumindo: **LAN** é uma rede local que conecta dispositivos próximos, permitindo comunicação rápida e compartilhamento de recursos. 😊
 ````
 ### Análises G06-Q04
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 00:04:17-00:05:30s — score: 0.6667
   - `aula-02.mp3` (audio) — tempo 00:27:32-00:28:26s — score: 0.3385
@@ -2536,6 +2604,8 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjMiLCJuYW1lIjoiQWxpY2UiLCJleHA
 Em resumo, o JWT é uma ferramenta poderosa para autenticação moderna, mas requer boas práticas de segurança para evitar vulnerabilidades.
 ````
 ### Análises G06-Q05
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT — score: 0.8679
   - `aula-06.mp3` (audio) — tempo 00:37:43-00:38:43s — score: 0.7778
@@ -2628,6 +2698,8 @@ A **Local Area Network (LAN)** is a network that connects devices within a limit
 By connecting devices efficiently and securely, LANs form the backbone of modern communication in homes and organizations. 🌐🔌📡
 ````
 ### Análises G06-Q06
+- **Nome do grupo:** Erros de pontuação
+- **Categorias:** sem_pontuacao | ingles | curta | contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 00:04:17-00:05:30s — score: 0.6313
   - `Introdução ao Python.pdf` (pdf) — p. 24 — seção: Indentação — score: 0.1939
@@ -2685,6 +2757,8 @@ Se você perguntar a um sistema RAG *"Qual a capital da Austrália?"*, ele:
 Em resumo, o RAG é como um "pesquisador inteligente" que consulta fontes confiáveis antes de responder! 🧠📚
 ````
 ### Análises G07-Q01
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `Python para Processamento de Dados.pdf` (pdf) — p. 76 — seção: # Mostra as duas primei ras l i nhas — score: 0.2070
   - `Python para Processamento de Dados.pdf` (pdf) — p. 10 — seção: Lista de Códigos — score: 0.1927
@@ -2729,6 +2803,8 @@ Ah, boa pergunta! 🤓 No entanto, não tenho informações específicas sobre q
 Quer ajuda com alguma ferramenta específica? Posso dar dicas! 😊
 ````
 ### Análises G07-Q02
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.3790
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.3731
@@ -2849,6 +2925,8 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG8
 Em resumo, o JWT é uma ferramenta poderosa para autenticação moderna, mas requer boas práticas de segurança para evitar vulnerabilidades! 🔒
 ````
 ### Análises G07-Q03
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | contexto
 - **Fontes obtidas:**
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT — score: 0.9307
   - `aula-06.mp3` (audio) — tempo 00:37:43-00:38:43s — score: 0.8094
@@ -2968,6 +3046,8 @@ Coleta (Web Scraping) → Limpeza (Regex/NLTK) → Tokenização (spaCy) → Arm
 Se o projeto envolve tecnologias específicas (ex.: Hugging Face, TensorFlow) ou requisitos adicionais (como compliance com GDPR), detalhes adicionais seriam necessários. Você tem algum contexto específico em mente? 😊
 ````
 ### Análises G07-Q04
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-12.mp3` (audio) — tempo 00:02:02-00:03:03s — score: 0.4067
   - `aula-05.mp3` (audio) — tempo 00:08:26-00:09:24s — score: 0.3583
@@ -3022,6 +3102,8 @@ LAN significa **Local Area Network** (em português, **Rede de Área Local**). �
 Se tiver mais dúvidas, é só perguntar! 😊
 ````
 ### Análises G07-Q05
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 00:04:17-00:05:30s — score: 0.7221
   - `Introdução ao Python.pdf` (pdf) — p. 24 — seção: Indentação — score: 0.2848
@@ -3119,6 +3201,8 @@ async def read_item(item_id: int, query_param: str = None):
 Se você já trabalha com Python e busca uma alternativa moderna a Flask ou Django REST Framework, o FastAPI é uma excelente escolha! 🚀
 ````
 ### Análises G07-Q06
+- **Nome do grupo:** Emojis
+- **Categorias:** emoji | curta | contexto
 - **Fontes obtidas:**
   - `README.md` (markdown) — seção: O que é FastAPI? — score: 0.9370
   - `aula-02.mp3` (audio) — tempo 01:08:26-01:09:23s — score: 0.6352
@@ -3175,6 +3259,8 @@ Se você perguntar ao RAG *"Qual foi o último lançamento da NASA?"*, ele:
 Em resumo, o RAG **integra informações externas** ao poder de geração do modelo, indo além do conhecimento armazenado internamente. 😊
 ````
 ### Análises G08-Q01
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `03.md` (markdown) — seção: Estruturando o projeto e criando rotas CRUD > Iniciando a implementação da rota POST > Modelo de dados — score: 0.3136
   - `Introdução ao Python.pdf` (pdf) — p. 97 — seção: Mounted at /content/drive — score: 0.3012
@@ -3247,6 +3333,8 @@ pipx list
 - ⚠️ **pip/pip --user**: Instala sem isolamento (pode causar conflitos de versões).
 ````
 ### Análises G08-Q02
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | contexto
 - **Fontes obtidas:**
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.6298
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.5746
@@ -3315,6 +3403,8 @@ O GNU Emacs é um editor de texto altamente personalizável e extensível, muito
 Se você está começando, não se assuste com a complexidade inicial. Com o tempo, o Emacs pode se tornar uma ferramenta indispensável para escrita, programação e organização! 🚀
 ````
 ### Análises G08-Q03
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.4527
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.4216
@@ -3448,6 +3538,8 @@ Para implementar JWT, utilize bibliotecas consolidadas:
 Sempre valide a assinatura e verifique as claims antes de confiar no token!
 ````
 ### Análises G08-Q04
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | contexto
 - **Fontes obtidas:**
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT — score: 0.9221
   - `aula-06.mp3` (audio) — tempo 00:37:43-00:38:43s — score: 0.7831
@@ -3555,6 +3647,8 @@ Sim, o FastAPI gera automaticamente documentação interativa usando o Swagger U
 Essa funcionalidade é um dos grandes diferenciais do FastAPI, pois simplifica o desenvolvimento e a manutenção de APIs RESTful. 😊
 ````
 ### Análises G08-Q05
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Documentação > OpenAPI e documentação automática — score: 0.7246
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Documentação > OpenAPI e documentação automática — score: 0.6556
@@ -3668,6 +3762,8 @@ Sim, o **PostgreSQL** é um banco de dados relacional de código aberto amplamen
 Se precisar de mais detalhes ou exemplos específicos, é só perguntar! 😊
 ````
 ### Análises G08-Q06
+- **Nome do grupo:** Afirmações
+- **Categorias:** afirmacao | curta | contexto
 - **Fontes obtidas:**
   - `11.md` (markdown) — seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL > Introduzindo o postgreSQL — score: 0.7812
   - `11.md` (markdown) — seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL > Introduzindo o postgreSQL > Como executar o postgres? — score: 0.6084
@@ -3734,6 +3830,8 @@ Resumindo: **RAG é a dupla dinâmica "pesquisador + redator"**. Ele junta o mel
 Quer mais detalhes ou exemplos? Só falar! 😎
 ````
 ### Análises G09-Q01
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 01:05:20-01:06:18s — score: 0.3393
   - `aula-04.mp3` (audio) — tempo 00:37:53-00:38:50s — score: 0.3343
@@ -3792,6 +3890,8 @@ Se eu fosse adivinhar qual editor o professor usa, apostaria nas opções cláss
 *Se for Vim... comece a praticar os comandos agora, ou vai passar raiva.* 🔥
 ````
 ### Análises G09-Q02
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.3626
   - `aula-01.mp3` (audio) — tempo 00:04:35-00:05:34s — score: 0.3505
@@ -3852,6 +3952,8 @@ LAN = rede local, rápida e restrita a um espaço pequeno. É o que você usa em
 Precisa de mais detalhes? Só perguntar! 😉
 ````
 ### Análises G09-Q03
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `aula-02.mp3` (audio) — tempo 00:04:17-00:05:30s — score: 0.6881
   - `aula-02.mp3` (audio) — tempo 00:05:30-00:06:28s — score: 0.3465
@@ -3939,6 +4041,8 @@ Nenhum é "melhor" que o outro — eles têm propósitos diferentes! A escolha d
 👉 **Dica bônus:** Instale o pipx usando `pip install pipx` e depois `pipx ensurepath` para integrá-lo ao seu terminal.
 ````
 ### Análises G09-Q04
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | curta | contexto
 - **Fontes obtidas:**
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.6221
   - `aula-01.mp3` (audio) — tempo 00:20:38-00:21:32s — score: 0.4876
@@ -4047,6 +4151,8 @@ uvicorn main:app --reload
 Pronto! Seu "trem" FastAPI está rodando! 🚂 Para mais detalhes, consulte a [documentação oficial](https://fastapi.tiangolo.com/).
 ````
 ### Análises G09-Q05
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | curta | contexto
 - **Fontes obtidas:**
   - `README.md` (markdown) — seção: O que é FastAPI? — score: 0.5299
   - `aula-01.mp3` (audio) — tempo 00:59:50-01:01:10s — score: 0.5203
@@ -4117,6 +4223,8 @@ https://api.loja.com/produtos/25
 Resumindo: endpoints são as "portas virtuais" por onde os apps trocam dados. É como se cada função do sistema tivesse seu próprio endereço de email específico para receber mensagens! 📬
 ````
 ### Análises G09-Q06
+- **Nome do grupo:** Gírias
+- **Categorias:** giria | sem_pontuacao | curta | contexto
 - **Fontes obtidas:**
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Endpoint — score: 0.7917
   - `aula-03.mp3` (audio) — tempo 00:16:52-00:17:40s — score: 0.6799
@@ -4165,6 +4273,8 @@ Se você perguntar algo sobre **"notícias de hoje"**, o RAG só responderá bem
 Resumindo: RAG é uma **ferramenta poderosa**, mas não é onisciente. Ele é tão bom quanto os dados que recupera e a capacidade do modelo de gerar respostas coerentes. 😊
 ````
 ### Análises G10-Q01
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | emoji | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-04.mp3` (audio) — tempo 01:16:05-01:17:01s — score: 0.2963
   - `aula-03.mp3` (audio) — tempo 00:49:25-00:50:29s — score: 0.2592
@@ -4199,6 +4309,8 @@ O instrutor inclusive simula erros propositalmente para demonstrar soluções pr
 Haha, entendo a frustração! Às vezes parece que o terminal tem vontade própria mesmo... 😅 Se quiser ajuda com algum comando específico ou erro que está aparecendo, compartilha aí que tento ajudar a "rezar" de forma mais prática! (Ou só desabafar também vale, o computador merece um puxão de orelha às vezes.)
 ````
 ### Análises G10-Q02
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:52:12-00:53:13s — score: 0.3120
   - `aula-01.mp3` (audio) — tempo 00:48:30-00:49:36s — score: 0.2989
@@ -4299,6 +4411,8 @@ A ideia de simplesmente colocar a senha diretamente no código para trabalhar co
 JWT é uma ferramenta poderosa, mas sua segurança depende diretamente de como a chave secreta é gerenciada. **Nunca exponha segredos no código** e siga práticas recomendadas para evitar vulnerabilidades graves. 🔒
 ````
 ### Análises G10-Q03
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | curta | contexto
 - **Fontes obtidas:**
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT — score: 0.6551
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT — score: 0.6059
@@ -4355,6 +4469,8 @@ pip install django==3.2
 **TL;DR:** Pip resolve "instalar pacotes", ambientes virtuais resolvem "não virar um caos generalizado". Usar os dois é o caminho! 🐍✨
 ````
 ### Análises G10-Q04
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | curta | contexto
 - **Fontes obtidas:**
   - `aula-01.mp3` (audio) — tempo 00:20:38-00:21:32s — score: 0.3630
   - `aula-01.mp3` (audio) — tempo 00:30:50-00:31:41s — score: 0.3406
@@ -4398,6 +4514,8 @@ Por outro lado, muitos educadores também usam IDEs modernas (Visual Studio Code
 Você está falando de alguma situação específica?
 ````
 ### Análises G10-Q05
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | curta | contexto
 - **Fontes obtidas:**
   - `Introdução ao Python.pdf` (pdf) — p. 45 — seção: 3.2 Notebook Colab: Estruturas de Dados — score: 0.3274
   - `aula-06.mp3` (audio) — tempo 00:00:50-00:01:35s — score: 0.3138
@@ -4434,6 +4552,8 @@ Fontes:
 Haha, I wish! 😅 While RAG (Retrieval-Augmented Generation) is powerful, it’s definitely not omniscient. It relies on the data it’s been trained on and the documents it can access in the moment. If the information isn’t in its training data or retrievable sources, it’ll either make an educated guess (which might be wrong) or admit it doesn’t know. Plus, biases, outdated info, or context gaps can trip it up. Think of me as a very enthusiastic librarian with a sometimes-overconfident AI sidekick. Need help with something specific? I’ll do my best! 🔍✨
 ````
 ### Análises G10-Q06
+- **Nome do grupo:** Sarcasmo/ironia
+- **Categorias:** sarcasmo | emoji | ingles | curta | fora_de_contexto
 - **Fontes obtidas:**
   - `aula-06.mp3` (audio) — tempo 01:53:46-01:54:18s — score: 0.1962
   - `aula-01.mp3` (audio) — tempo 02:03:37-02:04:39s — score: 0.1907
