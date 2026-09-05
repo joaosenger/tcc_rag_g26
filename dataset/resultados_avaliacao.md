@@ -1572,11 +1572,12 @@ A **Teoria da Relatividade** é um conjunto de ideias desenvolvidas por Albert E
   - `Python para Processamento de Dados.pdf` (pdf) — p. 127 — seção: Calcular Correlações — score: 0.2471
   - `Introdução ao Python.pdf` (pdf) — p. 109 — seção: Operadores : — score: 0.2333
   - `Python para Processamento de Dados.pdf` (pdf) — p. 127 — seção: Análise de Correlações e Proporções — score: 0.2286
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre a teoria da relatividade: o conteúdo disponível trata apenas de Python, processamento de dados e desenvolvimento web com FastAPI. Não é possível responder com base no material.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Scores baixíssimos (topo 0.2763, operadores relacionais) confirmam a ausência do tema; mesmo assim o modelo explicou por que não pode responder. Sem RAG, o modelo produz uma aula completa sobre relatividade — factualmente correta, porém sem qualquer fundamento no material (comportamento esperado da condição sem contexto).
 
 ### G04-Q04 (en)
 
@@ -1617,11 +1618,12 @@ While Bell is traditionally recognized due to his patent and commercialization s
   - `Introdução ao Python.pdf` (pdf) — p. 58 — seção: Criar um dicionário com chaves e valores do tipo string — score: 0.1385
   - `aula-02.mp3` (audio) — tempo 00:31:18-00:32:20s — score: 0.1377
   - `Introdução ao Python.pdf` (pdf) — p. 58 — seção: Criar um dicionário vazio — score: 0.1362
+- **Resposta padrão ouro:** There is insufficient evidence in the course materials to answer this question. The available content covers only Python and FastAPI web development, with no mention of the history of the telephone.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Pergunta em inglês sinalizada corretamente (resposta em português). Sem RAG atribui a invenção a Graham Bell com nuances históricas, usando apenas conhecimento paramétrico.
 
 ### G04-Q05 (pt)
 
@@ -1670,11 +1672,12 @@ Há hipóteses sobre a existência de um possível "Planeta Nove" além de Netun
   - `Python para Processamento de Dados.pdf` (pdf) — p. 11 — seção: Lista de Códigos — score: 0.1810
   - `Python para Processamento de Dados.pdf` (pdf) — p. 108 — seção: # Cri ando um gráfi co de pi zza com a Di st ri bui ção das Espéci es de Í ri s — score: 0.1797
   - `Introdução ao Python.pdf` (pdf) — p. 23 — seção: Indentação — score: 0.1795
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre astronomia ou sobre o número de planetas do sistema solar. O conteúdo disponível trata de programação em Python e desenvolvimento web, então não é possível responder com base no material.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Sinalização correta apesar de chunks irrelevantes (pandas, listas). Sem RAG acerta '8 planetas' de memória: resposta factualmente correta, mas sem fundamento no material — contraste útil para discutir grounding no TCC.
 
 ### G04-Q06 (pt)
 
@@ -1708,11 +1711,12 @@ O maior oceano do planeta é o **Oceano Pacífico**. Ele cobre aproximadamente *
   - `Introdução ao Python.pdf` (pdf) — p. 98 — seção: Escrever em um arquivo — score: 0.1738
   - `Python para Processamento de Dados.pdf` (pdf) — p. 37 — seção: Arrays e Matrizes — score: 0.1640
   - `Introdução ao Python.pdf` (pdf) — p. 57 — seção: 3.2.2.3 Dicionários — score: 0.1606
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre geografia ou oceanos. O conteúdo disponível trata de programação em Python e desenvolvimento web, então não é possível responder com base no material.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Sinalização limpa e justificada. Sem RAG responde 'Pacífico' com detalhes geográficos de conhecimento geral.
 
 ## Grupo 5 — Erros de ortografia (português)
 
@@ -1789,11 +1793,12 @@ Em resumo, o RAG é uma ponte entre o conhecimento estático de modelos de lingu
   - `aula-01.mp3` (audio) — tempo 01:10:37-01:11:39s — score: 0.2613
   - `aula-14.mp3` (audio) — tempo 00:35:00-00:36:08s — score: 0.2486
   - `Python para Processamento de Dados.pdf` (pdf) — p. 76 — seção: # Mostra as duas primei ras l i nhas — score: 0.2478
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre RAG (Retrieval-Augmented Generation). O curso cobre Python e desenvolvimento web com FastAPI, e o tema não é abordado em nenhuma fonte disponível.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Erro ortográfico ('oq é rag') somado a tema ausente: o ruído não comprometeu o controle de alucinação. Sem RAG explica RAG com conhecimento paramétrico.
 
 ### G05-Q02 (pt)
 
@@ -1835,11 +1840,12 @@ Se não tiver acesso a essas informações, o **VS Code** é uma opção versát
   - `aula-00.mp3` (audio) — tempo 00:54:33-00:55:30s — score: 0.3167
   - `aula-01.mp3` (audio) — tempo 00:05:34-00:06:16s — score: 0.3138
   - `aula-01.mp3` (audio) — tempo 01:10:37-01:11:39s — score: 0.3069
+- **Resposta padrão ouro:** O professor usa o GNU/Emacs durante o curso. Ele ressalta que qualquer editor de texto serve e recomenda o Kate como alternativa para quem preferir outra opção.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** Erros nas palavras-chave ('editar', 'profeçor', 'curço') não impediram a recuperação do trecho correto da aula-01 (score 0.3350). Resposta sem RAG não tem como saber (fato específico do curso) e sugere editores genéricos.
 
 ### G05-Q03 (pt)
 
@@ -1944,11 +1950,12 @@ O Pipx é recomendado pela [PyPA](https://packaging.python.org/en/latest/guides/
   - `aula-01.mp3` (audio) — tempo 00:09:49-00:10:55s — score: 0.5124
   - `aula-01.mp3` (audio) — tempo 00:20:38-00:21:32s — score: 0.5045
   - `aula-01.mp3` (audio) — tempo 00:13:28-00:14:27s — score: 0.4942
+- **Resposta padrão ouro:** O pipx é uma ferramenta usada para instalar e executar ferramentas Python globalmente no sistema de forma segura: ele cria um ambiente virtual e isola cada ferramenta dentro dele, evitando conflitos de dependências. Não é 'melhor' que o pip — têm propósitos diferentes: o pip instala dependências de projetos (por padrão sem isolamento, podendo 'sujar' o ambiente), enquanto o pipx é indicado para ferramentas de linha de comando globais, como o Poetry. No curso, o pipx é usado para instalar ferramentas globais e executar outras de uso único.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta fiel ao 01.md, inclusive na nuance 'não é melhor, é propósito diferente'. Fonte correta no topo (score 0.8097). Sem RAG também responde bem (tema de conhecimento geral), porém sem vínculo com o material do curso.
 
 ### G05-Q04 (pt)
 
@@ -2064,11 +2071,12 @@ Se encontrar erros, verifique se o ambiente virtual está ativado e se a versão
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > Criando um projeto > Instalando o FastAPI — score: 0.5948
   - `aula-01.mp3` (audio) — tempo 00:36:53-00:38:05s — score: 0.5477
   - `aula-01.mp3` (audio) — tempo 00:38:06-00:39:03s — score: 0.5426
+- **Resposta padrão ouro:** No curso, o FastAPI é instalado com o Poetry, dentro do ambiente virtual do projeto: primeiro `poetry install`, para criar o ambiente virtual, e depois `poetry add 'fastapi[standard]'`, que adiciona o FastAPI e suas dependências padrão (incluindo o servidor).
 - **Fonte correta recuperada:** parcial
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 4
+- **Observações:** Conteúdo correto e fiel (comandos do 01.md). O chunk mais específico (01.md > Instalando o FastAPI) apareceu só em 3º (README.md no topo) — daí o 'parcial' na fonte. O erro em 'computado' não afetou. Sem RAG ensina pip/venv, divergindo do fluxo do curso (Poetry).
 
 ### G05-Q05 (en)
 
@@ -2170,11 +2178,12 @@ By bridging retrieval and generation, RAG empowers models to deliver accurate, c
   - `Python para Processamento de Dados.pdf` (pdf) — p. 76 — seção: # Mostra as duas primei ras l i nhas — score: 0.1695
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > Configurando as ferramentas de desenvolvimento > Ruff — score: 0.1688
   - `Python para Processamento de Dados.pdf` (pdf) — p. 10 — seção: Lista de Códigos — score: 0.1593
+- **Resposta padrão ouro:** There is insufficient evidence in the course materials about RAG (Retrieval-Augmented Generation). The course covers Python and FastAPI web development only.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Erro de ortografia em inglês ('how dos it work') + tema ausente: sinalização correta. Sem RAG responde com um verbete completo sobre RAG.
 
 ### G05-Q06 (en)
 
@@ -2206,11 +2215,12 @@ If you need specifics about their LaTeX setup (e.g., editors like TeXworks, Over
   - `Introdução ao Python.pdf` (pdf) — p. 16 — seção: 1.3 Ferramentas e Ambientes de Desenvolvimento com Python — score: 0.3260
   - `aula-01.mp3` (audio) — tempo 01:09:56-01:10:37s — score: 0.3219
   - `aula-01.mp3` (audio) — tempo 01:10:37-01:11:39s — score: 0.3039
+- **Resposta padrão ouro:** The professor uses GNU/Emacs during the course. He notes that any text editor is acceptable and recommends Kate as an alternative option.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** parcial
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 3
+- **Observações:** A resposta propaga artefato da transcrição do áudio ('GNU e Macs' em vez de GNU Emacs), mitigando apenas no parêntese ('provavelmente GNU Emacs'). Os erros 'wich/proffesor' não impediram a recuperação. Respondeu em português a pergunta em inglês. Sem RAG alucina ('Vim + LaTeX').
 
 ## Grupo 6 — Erros de pontuação
 
@@ -2283,11 +2293,12 @@ Em resumo, o RAG é uma ponte entre a capacidade criativa dos modelos de linguag
   - `aula-01.mp3` (audio) — tempo 01:10:37-01:11:39s — score: 0.2348
   - `aula-07.mp3` (audio) — tempo 00:23:52-00:24:55s — score: 0.2299
   - `aula-13.mp3` (audio) — tempo 00:59:31-01:00:29s — score: 0.2239
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre RAG (Retrieval-Augmented Generation); o tema não é abordado em nenhuma fonte disponível.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Pontuação caótica (',,,' e '???') sem efeito sobre o comportamento: sinalizou insuficiência. Sem RAG explica RAG corretamente de memória.
 
 ### G06-Q02 (pt)
 
@@ -2351,11 +2362,12 @@ Se preferir explorar por conta própria, escolha um editor/terminal que se adapt
   - `aula-00.mp3` (audio) — tempo 00:04:46-00:05:47s — score: 0.5180
   - `README.md` (markdown) — seção: O que é FastAPI? > ❓ F.A.Q. — score: 0.5053
   - `README.md` (markdown) — seção: O que é FastAPI? > 🧰 Ferramentas necessárias para acompanhar o curso — score: 0.5049
+- **Resposta padrão ouro:** O terminal que o professor usa no curso é o Terminator (mencionado na lista de ferramentas do material e no F.A.Q. do curso).
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** O sistema acompanhou a autocorreção no meio da pergunta (editor → terminal) e respondeu à pergunta final, citando o trecho da aula-01 e o F.A.Q. Sem RAG não sabe e lista editores/terminais populares.
 
 ### G06-Q03 (pt)
 
@@ -2432,11 +2444,12 @@ Portanto, **não são a mesma coisa**, mas trabalham juntos para possibilitar a 
   - `03.md` (markdown) — seção: Estruturando o projeto e criando rotas CRUD > Implementando endpoints — score: 0.5836
   - `aula-03.mp3` (audio) — tempo 00:16:52-00:17:40s — score: 0.5685
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Documentação — score: 0.5594
+- **Resposta padrão ouro:** Não são a mesma coisa. Uma API (Application Programming Interface) é a interface completa — o 'contrato' — que define como sistemas se comunicam via HTTP, englobando todos os recursos e funcionalidades disponíveis. Um endpoint é um ponto específico dentro da API: uma URL (como `https://api.exemplo.com/usuarios/{id}`) associada a uma função e a métodos HTTP (GET, POST etc.). Ou seja, os endpoints são os pontos de acesso individuais que fazem parte da API.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** Distinção fiel ao 02.md, com as fontes certas no topo (Endpoint 0.8286; APIs 0.6741). A dupla de interrogações não afetou. Sem RAG também acerta a distinção (conhecimento geral).
 
 ### G06-Q04 (pt)
 
@@ -2487,11 +2500,12 @@ Resumindo: **LAN** é uma rede local que conecta dispositivos próximos, permiti
   - `aula-02.mp3` (audio) — tempo 00:05:30-00:06:28s — score: 0.3311
   - `aula-13.mp3` (audio) — tempo 01:07:42-01:08:58s — score: 0.3240
   - `aula-02.mp3` (audio) — tempo 00:12:22-00:13:13s — score: 0.3134
+- **Resposta padrão ouro:** LAN significa Local Area Network (rede de área local): uma rede que conecta dispositivos num espaço físico limitado, como a rede da sua casa ou de um escritório — computadores, celulares, tablets e outros aparelhos em volta de um roteador, compartilhando dados e recursos.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** As exclamações '!!!' não atrapalharam; trecho correto da aula-02 no topo (0.6667). Sem RAG também define corretamente, com extras (MAN/WAN).
 
 ### G06-Q05 (pt)
 
@@ -2612,11 +2626,12 @@ Em resumo, o JWT é uma ferramenta poderosa para autenticação moderna, mas req
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT — score: 0.6607
   - `aula-13.mp3` (audio) — tempo 00:29:34-00:30:21s — score: 0.6207
   - `aula-06.mp3` (audio) — tempo 00:51:49-00:52:51s — score: 0.6051
+- **Resposta padrão ouro:** JWT (JSON Web Token) é um padrão (RFC 7519) para transmitir informações de forma compacta e segura, por meio de um objeto JSON assinado digitalmente. Ele tem três partes: o header (tipo do token e algoritmo de assinatura), o payload (as claims — os dados transmitidos, como identificação do usuário e tempo de expiração) e a signature (assinatura gerada com uma chave secreta). Funciona assim: após o usuário enviar suas credenciais, o servidor assina criptograficamente os dados e devolve o token; o cliente o apresenta nas requisições seguintes e o servidor valida a assinatura. É usado para autenticação e autorização em aplicações web — no curso, no sistema de login.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta completa e estruturada (o que é / como funciona / onde é usado), com 06.md no topo (0.8679) e trechos da aula-06. As '????' não afetaram. Sem RAG também responde bem (conhecimento geral).
 
 ### G06-Q06 (en)
 
@@ -2706,11 +2721,12 @@ By connecting devices efficiently and securely, LANs form the backbone of modern
   - `aula-02.mp3` (audio) — tempo 00:05:30-00:06:28s — score: 0.1899
   - `aula-02.mp3` (audio) — tempo 00:12:22-00:13:13s — score: 0.1873
   - `07.md` (markdown) — seção: Refatorando a estrutura do projeto > Criando Routers — score: 0.1688
+- **Resposta padrão ouro:** LAN (Local Area Network) is a local network that connects devices within a limited physical area, such as your home network: computers, phones and other devices communicate through a router, sharing data without needing an external network.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 4
+- **Observações:** Conteúdo correto com as fontes certas (aula-02 no topo, 0.6313), mas respondeu em português a uma pergunta feita em inglês. A ausência total de pontuação não afetou a recuperação.
 
 ## Grupo 7 — Emojis
 
@@ -2765,11 +2781,12 @@ Em resumo, o RAG é como um "pesquisador inteligente" que consulta fontes confi�
   - `Python para Processamento de Dados.pdf` (pdf) — p. 8 — seção: Lista de Figuras — score: 0.1734
   - `Introdução ao Python.pdf` (pdf) — p. 9 — seção: Sumário — score: 0.1707
   - `Introdução ao Python.pdf` (pdf) — p. 7 — seção: Lista de Figuras — score: 0.1707
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre RAG (Retrieval-Augmented Generation); o tema não é abordado em nenhuma fonte disponível.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Emojis tratados como ruído não semântico; sinalização correta. Sem RAG explica RAG de memória.
 
 ### G07-Q02 (pt)
 
@@ -2811,11 +2828,12 @@ Quer ajuda com alguma ferramenta específica? Posso dar dicas! 😊
   - `README.md` (markdown) — seção: O que é FastAPI? > 📖 Licença — score: 0.3578
   - `aula-00.mp3` (audio) — tempo 00:04:46-00:05:47s — score: 0.3438
   - `aula-01.mp3` (audio) — tempo 01:23:13-01:24:23s — score: 0.3336
+- **Resposta padrão ouro:** O professor usa o GNU/Emacs; qualquer editor serve, e o Kate é a alternativa recomendada.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** O emoji 🖥️ não afetou; trecho correto no topo (0.3790 — score baixo, porém suficiente). Sem RAG não sabe.
 
 ### G07-Q03 (pt)
 
@@ -2933,11 +2951,12 @@ Em resumo, o JWT é uma ferramenta poderosa para autenticação moderna, mas req
   - `aula-13.mp3` (audio) — tempo 00:29:34-00:30:21s — score: 0.6092
   - `aula-06.mp3` (audio) — tempo 00:38:43-00:39:29s — score: 0.6026
   - `aula-06.mp3` (audio) — tempo 00:43:18-00:44:16s — score: 0.6019
+- **Resposta padrão ouro:** JWT (JSON Web Token) é um padrão (RFC 7519) de token assinado digitalmente, composto por três partes: header, payload (com as claims) e signature. É usado para autenticação: após o login, o servidor assina e emite o token, que o cliente reapresenta nas requisições seguintes.
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** n/a
+- **Qualidade geral (1–5):** 5
+- **Observações:** Melhor score de recuperação do subconjunto (06.md com 0.9307). O emoji 🔐 não afetou. Sem RAG também responde bem.
 
 ### G07-Q04 (pt)
 
@@ -3054,11 +3073,12 @@ Se o projeto envolve tecnologias específicas (ex.: Hugging Face, TensorFlow) ou
   - `aula-12.mp3` (audio) — tempo 00:04:07-00:05:07s — score: 0.3448
   - `aula-05.mp3` (audio) — tempo 00:14:53-00:15:44s — score: 0.3434
   - `aula-12.mp3` (audio) — tempo 00:05:07-00:05:59s — score: 0.3392
+- **Resposta padrão ouro:** Não há evidência nos materiais do curso sobre 'ingestão de corpus': o material não descreve o funcionamento interno deste projeto de assistente. O conteúdo disponível trata apenas de Python e desenvolvimento web com FastAPI.
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Pergunta sobre o próprio sistema (não sobre o curso): o risco de confusão com 'injeção de dependências' (aula 06) não se concretizou — recuperou aula-12 (CI/CD) e sinalizou insuficiência. Sem RAG descreve um pipeline de NLP genérico (plausível, mas sem base no material).
 
 ### G07-Q05 (pt)
 
