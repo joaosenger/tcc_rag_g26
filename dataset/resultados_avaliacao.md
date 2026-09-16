@@ -3,7 +3,7 @@
 Campos preenchidos automaticamente via API (dataset/respostas_com_rag.json).
 Legenda das respostas:
 
-- **fonte_correta_recuperada**: `sim` | `nao` | `parcial`
+- **fonte_correta_recuperada**: `sim` | `nao` | `parcial` | `n/a`
 - **resposta_adequada**: `sim` | `nao` | `parcial`
 - **sinalizou_insuficiencia**: `sim` | `nao` | `n/a` (esperado `sim` nas perguntas fora de contexto)
 - **qualidade_geral**: nota de 1 a 5
@@ -113,10 +113,10 @@ Em resumo, o `pipx` é a maneira recomendada de gerenciar aplicativos Python de 
   - `aula-01.mp3` (audio) — tempo 00:13:28-00:14:27s — score: 0.4858
   - `aula-01.mp3` (audio) — tempo 00:08:53-00:09:49s — score: 0.4757
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta concisa, foi perguntado o que é e para que serve, não como instalar e outras coisas, por isso, a resposta foi mais assertiva que a resposta da LLM sem RAG.
 
 ### G01-Q02 (pt)
 
@@ -158,10 +158,10 @@ Infelizmente, não tenho acesso a informações específicas sobre qual editor d
   - `aula-00.mp3` (audio) — tempo 00:04:46-00:05:47s — score: 0.4693
   - `aula-01.mp3` (audio) — tempo 01:09:56-01:10:37s — score: 0.4088
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta adequada, enquanto uma LLM sem RAG não é capaz de responder à questão.
 
 ### G01-Q03 (pt)
 
@@ -209,10 +209,10 @@ A LAN contrasta com redes de maior alcance, como **WAN** (Wide Area Network), qu
   - `aula-02.mp3` (audio) — tempo 00:05:30-00:06:28s — score: 0.2761
   - `aula-02.mp3` (audio) — tempo 00:06:29-00:07:24s — score: 0.2583
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** O modelo sem RAG novamente gerou respostas além do escopo da pergunta original.
 
 ### G01-Q04 (en)
 
@@ -305,10 +305,10 @@ FastAPI combines speed, simplicity, and modern Python practices, making it a top
   - `aula-01.mp3` (audio) — tempo 00:38:06-00:39:03s — score: 0.5368
   - `README.md` (markdown) — seção: O que é FastAPI? > Conclusão — score: 0.5285
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta concisa com o que foi pedido, sem ir além como o modelo sem RAG.
 
 ### G01-Q05 (pt)
 
@@ -396,10 +396,10 @@ Esses são os tipos básicos, mas Python permite grande flexibilidade com estrut
   - `Introdução ao Python.pdf` (pdf) — p. 47 — seção: 3.2.2 Estruturas básicas de dados — score: 0.5649
   - `aula-03.mp3` (audio) — tempo 00:10:12-00:11:07s — score: 0.5328
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** parcial
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 3
+- **Observações:** A resposta foi fiel ao material, porém, tipos avançados como `complex`, não foram abordados.
 
 ### G01-Q06 (pt)
 
@@ -442,8 +442,8 @@ Um **endpoint** é um ponto de acesso específico em uma API (Interface de Progr
 
 ### Exemplo Prático:
 - **Endpoint**: `https://api.redesocial.com/posts`  
-  - `GET /posts`: Retorna todas as postagens.  
-  - `POST /posts`: Publica uma nova postagem.
+   - `GET /posts`: Retorna todas as postagens.  
+   - `POST /posts`: Publica uma nova postagem.
 
 ### Importância:
 - **Padronização**: Facilita a integração entre sistemas.  
@@ -462,10 +462,10 @@ Em resumo, um endpoint é a "porta de entrada" para interagir com um serviço ou
   - `aula-03.mp3` (audio) — tempo 00:03:27-00:04:21s — score: 0.6162
   - `aula-02.mp3` (audio) — tempo 01:29:35-01:31:16s — score: 0.5291
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta está certa e de acordo com os materiais, porém, poderia ter sido mais criativa, como na resposta da LLM sem rag, que destacou a importância do tema.
 
 ## Grupo 2 — Longas e contextualizadas
 
@@ -554,10 +554,10 @@ Em resumo, o FastAPI atua como o **cérebro do servidor**, garantindo que as req
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > A web > O modelo cliente-servidor — score: 0.5685
   - `aula-02.mp3` (audio) — tempo 00:13:57-00:14:59s — score: 0.5679
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta foi fiel ao conteúdo que alimentou a RAG.
 
 ### G02-Q02 (pt)
 
@@ -654,10 +654,10 @@ Em resumo, as claims são a essência do JWT, permitindo que o token transporte 
   - `aula-06.mp3` (audio) — tempo 00:37:43-00:38:43s — score: 0.5631
   - `aula-06.mp3` (audio) — tempo 00:38:43-00:39:29s — score: 0.5543
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta foi adequada ao padrão esperado, não indo além da questão inicial da pergunta.
 
 ### G02-Q03 (pt)
 
@@ -734,10 +734,10 @@ O **pipx** é a escolha ideal para ferramentas que precisam ser executadas globa
   - `aula-14.mp3` (audio) — tempo 00:11:10-00:12:10s — score: 0.5265
   - `aula-01.mp3` (audio) — tempo 00:10:56-00:11:43s — score: 0.5248
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta foi adequada e fiel ao abordado pelo professor nas aulas, ao passo que a LLM alucinou no tocante a simular uma resposta de um curso ao qual ela não tem conhecimento.
 
 ### G02-Q04 (en)
 
@@ -838,10 +838,10 @@ REST APIs leverage HTTP verbs to perform CRUD operations on resources, with resp
   - `aula-03.mp3` (audio) — tempo 00:02:11-00:02:44s — score: 0.3894
   - `03.md` (markdown) — seção: Estruturando o projeto e criando rotas CRUD > CRUD e HTTP — score: 0.3844
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A RAG conseguiu detectar que o curso é em Português e a resposta foi feita no idioma dos materiais, o que é o comportamento esperado. A LLM sem RAG respondeu em inglês, o que não está errado haja vista que ela não tem contexto.
 
 ### G02-Q05 (pt)
 
@@ -883,10 +883,10 @@ Isso permite simular um ambiente completo e funcional, próximo ao que seria uti
   - `11.md` (markdown) — seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL > Containers e nossa aplicação — score: 0.5622
   - `aula-11.mp3` (audio) — tempo 00:00:59-00:01:55s — score: 0.5600
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 3
+- **Observações:** Não sinalizou os riscos de usar um banco de dados relacional com Docker, o que é abordado nos materiais em vídeo do curso.
 
 ### G02-Q06 (pt)
 
@@ -1000,10 +1000,10 @@ A divisão em **Arrange**, **Act** e **Assert** é essencial para criar testes r
   - `aula-14.mp3` (audio) — tempo 00:22:39-00:23:27s — score: 0.4989
   - `aula-01.mp3` (audio) — tempo 01:52:22-01:53:25s — score: 0.4949
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** Resposta adequada e com referências fiéis ao conteúdo das aulas em vídeo, ao passo que a LLM sem RAG foi além do solicitado na questão.
 
 ## Grupo 3 — Longas sem relação com o material
 
@@ -1070,10 +1070,10 @@ Em resumo, o aumento da densidade de transistores exige inovação contínua em 
   - `aula-08.mp3` (audio) — tempo 00:44:00-00:45:09s — score: 0.2401
   - `Introdução ao Python.pdf` (pdf) — p. 39 — seção: 3.1.2 Por Que Utilizar Estruturas de Dados? — score: 0.2401
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G03-Q02 (pt)
 
@@ -1146,10 +1146,10 @@ A inflação de alimentos no Brasil é multifatorial, combinando vulnerabilidade
   - `Introdução ao Python.pdf` (pdf) — p. 68 — seção: 4.1.3 Aplicações das Estruturas de Controle de Fluxo — score: 0.1646
   - `Introdução ao Python.pdf` (pdf) — p. 80 — seção: 4.2.5 Estrutura try-except — score: 0.1644
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G03-Q03 (pt)
 
@@ -1197,10 +1197,10 @@ Em resumo, o Muro de Berlim foi tanto uma solução pragmática para crises imed
   - `Introdução ao Python.pdf` (pdf) — p. 46 — seção: Desvantagens: — score: 0.1974
   - `Python para Processamento de Dados.pdf` (pdf) — p. 13 — seção: Sumário — score: 0.1944
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G03-Q04 (en)
 
@@ -1252,10 +1252,10 @@ The Apollo missions, conducted by NASA between 1961 and 1972, made profound cont
   - `11.md` (markdown) — seção: Inicia a aplicação > Testes e Docker — score: 0.1625
   - `11.md` (markdown) — seção: Inicia a aplicação > Testes e Docker > Executando testes com o banco de dados em um container — score: 0.1601
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Mesmo a pergunta sendo em inglês, nossa RAG conseguiu analisar o conteúdo da pergunta, validar que não há documentos sobre o tópico e retornar a resposta esperada.
 
 ### G03-Q05 (pt)
 
@@ -1328,10 +1328,10 @@ Superar esses desafios requer políticas integradas, como subsídios para certif
   - `aula-13.mp3` (audio) — tempo 00:10:53-00:11:39s — score: 0.2407
   - `Introdução ao Python.pdf` (pdf) — p. 16 — seção: 1.3 Ferramentas e Ambientes de Desenvolvimento com Python — score: 0.2374
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G03-Q06 (pt)
 
@@ -1420,10 +1420,10 @@ Enquanto Piaget destaca a **autonomia do sujeito** na descoberta do mundo, Vygot
   - `README.md` (markdown) — seção: O que é FastAPI? > Pré-requisitos — score: 0.2320
   - `aula-14.mp3` (audio) — tempo 00:56:18-00:57:45s — score: 0.2239
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ## Grupo 4 — Diretas sem relação com o material
 
@@ -1471,10 +1471,10 @@ Embora Pedro Álvares Cabral seja tradicionalmente reconhecido como o "descobrid
   - `Introdução ao Python.pdf` (pdf) — p. 98 — seção: Escrever em um arquivo — score: 0.1878
   - `Python para Processamento de Dados.pdf` (pdf) — p. 143 — seção: 3. Leitura adicional : — score: 0.1854
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G04-Q02 (pt)
 
@@ -1508,10 +1508,10 @@ Embora Sydney e Melbourne sejam cidades mais conhecidas internacionalmente, Canb
   - `Python para Processamento de Dados.pdf` (pdf) — p. 35 — seção: Introdução ao NumPy — score: 0.1605
   - `Introdução ao Python.pdf` (pdf) — p. 59 — seção: Adicionando novos pares chave-valor — score: 0.1569
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** Não há referência nos materiais no relativo à questão, sendo a resposta adequada como forma de `guardrail` para tópicos fora do escopo da LLM.
 
 ### G04-Q03 (pt)
 
