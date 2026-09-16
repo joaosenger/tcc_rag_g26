@@ -3131,10 +3131,10 @@ Se tiver mais dúvidas, é só perguntar! 😊
   - `aula-02.mp3` (audio) — tempo 00:05:30-00:06:28s — score: 0.2372
   - `Python para Processamento de Dados.pdf` (pdf) — p. 53 — seção: 2.2 Manipulação e Operações Básicas com Series e DataFrames — score: 0.2243
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG é correta, clara e objetiva, explicando adequadamente o significado de LAN e apresentando um exemplo coerente. A principal fonte recuperada possui boa relevância e sustenta diretamente a resposta, embora as demais fontes apresentem baixa relação com a pergunta. A resposta sem RAG também está correta e é mais detalhada, mas excede o nível de concisão esperado para uma pergunta curta. Nesse contexto, a resposta com RAG mostra-se mais alinhada às categorias definidas e atende plenamente à necessidade educacional.
 
 ### G07-Q06 (pt)
 
@@ -3230,10 +3230,10 @@ Se você já trabalha com Python e busca uma alternativa moderna a Flask ou Djan
   - `README.md` (markdown) — seção: O que é FastAPI? > Conclusão — score: 0.5956
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento — score: 0.5946
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG define corretamente o FastAPI, explica de forma clara sua finalidade e apresenta características relevantes, como anotações de tipo e suporte à concorrência. As fontes recuperadas são pertinentes e sustentam diretamente as informações apresentadas, com destaque para a seção “O que é FastAPI?”, que obteve alta relevância. A explicação adicional sobre API é correta, embora pudesse ser dispensada para manter maior concisão. A resposta sem RAG também é completa e informativa, mas está excessivamente detalhada para uma pergunta curta. Assim, a resposta com RAG apresenta melhor equilíbrio entre clareza, conteúdo e alinhamento às categorias propostas.
 
 ## Grupo 8 — Afirmações
 
@@ -3288,10 +3288,10 @@ Em resumo, o RAG **integra informações externas** ao poder de geração do mod
   - `aula-04.mp3` (audio) — tempo 00:30:16-00:31:15s — score: 0.2929
   - `aula-05.mp3` (audio) — tempo 01:20:14-01:21:13s — score: 0.2848
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG define corretamente o FastAPI, explica de forma clara sua finalidade e apresenta características relevantes, como anotações de tipo e suporte à concorrência. As fontes recuperadas são pertinentes e sustentam diretamente as informações apresentadas, com destaque para a seção “O que é FastAPI?”, que obteve alta relevância. A explicação adicional sobre API é correta, embora pudesse ser dispensada para manter maior concisão. A resposta sem RAG também é completa e informativa, mas está excessivamente detalhada para uma pergunta curta. Assim, a resposta com RAG apresenta melhor equilíbrio entre clareza, conteúdo e alinhamento às categorias propostas.
 
 ### G08-Q02 (pt)
 
@@ -3362,10 +3362,10 @@ pipx list
   - `aula-01.mp3` (audio) — tempo 00:10:56-00:11:43s — score: 0.4853
   - `aula-01.mp3` (audio) — tempo 00:18:24-00:19:28s — score: 0.4602
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG corrige adequadamente a afirmação e explica, de maneira clara e objetiva, que o pipx cria um ambiente virtual isolado para cada ferramenta instalada. A principal fonte recuperada é diretamente relevante e sustenta essa conclusão. Entretanto, o trecho do áudio sobre o Poetry não comprova claramente o isolamento realizado pelo pipx e poderia ser omitido, pois a fonte textual já é suficiente. A resposta sem RAG também está correta e traz exemplos úteis, mas é mais extensa do que o necessário para uma afirmação curta. A resposta com RAG apresenta melhor concisão e alinhamento ao contexto, com pequena perda de qualidade pela utilização de uma evidência secundária pouco específica.
 
 ### G08-Q03 (pt)
 
@@ -3432,10 +3432,10 @@ Se você está começando, não se assuste com a complexidade inicial. Com o tem
   - `aula-00.mp3` (audio) — tempo 00:04:46-00:05:47s — score: 0.3854
   - `README.md` (markdown) — seção: O que é FastAPI? > 🧰 Ferramentas necessárias para acompanhar o curso — score: 0.3842
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG confirma corretamente a afirmação de forma clara, direta e apoiada por duas seções pertinentes do README.md. Embora os escores de recuperação sejam moderados, as fontes citadas contêm evidências específicas e suficientes para sustentar a resposta. A resposta sem RAG não confirma efetivamente se o professor utiliza o GNU Emacs, adota linguagem condicional e acrescenta muitas informações genéricas que não respondem diretamente à afirmação, pois não há evidência pois não tem acesso ao conteúdo. Portanto, a resposta com RAG é mais precisa, concisa e alinhada ao contexto educacional consultado.
 
 ### G08-Q04 (pt)
 
@@ -3567,10 +3567,10 @@ Sempre valide a assinatura e verifique as claims antes de confiar no token!
   - `aula-13.mp3` (audio) — tempo 00:29:34-00:30:21s — score: 0.5971
   - `06.md` (markdown) — seção: Autenticação e Autorização com JWT > O que é um JWT — score: 0.5889
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG confirma corretamente a afirmação e explica, de forma clara e objetiva, a aplicação do JWT em processos de autenticação. As fontes recuperadas são altamente relevantes e sustentam diretamente tanto seu uso quanto sua estrutura, especialmente a seção “O que é um JWT”, que apresentou elevado score. Como ressalva técnica, a assinatura garante integridade e autenticidade, mas não confidencialidade, pois o conteúdo de um JWT comum não é necessariamente criptografado. A resposta sem RAG também é tecnicamente consistente e mais abrangente, porém excessivamente extensa para uma afirmação curta. Nesse caso, a resposta com RAG está mais alinhada à categoria e à necessidade apresentada
 
 ### G08-Q05 (pt)
 
@@ -3676,10 +3676,10 @@ Essa funcionalidade é um dos grandes diferenciais do FastAPI, pois simplifica o
   - `02.md` (markdown) — seção: Introdução ao desenvolvimento WEB > APIs > Documentação > Qual escolher? — score: 0.6114
   - `aula-02.mp3` (audio) — tempo 01:22:10-01:23:07s — score: 0.5651
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG confirma corretamente a afirmação e explica de maneira clara como o FastAPI utiliza a especificação OpenAPI para disponibilizar uma interface interativa no Swagger UI. A indicação da rota /docs acrescenta uma orientação prática e pertinente. As fontes recuperadas são relevantes e sustentam diretamente a resposta, embora existam resultados duplicados referentes às mesmas seções. A resposta sem RAG também está correta e oferece exemplos e informações complementares, mas é excessivamente extensa para uma afirmação curta. Assim, a resposta com RAG apresenta melhor concisão e alinhamento à categoria, sem comprometer a precisão ou a utilidade educacional.
 
 ### G08-Q06 (pt)
 
@@ -3791,10 +3791,10 @@ Se precisar de mais detalhes ou exemplos específicos, é só perguntar! 😊
   - `11.md` (markdown) — seção: Containerizando a nossa aplicação e introduzindo o PostgreSQL — score: 0.5881
   - `aula-11.mp3` (audio) — tempo 00:33:45-00:34:43s — score: 0.5680
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG confirma corretamente a afirmação e apresenta evidências específicas de que o PostgreSQL foi introduzido na aula de containerização, incluindo a migração do SQLite, sua execução com Docker e a integração com Python. As fontes recuperadas são pertinentes e sustentam diretamente a conclusão. Entretanto, a seção final de fontes está incompleta e pouco clara, pois apresenta apenas os números [1], [2], [4] e [5] sem identificar adequadamente cada documento ou trecho, além de mencionar a fonte [1] sem utilizá-la no texto. A resposta sem RAG fornece informações tecnicamente úteis sobre PostgreSQL e Docker, mas não possui evidências para confirmar o conteúdo específico da aula e é excessivamente extensa. A resposta com RAG é, portanto, mais adequada ao contexto, embora a apresentação das referências deva ser corrigida.
 
 ## Grupo 9 — Gírias
 
@@ -3859,10 +3859,10 @@ Quer mais detalhes ou exemplos? Só falar! 😎
   - `aula-14.mp3` (audio) — tempo 00:08:26-00:09:14s — score: 0.3234
   - `aula-00.mp3` (audio) — tempo 00:35:40-00:36:21s — score: 0.3204
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG identificou corretamente que os conteúdos recuperados não apresentam informações sobre RAG e sinalizou explicitamente a insuficiência das evidências. Os baixos escores e a ausência de fontes relacionadas ao tema confirmam que a pergunta está fora do contexto da base. A resposta é clara e evita gerar uma explicação sem respaldo documental, embora pudesse adaptar levemente a linguagem ao tom informal da pergunta. A resposta sem RAG oferece uma explicação didática e compatível com a presença de gírias, mas utiliza apenas o conhecimento interno do modelo e, por isso, não atende à expectativa out_of_context adotada para esta avaliação.
 
 ### G09-Q02 (pt)
 
@@ -3919,10 +3919,10 @@ Se eu fosse adivinhar qual editor o professor usa, apostaria nas opções cláss
   - `aula-00.mp3` (audio) — tempo 00:04:46-00:05:47s — score: 0.3379
   - `aula-01.mp3` (audio) — tempo 01:23:13-01:24:23s — score: 0.3252
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG identifica corretamente o GNU Emacs como o editor utilizado pelo professor e acrescenta, de forma pertinente, a recomendação do Kate como alternativa para os estudantes. Apesar dos escores relativamente baixos, o trecho citado contém a informação necessária e sustenta a resposta. O texto é claro e conciso, embora pudesse acompanhar discretamente o tom informal da pergunta. A resposta sem RAG não dispõe do contexto do curso, apresenta várias suposições e estereótipos desnecessários e não fornece uma resposta conclusiva. Portanto, a resposta com RAG é consideravelmente mais precisa, relevante e adequada.
 
 ### G09-Q03 (pt)
 
@@ -3981,10 +3981,10 @@ Precisa de mais detalhes? Só perguntar! 😉
   - `aula-03.mp3` (audio) — tempo 00:02:44-00:03:27s — score: 0.2957
   - `aula-14.mp3` (audio) — tempo 00:35:00-00:36:08s — score: 0.2921
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG explica corretamente o significado de LAN, apresenta exemplos familiares e estabelece uma comparação útil com WAN. A fonte principal possui boa relevância e sustenta diretamente a explicação. O texto também compreende adequadamente a pergunta, apesar da gíria e da ausência de pontuação. Como pequena ressalva, a afirmação de que uma LAN funciona “sem depender de infraestrutura externa” refere-se à comunicação interna entre seus dispositivos e poderia ser formulada com maior precisão para não sugerir que o acesso à internet também independe dessa infraestrutura. A resposta sem RAG igualmente está correta e adapta melhor o tom ao usuário, mas é mais extensa do que o necessário para uma pergunta curta.
 
 ### G09-Q04 (pt)
 
@@ -4070,10 +4070,10 @@ Nenhum é "melhor" que o outro — eles têm propósitos diferentes! A escolha d
   - `aula-01.mp3` (audio) — tempo 00:08:53-00:09:49s — score: 0.4432
   - `01.md` (markdown) — seção: Configurando o ambiente de desenvolvimento > pipx — score: 0.4388
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG esclarece corretamente que pipx e pip possuem finalidades distintas, evitando classificar uma ferramenta como universalmente superior. A comparação entre ferramentas globais isoladas e dependências de projetos está clara, organizada e apoiada pelas fontes recuperadas. Os exemplos são pertinentes e a conclusão responde diretamente à pergunta, embora o texto pudesse adotar um tom um pouco mais informal para acompanhar a gíria utilizada pelo usuário. A resposta sem RAG também é correta e didática, mas apresenta mais detalhes do que o necessário para uma pergunta curta. A resposta com RAG oferece melhor equilíbrio entre concisão, precisão e fundamentação.
 
 ### G09-Q05 (pt)
 
@@ -4180,10 +4180,10 @@ Pronto! Seu "trem" FastAPI está rodando! 🚂 Para mais detalhes, consulte a [d
   - `aula-13.mp3` (audio) — tempo 01:48:16-01:48:43s — score: 0.4860
   - `aula-02.mp3` (audio) — tempo 00:21:19-00:22:14s — score: 0.4860
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta com RAG fornece uma orientação direta para iniciar a aplicação, informa corretamente o endereço padrão e relaciona a execução ao servidor ASGI Uvicorn. Entretanto, poderia esclarecer que o comando fastapi run depende da CLI do FastAPI estar instalada e indicar o arquivo da aplicação quando necessário, como em fastapi run main.py. Para desenvolvimento, também seria útil mencionar fastapi dev main.py ou, conforme a configuração do curso, uvicorn main:app --reload. A referência sobre possíveis erros de instalação é pouco específica e não acrescenta uma instrução concreta. A resposta sem RAG oferece um passo a passo mais completo, mas é excessivamente extensa para a pergunta curta. Assim, a resposta com RAG é adequada e concisa, porém poderia ser tecnicamente mais precisa e operacional.
 
 ### G09-Q06 (pt)
 
@@ -4252,10 +4252,10 @@ Resumindo: endpoints são as "portas virtuais" por onde os apps trocam dados. É
   - `aula-03.mp3` (audio) — tempo 00:03:27-00:04:21s — score: 0.5898
   - `aula-02.mp3` (audio) — tempo 01:29:35-01:31:16s — score: 0.5410
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta com RAG explica corretamente que um endpoint corresponde à combinação de uma rota com um método HTTP e apresenta exemplos úteis de operações CRUD. As fontes recuperadas são relevantes, especialmente a seção dedicada ao conceito de endpoint, que obteve bom score. Entretanto, o exemplo de URL está com a formatação quebrada, e há inconsistência nas referências: o texto cita as fontes [1] e [5], mas a lista final não identifica a fonte [5]; por outro lado, apresenta a fonte [3] sem associá-la claramente a uma afirmação. A resposta sem RAG é mais acessível e adapta melhor a linguagem ao tom informal do usuário, mas inclui detalhes além do necessário. A resposta com RAG permanece adequada, embora a formatação e a rastreabilidade das citações precisem ser corrigidas.
 
 ## Grupo 10 — Sarcasmo/ironia
 
@@ -4302,10 +4302,10 @@ Resumindo: RAG é uma **ferramenta poderosa**, mas não é onisciente. Ele é t�
   - `aula-04.mp3` (audio) — tempo 00:24:42-00:25:44s — score: 0.2533
   - `aula-14.mp3` (audio) — tempo 00:51:59-00:53:03s — score: 0.2472
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 5
+- **Observações:** A resposta com RAG reconhece corretamente que as fontes recuperadas não tratam de RAG e sinaliza explicitamente a insuficiência de evidências. Também diferencia adequadamente o uso da palavra “magia” nos materiais do sentido empregado sarcasticamente na pergunta, evitando utilizar trechos apenas superficialmente semelhantes. Os baixos escores reforçam a falta de relação entre as fontes e o tema consultado. A resposta sem RAG interpreta corretamente o sarcasmo e apresenta uma explicação tecnicamente adequada, mas utiliza conhecimento interno não fundamentado nos materiais. Portanto, considerando a expectativa out_of_context, a abstenção da resposta com RAG é o comportamento mais apropriado.
 
 ### G10-Q02 (pt)
 
@@ -4338,10 +4338,10 @@ Haha, entendo a frustração! Às vezes parece que o terminal tem vontade própr
   - `aula-03.mp3` (audio) — tempo 00:21:14-00:22:08s — score: 0.2882
   - `aula-01.mp3` (audio) — tempo 00:11:43-00:12:42s — score: 0.2838
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** não
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 2
+- **Observações:** A resposta com RAG reconhece o sarcasmo, mas força uma associação entre a pergunta genérica e trechos sobre poetry shell, Event Loop e configuração do PATH. Essas fontes possuem baixos escores e não permitem identificar qual problema o usuário enfrenta, tornando os exemplos pouco relevantes. Como a pergunta não apresenta um erro ou comando específico e está fora do contexto recuperado, o sistema deveria sinalizar a insuficiência de informações e solicitar mais detalhes. A resposta sem RAG lida melhor com o tom irônico, reconhece a frustração e pede que o usuário informe o erro ou comando, sendo mais apropriada para a situação.
 
 ### G10-Q03 (pt)
 
@@ -4440,10 +4440,10 @@ JWT é uma ferramenta poderosa, mas sua segurança depende diretamente de como a
   - `aula-06.mp3` (audio) — tempo 00:44:16-00:45:16s — score: 0.5983
   - `aula-13.mp3` (audio) — tempo 00:29:34-00:30:21s — score: 0.5770
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta com RAG interpreta corretamente o sarcasmo, rejeita a prática insegura e apresenta orientações relevantes sobre geração e proteção da chave usada para assinar tokens JWT. As fontes recuperadas são pertinentes ao tema e sustentam a explicação geral. Contudo, seria importante distinguir mais claramente a senha do usuário da chave de assinatura do JWT: senhas devem ser armazenadas como hashes seguros, enquanto a chave de assinatura deve ficar em variável de ambiente ou gerenciador de segredos. Além disso, as referências [1], [2] e [5] não são identificadas em uma lista final, o que prejudica a rastreabilidade. A menção à pwdlib também está mais relacionada ao tratamento de senhas do que à validação do JWT. A resposta sem RAG faz essa distinção com mais clareza, mas é excessivamente extensa para uma pergunta curta.
 
 ### G10-Q04 (pt)
 
@@ -4498,10 +4498,10 @@ pip install django==3.2
   - `aula-01.mp3` (audio) — tempo 00:14:27-00:15:28s — score: 0.3324
   - `aula-01.mp3` (audio) — tempo 01:02:32-01:03:30s — score: 0.3289
 - **Fonte correta recuperada:** sim
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta com RAG interpreta corretamente o sarcasmo e explica que pip e ambientes virtuais são complementares: o primeiro instala pacotes, enquanto o segundo isola as dependências de cada projeto. A distinção entre pip, pipx e Poetry é relevante e está apoiada pelos trechos recuperados. Como pontos de melhoria, as referências finais deveriam identificar o arquivo, e não apenas os intervalos de tempo. Também há um provável erro de transcrição em “HTT-PAI” e uma imprecisão ao sugerir que o Poetry permite alterar versões do Python: ele pode selecionar um interpretador disponível, mas normalmente não instala nem gerencia essas versões por conta própria. A resposta sem RAG é mais simples e didática, embora também seja mais extensa do que o necessário para uma pergunta curta.
 
 ### G10-Q05 (pt)
 
@@ -4543,10 +4543,10 @@ Você está falando de alguma situação específica?
   - `Introdução ao Python.pdf` (pdf) — p. 69 — seção: 4.2 Notebook Colab: Estruturas de Controle de Fluxo — score: 0.3031
   - `Python para Processamento de Dados.pdf` (pdf) — p. 140 — seção: 4.3 Saiba Mais… — score: 0.2957
 - **Fonte correta recuperada:** parcial
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** não
+- **Sinalizou insuficiência:** não
+- **Qualidade geral (1–5):** 2
+- **Observações:** A resposta com RAG confunde o Bloco de Notas, editor de texto do Windows, com os Notebooks do Google Colab. As fontes recuperadas comprovam apenas que notebooks Colab são disponibilizados para atividades práticas, mas não identificam o editor utilizado pelo professor. Portanto, elas são apenas parcialmente relacionadas ao termo da pergunta e não sustentam a conclusão apresentada. A resposta deveria reconhecer o sarcasmo e corrigir a afirmação com a informação contextual de que o professor utiliza o GNU Emacs ou, caso essa evidência não tivesse sido recuperada, sinalizar a insuficiência das fontes. A resposta sem RAG também não responde adequadamente, pois apresenta hipóteses genéricas sobre professores e editores sem determinar qual ferramenta é utilizada no curso.
 
 ### G10-Q06 (en)
 
@@ -4581,7 +4581,7 @@ Haha, I wish! 😅 While RAG (Retrieval-Augmented Generation) is powerful, it’
   - `aula-00.mp3` (audio) — tempo 00:49:28-00:50:27s — score: 0.1844
   - `aula-03.mp3` (audio) — tempo 00:49:25-00:50:29s — score: 0.1839
 - **Fonte correta recuperada:** n/a
-- **Resposta adequada:**
-- **Sinalizou insuficiência:**
-- **Qualidade geral (1–5):**
-- **Observações:**
+- **Resposta adequada:** sim
+- **Sinalizou insuficiência:** sim
+- **Qualidade geral (1–5):** 4
+- **Observações:** A resposta com RAG identifica corretamente que os conteúdos recuperados não abordam RAG e sinaliza de forma explícita a impossibilidade de responder com fundamentação. Os escores muito baixos e os assuntos distintos das fontes confirmam que a pergunta está fora do contexto da base. Entretanto, a resposta foi escrita em português, apesar de a pergunta estar em inglês, reduzindo o alinhamento linguístico com a categoria avaliada. A resposta sem RAG compreende melhor o idioma e o sarcasmo e fornece uma explicação correta, mas utiliza conhecimento interno sem respaldo nos documentos. Considerando a expectativa out_of_context, a abstenção da resposta com RAG é adequada, mas deveria ter sido apresentada em inglês.
